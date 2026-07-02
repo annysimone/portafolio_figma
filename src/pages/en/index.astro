@@ -1,0 +1,160 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getFeaturedProjects } from '../../data/projects';
+import { useTranslations } from '../../i18n/ui';
+
+const lang = 'en';
+const t = useTranslations(lang);
+const featured = getFeaturedProjects();
+---
+
+<Base title="UX/UI Portfolio — Digital product design" description={t.hero.subtitle} lang={lang} currentPath="/en/">
+  <section class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">{t.hero.eyebrow}</p>
+        <h1>{t.hero.title}</h1>
+        <p class="lead">{t.hero.subtitle}</p>
+        <div class="hero-actions">
+          <a href="/en/work" class="btn btn-primary">{t.hero.cta}</a>
+          <a href="/en/contact" class="btn btn-secondary">{t.hero.ctaSecondary}</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="/assets/profile.jpg" alt="Profile photo" width="480" height="560" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{t.featured.title}</h2>
+        <p class="section-subtitle">{t.featured.subtitle}</p>
+      </div>
+      <div class="project-grid">
+        {featured.map((project) => <ProjectCard project={project} lang={lang} />)}
+      </div>
+      <div class="section-cta">
+        <a href="/en/work" class="btn btn-secondary">{t.featured.viewAll}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services">
+    <div class="container">
+      <h2 class="section-title">{t.services.title}</h2>
+      <div class="services-grid">
+        {
+          t.services.items.map((item) => (
+            <article class="service-card">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    background: linear-gradient(180deg, var(--color-hero-bg) 0%, var(--color-bg) 100%);
+    padding-top: 3rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin: 0 0 1.75rem;
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    max-width: 38rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    max-width: 28rem;
+    margin-inline: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    aspect-ratio: 6 / 7;
+  }
+
+  .project-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .section-cta {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .services {
+    background: white;
+  }
+
+  .services-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg);
+  }
+
+  .service-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.0625rem;
+  }
+
+  .service-card p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .project-grid,
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

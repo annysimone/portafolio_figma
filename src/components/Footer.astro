@@ -1,0 +1,79 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const prefix = lang === 'en' ? '/en' : '';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand">Portafolio UX/UI</p>
+      <p class="footer-note">{t.footer.built}</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href={`${prefix}/work`}>{t.nav.work}</a>
+      <a href={`${prefix}/about`}>{t.nav.about}</a>
+      <a href={`${prefix}/contact`}>{t.nav.contact}</a>
+    </nav>
+    <p class="footer-copy">© {year}. {t.footer.rights}</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    background: white;
+    padding-block: 2.5rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    margin: 0 0 0.25rem;
+    font-weight: 700;
+  }
+
+  .footer-note,
+  .footer-copy {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+  }
+
+  .footer-nav a {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+  }
+
+  .footer-nav a:hover {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 768px) {
+    .footer-inner {
+      grid-template-columns: 1fr auto;
+      align-items: end;
+    }
+
+    .footer-copy {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

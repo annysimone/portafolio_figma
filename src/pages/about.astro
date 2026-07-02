@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import { useTranslations } from '../i18n/ui';
+
+const lang = 'es';
+const t = useTranslations(lang);
+---
+
+<Base title={`${t.about.title} — Portafolio`} description={t.about.intro} lang={lang} currentPath="/about">
+  <section class="section about-hero">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="/assets/profile.jpg" alt="Foto de perfil profesional" width="520" height="620" />
+      </div>
+      <div>
+        <h1 class="section-title">{t.about.title}</h1>
+        <p class="intro">{t.about.intro}</p>
+
+        <h2>{t.about.skillsTitle}</h2>
+        <ul class="skills">
+          {t.about.skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+
+        <h2>{t.about.experienceTitle}</h2>
+        <div class="experience-list">
+          {
+            t.about.experience.map((item) => (
+              <article class="experience-item">
+                <h3>{item.role}</h3>
+                <p>{item.company}</p>
+                <span>{item.period}</span>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .about-hero {
+    background: white;
+  }
+
+  .about-grid {
+    display: grid;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .about-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    aspect-ratio: 5 / 6;
+  }
+
+  .intro {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    margin: 0 0 2rem;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.125rem;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+
+  .skills li {
+    padding: 0.5rem 0.875rem;
+    border-radius: 999px;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .experience-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .experience-item {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+  }
+
+  .experience-item h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+  }
+
+  .experience-item p {
+    margin: 0 0 0.25rem;
+    color: var(--color-text-muted);
+  }
+
+  .experience-item span {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 900px) {
+    .about-grid {
+      grid-template-columns: 0.85fr 1.15fr;
+    }
+  }
+</style>
