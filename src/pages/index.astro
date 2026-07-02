@@ -1,172 +1,77 @@
 ---
-import Base from '../layouts/Base.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import { getFeaturedProjects } from '../data/projects';
-import { useTranslations } from '../i18n/ui';
-
-const lang = 'es';
-const t = useTranslations(lang);
-const featured = getFeaturedProjects();
+import Portfolio from '../layouts/Portfolio.astro';
 ---
 
-<Base
-  title="Portafolio UX/UI — Diseño de producto digital"
-  description={t.hero.subtitle}
-  lang={lang}
-  currentPath="/"
+<Portfolio
+  title="Anny Mamani — Product Designer"
+  description="Soy Anny Mamani, Product Designer con mucho enfoque en procesos."
+  current="home"
 >
-  <section class="hero section">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">{t.hero.eyebrow}</p>
-        <h1>{t.hero.title}</h1>
-        <p class="lead">{t.hero.subtitle}</p>
-        <div class="hero-actions">
-          <a href="/work" class="btn btn-primary">{t.hero.cta}</a>
-          <a href="/contact" class="btn btn-secondary">{t.hero.ctaSecondary}</a>
-        </div>
+  <main class="flex flex-col items-start w-full max-w-[1500px] mx-auto px-12">
+    <header class="flex flex-col h-auto items-start pb-20 pt-[200px] pr-[100px] w-full">
+      <p class="font-manjari leading-[1.2] text-[clamp(28px,4vw,48px)] text-black tracking-[-2.16px]">
+        Soy Anny Mamani, Product Designer con mucho enfoque en procesos. Me encanta transformar ideas y procesos complejos en productos digitales intuitivos y centrados en el usuario.
+      </p>
+    </header>
+
+    <!-- Pacífico Seguros 2025 -->
+    <section class="border-[#6e660a] border-t-[0.5px] flex flex-wrap gap-[50px] items-start pb-20 pt-[50px] w-full">
+      <div class="flex flex-1 flex-col gap-[19px] items-start min-w-[280px]">
+        <h2 class="font-source-code font-medium text-[#ab0782] text-base tracking-[-0.72px] underline">2025</h2>
+        <p class="font-manjari leading-[1.2] text-[#ab0782] text-[clamp(32px,4vw,48px)] tracking-[-2.16px]">Pacífico Seguros.</p>
+        <a href="/project_3" class="border border-[#ab0782] flex h-8 items-center justify-center px-2.5 rounded font-source-code text-[#ab0782] text-base tracking-[-0.72px] no-underline">Ver</a>
       </div>
-      <div class="hero-visual">
-        <img src="/assets/profile.jpg" alt="Foto de perfil" width="480" height="560" />
+      <div class="aspect-square flex-1 min-w-[280px] relative rounded">
+        <img alt="Pacífico Seguros — Seguro de Sepelio" class="absolute inset-0 object-contain rounded size-full" src="/assets/original/home-pacifico.png" />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">{t.featured.title}</h2>
-        <p class="section-subtitle">{t.featured.subtitle}</p>
+    <!-- Gestión de horas -->
+    <section class="border-[#5f00ad] border-t-[0.5px] flex flex-wrap gap-[50px] items-start pb-20 pt-[50px] w-full">
+      <div class="flex flex-1 flex-col gap-[19px] items-start min-w-[280px]">
+        <h2 class="font-source-code font-medium text-[#0034ad] text-base tracking-[-0.72px] underline">Pacífico Seguros</h2>
+        <p class="font-manjari leading-[1.2] text-[#0034ad] text-[clamp(32px,4vw,48px)] tracking-[-2.16px]">Gestión de horas y tareas</p>
+        <a href="/project_4" class="border border-black flex h-8 items-center justify-center px-2.5 rounded font-source-code text-base tracking-[-0.72px] no-underline text-black">Ver</a>
       </div>
-      <div class="project-grid">
-        {featured.map((project) => <ProjectCard project={project} lang={lang} />)}
+      <div class="aspect-square flex-1 min-w-[280px] relative rounded">
+        <img alt="Gestión de horas y tareas" class="absolute inset-0 object-contain rounded size-full" src="/assets/original/home-gestion-horas.png" />
       </div>
-      <div class="section-cta">
-        <a href="/work" class="btn btn-secondary">{t.featured.viewAll}</a>
+    </section>
+
+    <!-- Interbank -->
+    <section class="border-[#ab0782] border-t-[0.5px] flex flex-wrap gap-[50px] items-start pb-20 pt-[50px] w-full">
+      <div class="flex flex-1 flex-col gap-[19px] items-start min-w-[280px]">
+        <h2 class="font-source-code font-medium text-[#6e660a] text-base tracking-[-0.72px] underline">2020-2024</h2>
+        <p class="font-manjari leading-[1.2] text-[#6e660a] text-[clamp(32px,4vw,48px)] tracking-[-2.16px]">Interbank</p>
+        <a href="/project_1" class="border border-[#ab0782] flex h-8 items-center justify-center px-2.5 rounded font-source-code text-[#ab0782] text-base tracking-[-0.72px] no-underline">Ver</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section services">
-    <div class="container">
-      <h2 class="section-title">{t.services.title}</h2>
-      <div class="services-grid">
-        {
-          t.services.items.map((item) => (
-            <article class="service-card">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))
-        }
+      <div class="aspect-square flex-1 min-w-[280px] relative rounded overflow-hidden">
+        <img alt="Interbank ASSI" class="absolute left-[-3%] max-w-none size-[106%] top-[-2.74%]" src="/assets/original/home-interbank.png" />
       </div>
-    </div>
-  </section>
-</Base>
+    </section>
 
-<style>
-  .hero {
-    background: linear-gradient(180deg, var(--color-hero-bg) 0%, var(--color-bg) 100%);
-    padding-top: 3rem;
-  }
+    <!-- AppCres -->
+    <section class="border-[#0034ad] border-t-[0.5px] flex flex-wrap gap-[50px] items-start pb-20 pt-[50px] w-full">
+      <div class="flex flex-1 flex-col gap-[19px] items-start min-w-[280px]">
+        <h2 class="font-source-code font-medium text-[#0034ad] text-base tracking-[-0.72px] underline">2019</h2>
+        <p class="font-manjari leading-[1.2] text-[#0034ad] text-[clamp(32px,4vw,48px)] tracking-[-2.16px]">AppCres</p>
+        <a href="/project_2" class="border border-[#5f00ad] flex h-8 items-center justify-center px-2.5 rounded font-source-code text-[#5f00ad] text-base tracking-[-0.72px] no-underline">Ver</a>
+      </div>
+      <div class="aspect-square flex-1 min-w-[280px] relative">
+        <img alt="AppCres" class="absolute inset-0 object-cover size-full" src="/assets/original/home-appcres.png" />
+      </div>
+    </section>
 
-  .hero-grid {
-    display: grid;
-    gap: 2.5rem;
-    align-items: center;
-  }
-
-  .eyebrow {
-    margin: 0 0 1rem;
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  h1 {
-    margin: 0 0 1rem;
-    font-size: clamp(2rem, 5vw, 3.25rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-  }
-
-  .lead {
-    margin: 0 0 1.75rem;
-    color: var(--color-text-muted);
-    font-size: 1.0625rem;
-    max-width: 38rem;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-  }
-
-  .hero-visual img {
-    width: 100%;
-    max-width: 28rem;
-    margin-inline: auto;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    object-fit: cover;
-    aspect-ratio: 6 / 7;
-  }
-
-  .section-header {
-    margin-bottom: 0.5rem;
-  }
-
-  .project-grid {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  .section-cta {
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .services {
-    background: white;
-  }
-
-  .services-grid {
-    display: grid;
-    gap: 1.25rem;
-  }
-
-  .service-card {
-    padding: 1.5rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background: var(--color-bg);
-  }
-
-  .service-card h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.0625rem;
-  }
-
-  .service-card p {
-    margin: 0;
-    color: var(--color-text-muted);
-    font-size: 0.9375rem;
-  }
-
-  @media (min-width: 768px) {
-    .hero-grid {
-      grid-template-columns: 1.1fr 0.9fr;
-    }
-
-    .project-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-</style>
+    <!-- AppCress en proceso -->
+    <section class="border-[#6e660a] border-t-[0.5px] flex flex-wrap gap-[50px] items-start pb-20 pt-[50px] w-full">
+      <div class="flex flex-1 flex-col gap-[19px] items-start min-w-[280px]">
+        <h2 class="font-source-code font-medium text-base tracking-[-0.72px] underline">2019</h2>
+        <p class="font-manjari leading-[1.2] text-[clamp(32px,4vw,48px)] tracking-[-2.16px]">AppCress</p>
+        <span class="border border-black flex h-8 items-center justify-center px-2.5 rounded font-source-code text-base tracking-[-0.72px]">En proceso</span>
+      </div>
+      <div class="aspect-square flex-1 min-w-[280px] relative rounded">
+        <img alt="AppCress" class="absolute inset-0 object-contain rounded size-full" src="/assets/original/home-appcress.png" />
+      </div>
+    </section>
+  </main>
+</Portfolio>
