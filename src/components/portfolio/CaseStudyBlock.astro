@@ -1,0 +1,539 @@
+---
+import type { Lang } from '../../i18n/config';
+import type { CaseStudyBlock } from '../../data/types';
+import { pick } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  block: CaseStudyBlock;
+  index: number;
+}
+
+const { lang, block, index } = Astro.props;
+
+const hmwLabels = {
+  es: {
+    need: 'Jobs to be done',
+    hmw: '¿How might we…?',
+    guidelines: 'Lineamientos de diseño',
+    features: 'Features',
+  },
+  en: {
+    need: 'Jobs to be done',
+    hmw: 'How might we…?',
+    guidelines: 'Design guidelines',
+    features: 'Features',
+  },
+};
+---
+
+{
+  block.type === 'heading' && block.level === 2 && (
+    <h2
+      class="cs-section-heading font-source-code font-medium text-xl md:text-2xl tracking-[-0.72px] border-t border-[var(--color-border)] pt-8 first:border-t-0 first:pt-0"
+      id={`block-${index}`}
+    >
+      {pick(block.text, lang)}
+    </h2>
+  )
+}
+{
+  block.type === 'heading' && block.level === 3 && (
+    <h3
+      class="font-source-code text-lg md:text-xl tracking-[-0.72px] text-[var(--color-accent-olive)]"
+      id={`block-${index}`}
+    >
+      {pick(block.text, lang)}
+    </h3>
+  )
+}
+{
+  block.type === 'heading' && block.level === 4 && (
+    <h4
+      class="cs-heading-4 font-source-code text-base tracking-[-0.72px] text-[var(--color-text-muted)]"
+      id={`block-${index}`}
+    >
+      {pick(block.text, lang)}
+    </h4>
+  )
+}
+{
+  block.type === 'paragraph' && (
+    <p class="font-manjari text-lg leading-[1.55] text-[var(--color-text)] w-full">
+      {pick(block.text, lang)}
+    </p>
+  )
+}
+{
+  block.type === 'list' && (
+    <>
+      {block.ordered ? (
+        <ol class="font-manjari text-lg leading-[1.55] text-[var(--color-text)] w-full list-decimal pl-5 flex flex-col gap-3">
+          {pick(block.items, lang).map((item) => (
+            <li>{item}</li>
+          ))}
+        </ol>
+      ) : (
+        <ul class="font-manjari text-lg leading-[1.55] text-[var(--color-text)] w-full list-disc pl-5 flex flex-col gap-2">
+          {pick(block.items, lang).map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      )}
+    </>
+  )
+}
+{
+  block.type === 'cards' && (
+    <div
+      class:list={[
+        'flex flex-col gap-4 w-full',
+        block.widthReduce && 'cs-width-reduce',
+        block.extraSpacingTop && 'cs-cards-block--extra-top',
+      ]}
+      style={
+        block.widthReduce
+          ? `--width-reduce: ${block.widthReduce}px`
+          : block.extraSpacingTop
+            ? `--cards-extra-top: ${block.extraSpacingTop}px`
+            : undefined
+      }
+    >
+      {block.title && (
+        <h3 class="font-source-code text-lg tracking-[-0.72px] text-[var(--color-text-muted)]">
+          {pick(block.title, lang)}
+        </h3>
+      )}
+      {block.variant === 'postitsKpi' ? (
+        <div class="cs-kpi-flow">
+          {block.items.map((card) => (
+            <div class="cs-kpi-flow__row">
+              <div class="cs-card cs-card--postits-yellow cs-kpi-flow__main">
+                <div class="cs-card__inner">
+                  {card.title && (
+                    <h4 class="font-manjari font-bold text-[var(--color-text)]">
+                      {pick(card.title, lang)}
+                    </h4>
+                  )}
+                  {card.bodyLines && (
+                    <ul class="cs-card__body cs-card__metrics font-manjari text-[var(--color-text-muted)] list-disc pl-4 m-0 mt-2 flex flex-col gap-1">
+                      {pick(card.bodyLines, lang).map((line) => (
+                        <li>{line}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+              {card.indicators && (
+                <div class="cs-kpi-flow__indicators">
+                  {pick(card.indicators, lang).map((indicator) => (
+                    <aside class="cs-kpi-flow__postit font-manjari">
+                      {indicator.split('\n').map((line, i) => (
+                        <>
+                          {i > 0 && <br />}
+                          {line}
+                        </>
+                      ))}
+                    </aside>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div
+          class:list={[
+            'cs-card-grid',
+            block.variant === 'impact' && 'lg:grid-cols-2',
+            block.variant === 'row3' && 'lg:grid-cols-3',
+            block.variant === 'pair' && 'cs-card-grid--pair',
+            block.variant === 'postitsRef' && 'cs-card-grid--postits-ref',
+            block.variant === 'postitsRef' &&
+              block.items.length === 3 &&
+              'cs-card-grid--postits-ref-3',
+            block.variant !== 'postitsRef' &&
+              block.items.some((card) => card.postIt) &&
+              'cs-card-grid--postits',
+          ]}
+        >
+        {block.items.map((card) => (
+          <div
+            class:list={[
+              'cs-card',
+              block.variant === 'impact' && 'cs-card--impact',
+              block.variant === 'postitsRef' && 'cs-card--postits-ref',
+              block.variant === 'postitsRef' &&
+                (block.postitsTheme === 'impact'
+                  ? 'cs-card--impact'
+                  : 'cs-card--postits-yellow'),
+              card.tint && 'cs-card--tinted',
+              card.fill === 'yellow' && 'cs-card--postits-yellow',
+              card.postIt && 'cs-card--has-postit',
+            ]}
+            style={card.tint ? `--card-tint: ${card.tint}` : undefined}
+          >
+            {block.variant === 'postitsRef' ? (
+              <>
+                <div class="cs-card__inner">
+                  <h4 class="font-manjari font-bold text-[var(--color-text)]">
+                    {pick(card.title, lang)}
+                  </h4>
+                </div>
+                {card.body && (
+                  <aside class="cs-card__postit cs-card__postit--gray font-manjari m-0">
+                    {pick(card.body, lang)}
+                  </aside>
+                )}
+              </>
+            ) : (
+              <>
+                {card.postIt && (
+                  <aside class="cs-card__postit font-manjari text-[var(--color-text)]">
+                    {pick(card.postIt, lang)}
+                    {card.postItLines && (
+                      <ul class="cs-card__postit-list list-none p-0 m-0 mt-1 flex flex-col gap-0.5">
+                        {pick(card.postItLines, lang).map((line) => (
+                          <li>{line}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </aside>
+                )}
+                <div class="cs-card__inner">
+                  {card.title && (
+                    <h4 class="font-manjari font-bold text-[var(--color-text)]">
+                      {pick(card.title, lang)}
+                    </h4>
+                  )}
+                  {card.bodyLines ? (
+                    <ul class="cs-card__body cs-card__metrics font-manjari text-[var(--color-text-muted)] list-none p-0 m-0 flex flex-col gap-1.5">
+                      {pick(card.bodyLines, lang).map((line) => (
+                        <li>{line}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    card.body && (
+                      <p
+                        class:list={[
+                          'cs-card__body font-manjari m-0',
+                          card.title
+                            ? 'text-[var(--color-text-muted)]'
+                            : 'text-[var(--color-text)]',
+                        ]}
+                      >
+                        {pick(card.body, lang)}
+                      </p>
+                    )
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+      )}
+    </div>
+  )
+}
+{
+  block.type === 'phases' && (
+    <div class="cs-phases">
+      {block.items.map((phase) => (
+        <div class="cs-phase" style={`--phase-accent: ${phase.accent ?? 'var(--color-accent-purple)'}`}>
+          <span class="cs-phase__title">{pick(phase.title, lang)}</span>
+          <p class="font-manjari text-sm text-[var(--color-text-muted)] mb-3">
+            {pick(phase.subtitle, lang)}
+          </p>
+          <ul class="font-manjari text-base leading-[1.45] text-[var(--color-text)] list-disc pl-4 flex flex-col gap-1.5">
+            {pick(phase.items, lang).map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}
+{
+  block.type === 'discoveryFlow' && (
+    <div
+      class="cs-discovery flex flex-col gap-4 w-full"
+      role="group"
+      aria-label={pick(block.title, lang)}
+    >
+      <h3 class="font-source-code text-lg tracking-[-0.72px] text-[var(--color-text-muted)] m-0">
+        {pick(block.title, lang)}
+      </h3>
+      <div class="cs-discovery__grid">
+        {block.columns.map((column) => (
+          <div class="cs-discovery__column">
+            <div class="cs-card">
+              <div class="cs-card__inner">
+                <h4 class="font-manjari font-bold text-[var(--color-text)]">
+                  {pick(column.title, lang)}
+                </h4>
+                <p class="cs-card__body font-manjari text-[var(--color-text-muted)] m-0">
+                  {pick(column.body, lang)}
+                </p>
+              </div>
+            </div>
+            <div class="cs-discovery__arrow" aria-hidden="true">
+              <span class="cs-discovery__arrow-line" />
+              <span class="cs-discovery__arrow-head" />
+            </div>
+            <div class="cs-card cs-card--impact">
+              <div class="cs-card__inner">
+                {column.findingsLabel && (
+                  <p class="cs-discovery__findings-label font-source-code m-0">
+                    {pick(column.findingsLabel, lang)}
+                  </p>
+                )}
+                <ul class="cs-card__body cs-card__metrics font-manjari text-[var(--color-text-muted)] list-disc pl-4 m-0 flex flex-col gap-1">
+                  {pick(column.findings, lang).map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+                {column.footnote && (
+                  <p class="cs-discovery__footnote font-manjari m-0">
+                    {pick(column.footnote, lang)}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+{
+  block.type === 'hmwTable' && (
+    <div class="cs-hmw">
+      {block.rows.map((row) => (
+        <div class="cs-hmw-row">
+          <div class="cs-hmw-cell cs-hmw-cell--need">
+            <span class="cs-hmw-label">{hmwLabels[lang].need}</span>
+            {pick(row.userNeed, lang)}
+          </div>
+          <div class="cs-hmw-cell cs-hmw-cell--hmw">
+            <span class="cs-hmw-label">{hmwLabels[lang].hmw}</span>
+            {pick(row.hmw, lang)}
+          </div>
+          <div class="cs-hmw-cell cs-hmw-cell--guidelines">
+            <span class="cs-hmw-label">{hmwLabels[lang].guidelines}</span>
+            {pick(row.guidelines, lang)}
+          </div>
+          <div class="cs-hmw-cell cs-hmw-cell--features">
+            <span class="cs-hmw-label">{hmwLabels[lang].features}</span>
+            <ul class="list-disc pl-4 flex flex-col gap-1 mt-1">
+              {pick(row.features, lang).map((f) => (
+                <li>{f}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+{
+  block.type === 'image' && (
+    <figure
+      class:list={[
+        'cs-ui-figure w-full flex flex-col gap-3',
+        block.reference && 'cs-ui-figure--reference',
+        block.widthReduce && 'cs-ui-figure--centered cs-width-reduce',
+        block.maxWidth && 'cs-ui-figure--centered',
+        block.extraSpacingTop && 'cs-ui-figure--extra-top',
+      ]}
+      style={
+        block.widthReduce
+          ? `--width-reduce: ${block.widthReduce}px`
+          : block.extraSpacingTop
+            ? `--figure-extra-top: ${block.extraSpacingTop}px`
+            : undefined
+      }
+    >
+      {block.reference && (
+        <p class="font-source-code text-xs tracking-[-0.04em] text-[var(--color-accent-pink)] m-0">
+          {lang === 'es' ? 'Referencia visual · Figma Site' : 'Visual reference · Figma Site'}
+        </p>
+      )}
+      <img
+        src={block.src}
+        alt={pick(block.alt, lang)}
+        class:list={[
+          'h-auto',
+          block.reference && !block.maxWidth && !block.widthReduce && 'cs-ui-figure__img--reference',
+          !block.reference && !block.maxWidth && !block.widthReduce && 'w-full',
+        ]}
+        style={
+          block.widthReduce
+            ? undefined
+            : block.maxWidth
+              ? `width: ${block.maxWidth}px; max-width: 100%; margin-inline: auto;`
+              : undefined
+        }
+        loading={index < 4 ? 'eager' : 'lazy'}
+      />
+      {block.title && (
+        <figcaption class="font-source-code text-base tracking-[-0.72px] text-[var(--color-text-muted)]">
+          {pick(block.title, lang)}
+        </figcaption>
+      )}
+    </figure>
+  )
+}
+{
+  block.type === 'gallery' && (
+    <div class="cs-gallery-block w-full flex flex-col gap-4">
+      {block.title && (
+        <h3 class="font-source-code text-base tracking-[-0.72px] text-[var(--color-text-muted)] m-0">
+          {pick(block.title, lang)}
+        </h3>
+      )}
+      {block.layout === 'stack' ? (
+        <div class="cs-gallery-stack">
+          {block.images.map((img) => {
+            const alt = pick(img.alt, lang);
+            const dialogId = `gallery-${index}-${img.src.split('/').pop()?.replace(/\./g, '-')}`;
+            return (
+              <figure
+                class:list={[
+                  'cs-ui-figure flex flex-col gap-2',
+                  img.wide && 'cs-gallery-figure--wide',
+                ]}
+              >
+                {img.reference && (
+                  <p class="font-source-code text-xs tracking-[-0.04em] text-[var(--color-accent-pink)] m-0">
+                    {lang === 'es' ? 'Referencia visual · Figma Site' : 'Visual reference · Figma Site'}
+                  </p>
+                )}
+                <div class="cs-gallery-figure__media">
+                  <img src={img.src} alt={alt} class="w-full h-auto" loading="lazy" />
+                  {img.wide && (
+                    <button
+                      type="button"
+                      class="cs-gallery-expand-btn"
+                      aria-label={lang === 'es' ? `Ampliar: ${alt}` : `Expand: ${alt}`}
+                      onclick={`document.getElementById('${dialogId}')?.showModal()`}
+                    >
+                      {lang === 'es' ? 'Ampliar' : 'Expand'}
+                    </button>
+                  )}
+                </div>
+                {img.caption && (
+                  <figcaption class="font-source-code text-sm tracking-[-0.72px] text-[var(--color-text-muted)]">
+                    {pick(img.caption, lang)}
+                  </figcaption>
+                )}
+                {img.wide && (
+                  <dialog id={dialogId} class="cs-gallery-dialog">
+                    <form method="dialog">
+                      <button type="submit" class="cs-gallery-dialog__close" aria-label={lang === 'es' ? 'Cerrar' : 'Close'}>
+                        ×
+                      </button>
+                    </form>
+                    <img src={img.src} alt={alt} />
+                  </dialog>
+                )}
+              </figure>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="cs-gallery-carousel-wrap" data-gallery-wrap>
+          <div class="cs-gallery-carousel-shell">
+            <button
+              type="button"
+              class="cs-gallery-nav cs-gallery-nav--prev"
+              aria-label={lang === 'es' ? 'Imagen anterior' : 'Previous image'}
+              data-gallery-prev
+            >
+              <svg class="cs-gallery-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 6L9 12l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="cs-gallery-carousel" data-gallery-track tabindex="0">
+              {block.images.map((img, slideIndex) => {
+                const alt = pick(img.alt, lang);
+                const dialogId = `gallery-${index}-${img.src.split('/').pop()?.replace(/\./g, '-')}`;
+                return (
+                  <figure
+                    class:list={[
+                      'cs-ui-figure flex flex-col gap-2',
+                      img.wide && 'cs-gallery-figure--wide',
+                    ]}
+                    data-gallery-slide={slideIndex}
+                  >
+                    {img.reference && (
+                      <p class="font-source-code text-xs tracking-[-0.04em] text-[var(--color-accent-pink)] m-0">
+                        {lang === 'es' ? 'Referencia visual · Figma Site' : 'Visual reference · Figma Site'}
+                      </p>
+                    )}
+                    <div class="cs-gallery-figure__media">
+                      <img src={img.src} alt={alt} class="w-full h-auto" loading="lazy" />
+                      {img.wide && (
+                        <button
+                          type="button"
+                          class="cs-gallery-expand-btn"
+                          aria-label={lang === 'es' ? `Ampliar: ${alt}` : `Expand: ${alt}`}
+                          onclick={`document.getElementById('${dialogId}')?.showModal()`}
+                        >
+                          {lang === 'es' ? 'Ampliar' : 'Expand'}
+                        </button>
+                      )}
+                    </div>
+                    {img.caption && (
+                      <figcaption class="font-source-code text-sm tracking-[-0.72px] text-[var(--color-text-muted)]">
+                        {pick(img.caption, lang)}
+                      </figcaption>
+                    )}
+                    {img.wide && (
+                      <dialog id={dialogId} class="cs-gallery-dialog">
+                        <form method="dialog">
+                          <button type="submit" class="cs-gallery-dialog__close" aria-label={lang === 'es' ? 'Cerrar' : 'Close'}>
+                            ×
+                          </button>
+                        </form>
+                        <img src={img.src} alt={alt} />
+                      </dialog>
+                    )}
+                  </figure>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              class="cs-gallery-nav cs-gallery-nav--next"
+              aria-label={lang === 'es' ? 'Siguiente imagen' : 'Next image'}
+              data-gallery-next
+            >
+              <svg class="cs-gallery-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="cs-gallery-carousel-meta">
+            <span class="cs-gallery-counter font-source-code text-xs tracking-[-0.04em] text-[var(--color-text-muted)]" data-gallery-counter>
+              1 / {block.images.length}
+            </span>
+            <div class="cs-gallery-dots" role="tablist" aria-label={lang === 'es' ? 'Diapositivas del carrusel' : 'Carousel slides'}>
+              {block.images.map((_, dotIndex) => (
+                <button
+                  type="button"
+                  class="cs-gallery-dot"
+                  role="tab"
+                  aria-label={lang === 'es' ? `Ir a imagen ${dotIndex + 1}` : `Go to image ${dotIndex + 1}`}
+                  aria-selected={dotIndex === 0 ? 'true' : 'false'}
+                  data-gallery-dot={dotIndex}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}

@@ -1,0 +1,9 @@
+---
+import CaseStudyPage from '../../views/CaseStudyPage.astro';
+import { getCaseStudy } from '../../data/site';
+
+const study = getCaseStudy('project_3');
+if (!study) throw new Error('Case study project_3 not found');
+---
+
+<CaseStudyPage lang="en" study={study} />

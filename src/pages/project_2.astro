@@ -1,9 +1,9 @@
 ---
-import ProjectPage from '../components/figma/ProjectPage.astro';
+import CaseStudyPage from '../views/CaseStudyPage.astro';
+import { getCaseStudy } from '../data/site';
+
+const study = getCaseStudy('project_2');
+if (!study) throw new Error('Case study project_2 not found');
 ---
-<ProjectPage
-  title="AppCres — Anny Mamani"
-  description="Plataforma de gestión de inversiones — AppCres 2019"
-  image="/assets/projects/project_2-full.png"
-  alt="Case study AppCres"
-/>
+
+<CaseStudyPage lang="es" study={study} />

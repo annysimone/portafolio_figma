@@ -1,0 +1,28 @@
+---
+import type { Lang } from '../i18n/config';
+import Portfolio from '../layouts/Portfolio.astro';
+import ProjectPreviewCard from '../components/portfolio/ProjectPreviewCard.astro';
+import { homeProjects } from '../data/site';
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Portfolio title={t.home.title} description={t.home.description} lang={lang} current="home">
+  <main class="flex flex-col items-start w-full max-w-[1500px] mx-auto px-6 md:px-12">
+    <header class="flex flex-col items-start pb-20 pt-[200px] md:pr-[100px] w-full">
+      <h1 class="font-manjari leading-[1.2] text-[clamp(28px,4vw,48px)] tracking-[-2.16px] text-[var(--color-text)]">
+        {t.home.intro}
+      </h1>
+    </header>
+
+    {homeProjects.map((project) => (
+      <ProjectPreviewCard lang={lang} project={project} variant="home" />
+    ))}
+  </main>
+</Portfolio>

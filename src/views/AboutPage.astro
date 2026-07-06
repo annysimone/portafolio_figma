@@ -1,0 +1,57 @@
+---
+import type { Lang } from '../i18n/config';
+import Portfolio from '../layouts/Portfolio.astro';
+import ProjectPreviewCard from '../components/portfolio/ProjectPreviewCard.astro';
+import { aboutFeaturedProjects, contact } from '../data/site';
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const paragraphs = t.about.body.split('\n\n');
+---
+
+<Portfolio title={t.about.title} description={t.about.description} lang={lang} current="about">
+  <main class="flex flex-col items-start w-full max-w-[1500px] mx-auto">
+    <section class="flex flex-col pb-[100px] pt-[200px] w-full px-6 md:px-12">
+      <div class="font-manjari text-[clamp(24px,3vw,36px)] tracking-[-1.08px] text-[var(--color-text)]">
+        <p class="leading-[1.25]">{t.about.intro}</p>
+        {paragraphs.map((p) => (
+          <p class="leading-[1.25] mt-6">{p}</p>
+        ))}
+      </div>
+    </section>
+
+    <section class="flex flex-wrap gap-[50px] items-start pb-10 px-6 md:px-12 w-full" aria-labelledby="contact-heading">
+      <div class="border-t border-[var(--color-border)] py-10 w-full md:w-[565px]">
+        <h2 id="contact-heading" class="font-source-code text-base tracking-[-0.72px] m-0">
+          {t.about.contactTitle}
+        </h2>
+      </div>
+      <address class="flex flex-1 flex-col min-w-[280px] not-italic">
+        <div class="border-t border-[var(--color-border)] flex font-source-code gap-[19px] py-[30px] text-base tracking-[-0.72px] w-full">
+          <span>{t.about.mail}</span>
+          <a href={`mailto:${contact.email}`} class="underline">{contact.email}</a>
+        </div>
+        <div class="border-t border-[var(--color-border)] flex font-source-code gap-[19px] py-[30px] text-base tracking-[-0.72px] w-full">
+          <span>{t.about.phone}</span>
+          <a href={contact.phoneHref}>{contact.phone}</a>
+        </div>
+      </address>
+    </section>
+
+    <section class="border-t-4 border-[var(--color-border)] flex flex-col gap-12 py-[30px] w-full px-6 md:px-12" aria-labelledby="about-projects-heading">
+      <h2 id="about-projects-heading" class="font-manjari text-[var(--color-text-muted)] text-2xl tracking-[-1.08px] w-full">
+        {t.about.projectsTitle}
+      </h2>
+      <div class="grid gap-12 lg:grid-cols-3 w-full">
+        {aboutFeaturedProjects.map((project) => (
+          <ProjectPreviewCard lang={lang} project={project} variant="about" />
+        ))}
+      </div>
+    </section>
+  </main>
+</Portfolio>

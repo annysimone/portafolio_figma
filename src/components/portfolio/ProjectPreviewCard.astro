@@ -1,0 +1,104 @@
+---
+import type { Lang } from '../../i18n/config';
+import type { ProjectPreview } from '../../data/types';
+import { localizedPath, pick } from '../../i18n/utils';
+import { useTranslations } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  project: ProjectPreview;
+  variant?: 'home' | 'about';
+}
+
+const { lang, project, variant = 'home' } = Astro.props;
+const t = useTranslations(lang);
+const isInactive = project.status === 'in-progress';
+const href = isInactive ? undefined : localizedPath(project.href, lang);
+const title = pick(project.title, lang);
+const year = pick(project.year, lang);
+const imageAlt = pick(project.imageAlt, lang);
+const aboutLabel = project.aboutLabel ? pick(project.aboutLabel, lang) : year;
+const accentStyle = isInactive ? undefined : `color: ${project.accent}`;
+const borderStyle = isInactive ? undefined : `border-color: ${project.borderAccent}`;
+const buttonStyle = isInactive ? undefined : `border-color: ${project.accent}; color: ${project.accent}`;
+---
+
+{
+  variant === 'home' ? (
+    <section
+      class:list={[
+        'flex flex-wrap gap-[50px] items-start pb-20 pt-[50px] w-full border-t-[0.5px]',
+        isInactive && 'cs-project-card--inactive',
+      ]}
+      style={borderStyle}
+    >
+      <div class="flex flex-1 flex-col gap-[19px] items-start min-w-[280px]">
+        <h2
+          class="font-source-code font-medium text-base tracking-[-0.72px] underline"
+          style={accentStyle}
+        >
+          {year}
+        </h2>
+        <p
+          class="font-manjari leading-[1.2] text-[clamp(32px,4vw,48px)] tracking-[-2.16px]"
+          style={accentStyle}
+        >
+          {title}
+        </p>
+        {href ? (
+          <a
+            href={href}
+            class="border flex h-8 items-center justify-center px-2.5 rounded font-source-code text-base tracking-[-0.72px] no-underline"
+            style={buttonStyle}
+          >
+            {t.home.view}
+          </a>
+        ) : (
+          <span class="cs-project-card__badge border flex h-8 items-center justify-center px-2.5 rounded font-source-code text-base tracking-[-0.72px]">
+            {t.home.inProgress}
+          </span>
+        )}
+      </div>
+      <div class="cs-project-card__media aspect-square flex-1 min-w-[280px] relative rounded overflow-hidden">
+        <img alt={imageAlt} class="absolute inset-0 object-contain rounded size-full" src={project.image} loading="lazy" />
+      </div>
+    </section>
+  ) : (
+    <article
+      class="border-t-[0.5px] flex flex-col gap-[50px] py-[50px]"
+      style={`border-color: ${project.borderAccent}`}
+    >
+      <div class="flex flex-col gap-[19px]">
+        <h3
+          class="font-source-code font-medium text-base tracking-[-0.72px] underline"
+          style={accentStyle}
+        >
+          {aboutLabel}
+        </h3>
+        <p
+          class="font-manjari leading-[1.2] text-[clamp(28px,3vw,48px)] tracking-[-2.16px]"
+          style={accentStyle}
+        >
+          {title}
+        </p>
+        {href && (
+          <a
+            href={href}
+            class="border flex h-8 items-center justify-center px-2.5 rounded font-source-code text-base tracking-[-0.72px] w-[70px] no-underline"
+            style={buttonStyle}
+          >
+            {t.home.view}
+          </a>
+        )}
+      </div>
+      <div class="aspect-square relative rounded shadow-md w-full">
+        <img
+          alt={imageAlt}
+          class="absolute inset-0 object-contain rounded size-full"
+          src={project.aboutImage ?? project.image}
+          loading="lazy"
+        />
+      </div>
+    </article>
+  )
+}

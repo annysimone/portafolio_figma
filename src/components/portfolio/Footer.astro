@@ -1,0 +1,37 @@
+---
+import type { Lang } from '../../i18n/config';
+import { useTranslations } from '../../i18n/ui';
+import { contact } from '../../data/site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<footer class="flex flex-col font-manjari gap-10 items-center max-w-[1500px] pb-20 w-full mx-auto px-[50px]">
+  <div class="border-t border-[var(--color-border)] flex flex-wrap items-start justify-between gap-4 py-[30px] text-2xl tracking-[-1.08px] w-full">
+    <a class="text-[var(--color-accent-pink)] underline" href={`mailto:${contact.email}`}>
+      {t.footer.email}
+    </a>
+    <a
+      class="text-[var(--color-accent-violet)] underline"
+      href={contact.behance}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {t.footer.behance}
+    </a>
+    <a
+      class="text-[var(--color-accent-blue)] underline"
+      href={contact.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {t.footer.linkedin}
+    </a>
+  </div>
+  <p class="text-base text-[var(--color-text)] tracking-[-0.72px] w-full">{t.footer.rights}</p>
+</footer>

@@ -1,209 +1,95 @@
-export type Lang = 'es' | 'en';
-
-export const defaultLang: Lang = 'es';
+import type { Lang } from './config';
 
 export const ui = {
   es: {
     nav: {
-      home: 'Inicio',
-      about: 'Acerca de',
-      work: 'Proyectos',
-      contact: 'Contacto',
+      home: 'Home',
+      about: 'About',
+      themeLight: 'Modo claro',
+      themeDark: 'Modo oscuro',
+      langSwitch: 'Cambiar idioma',
     },
-    hero: {
-      eyebrow: 'Diseño UX/UI',
-      title: 'Creo experiencias digitales claras, humanas y orientadas a resultados.',
-      subtitle:
-        'Diseñadora de producto con enfoque en investigación, sistemas de diseño y soluciones para fintech, seguros y plataformas B2B.',
-      cta: 'Ver proyectos',
-      ctaSecondary: 'Contactar',
-    },
-    featured: {
-      title: 'Proyectos destacados',
-      subtitle: 'Casos de diseño end-to-end: research, UI, prototipado y handoff.',
-      viewAll: 'Ver todos',
-      viewCase: 'Ver caso',
-    },
-    services: {
-      title: 'Cómo trabajo',
-      items: [
-        {
-          title: 'Research & estrategia',
-          description:
-            'Entrevistas, journey maps y definición de problemas para alinear negocio y usuario.',
-        },
-        {
-          title: 'Diseño de interfaz',
-          description:
-            'Wireframes, UI de alta fidelidad y design systems escalables en Figma.',
-        },
-        {
-          title: 'Validación & handoff',
-          description:
-            'Prototipos, pruebas de usabilidad y documentación lista para desarrollo.',
-        },
-      ],
+    home: {
+      title: 'Anny Mamani — Product Designer',
+      description:
+        'Soy Anny Mamani, Product Designer con mucho enfoque en procesos.',
+      intro:
+        'Soy Anny Mamani, Product Designer con mucho enfoque en procesos. Me encanta transformar ideas y procesos complejos en productos digitales intuitivos y centrados en el usuario.',
+      view: 'Ver',
+      inProgress: 'En proceso',
     },
     about: {
-      title: 'Acerca de mí',
+      title: 'About — Anny Mamani',
+      description:
+        'Soy diseñadora de productos digitales enfocada en plataformas de gestión interna.',
       intro:
-        'Soy diseñadora UX/UI apasionada por transformar procesos complejos en experiencias simples. He trabajado en proyectos para sector financiero, seguros y plataformas digitales en Perú y Latinoamérica.',
-      skillsTitle: 'Habilidades',
-      skills: [
-        'UX Research',
-        'UI Design',
-        'Design Systems',
-        'Prototipado',
-        'Figma',
-        'Design Thinking',
-      ],
-      experienceTitle: 'Experiencia',
-      experience: [
-        {
-          role: 'UX/UI Designer',
-          company: 'Proyectos freelance & consultoría',
-          period: '2022 — presente',
-        },
-        {
-          role: 'Product Designer',
-          company: 'Sector financiero & seguros',
-          period: '2020 — 2024',
-        },
-      ],
+        'Soy diseñadora de productos digitales enfocada en plataformas de gestión interna.',
+      body: 'He colaborado activamente en el proyecto ASSI, la plataforma de venta de Interbank. Este proyecto presentó desafíos significativos debido a la complejidad de sus procesos, el entendimiento de las reglas de negocio y las múltiples integraciones tecnológicas que implicaba su funcionamiento.\n\nEsta experiencia me ha permitido adquirir conocimientos sobre lógicas y sistemas internos integrados. He tenido la oportunidad de interactuar diariamente con equipos multidisciplinarios incluyendo: equipos de desarrollo, Líderes técnicos, Business Analysts, Product Owners y aprender de los Ejecutivos de ventas y Supervisores, nuestros usuarios finales.',
+      contactTitle: 'Conversemos...',
+      mail: 'mail:',
+      phone: 'cel:',
+      projectsTitle: 'Mis proyectos',
     },
-    work: {
-      title: 'Proyectos',
-      subtitle: 'Selección de casos de diseño de producto digital.',
-    },
-    contact: {
-      title: 'Contacto',
-      subtitle: '¿Tienes un proyecto o quieres colaborar? Escríbeme.',
-      name: 'Nombre',
-      email: 'Correo',
-      message: 'Mensaje',
-      send: 'Enviar mensaje',
-      emailLabel: 'Correo',
-      linkedin: 'LinkedIn',
+    caseStudy: {
+      overview: 'Overview',
+      challenge: 'Challenge',
+      process: 'Proceso',
+      solutions: 'Soluciones',
+      learnings: 'Aprendizajes',
+      moreProjects: 'Más proyectos',
     },
     footer: {
-      rights: 'Todos los derechos reservados.',
-      built: 'Reconstruido desde Figma Sites con Astro.',
-    },
-    project: {
-      role: 'Rol',
-      client: 'Cliente',
-      year: 'Año',
-      overview: 'Resumen',
-      challenge: 'Desafío',
-      process: 'Proceso',
-      outcome: 'Resultado',
-      back: 'Volver a proyectos',
+      email: 'Email',
+      behance: 'Behance',
+      linkedin: 'LinkedIn',
+      rights: '© 2026 Anny Mamani · Product Designer. Todos los derechos reservados.',
     },
   },
   en: {
     nav: {
       home: 'Home',
       about: 'About',
-      work: 'Work',
-      contact: 'Contact',
+      themeLight: 'Light mode',
+      themeDark: 'Dark mode',
+      langSwitch: 'Switch language',
     },
-    hero: {
-      eyebrow: 'UX/UI Design',
-      title: 'I craft clear, human-centered digital experiences that drive results.',
-      subtitle:
-        'Product designer focused on research, design systems, and solutions for fintech, insurance, and B2B platforms.',
-      cta: 'View projects',
-      ctaSecondary: 'Get in touch',
-    },
-    featured: {
-      title: 'Featured work',
-      subtitle: 'End-to-end design cases: research, UI, prototyping, and handoff.',
-      viewAll: 'View all',
-      viewCase: 'View case',
-    },
-    services: {
-      title: 'How I work',
-      items: [
-        {
-          title: 'Research & strategy',
-          description:
-            'Interviews, journey maps, and problem framing to align business and user goals.',
-        },
-        {
-          title: 'Interface design',
-          description:
-            'Wireframes, high-fidelity UI, and scalable design systems in Figma.',
-        },
-        {
-          title: 'Validation & handoff',
-          description:
-            'Prototypes, usability testing, and dev-ready documentation.',
-        },
-      ],
+    home: {
+      title: 'Anny Mamani — Product Designer',
+      description:
+        'I am Anny Mamani, a Product Designer with a strong focus on process.',
+      intro:
+        'I am Anny Mamani, a Product Designer with a strong focus on process. I love turning complex ideas and workflows into intuitive, user-centered digital products.',
+      view: 'View',
+      inProgress: 'In progress',
     },
     about: {
-      title: 'About me',
+      title: 'About — Anny Mamani',
+      description:
+        'Digital product designer focused on internal management platforms.',
       intro:
-        'I am a UX/UI designer passionate about turning complex processes into simple experiences. I have worked on financial services, insurance, and digital platforms across Latin America.',
-      skillsTitle: 'Skills',
-      skills: [
-        'UX Research',
-        'UI Design',
-        'Design Systems',
-        'Prototyping',
-        'Figma',
-        'Design Thinking',
-      ],
-      experienceTitle: 'Experience',
-      experience: [
-        {
-          role: 'UX/UI Designer',
-          company: 'Freelance & consulting projects',
-          period: '2022 — present',
-        },
-        {
-          role: 'Product Designer',
-          company: 'Financial services & insurance',
-          period: '2020 — 2024',
-        },
-      ],
+        'I am a digital product designer focused on internal management platforms.',
+      body: 'I actively collaborated on ASSI, Interbank\'s sales platform. The project involved significant challenges due to process complexity, business rule understanding, and the many technology integrations required for it to work.\n\nThis experience helped me build knowledge of integrated internal systems and logic. I worked daily with multidisciplinary teams including developers, technical leads, business analysts, product owners, and learned from sales executives and supervisors—our end users.',
+      contactTitle: 'Let\'s talk...',
+      mail: 'mail:',
+      phone: 'phone:',
+      projectsTitle: 'My projects',
     },
-    work: {
-      title: 'Work',
-      subtitle: 'A selection of digital product design case studies.',
-    },
-    contact: {
-      title: 'Contact',
-      subtitle: 'Have a project or want to collaborate? Reach out.',
-      name: 'Name',
-      email: 'Email',
-      message: 'Message',
-      send: 'Send message',
-      emailLabel: 'Email',
-      linkedin: 'LinkedIn',
-    },
-    footer: {
-      rights: 'All rights reserved.',
-      built: 'Rebuilt from Figma Sites with Astro.',
-    },
-    project: {
-      role: 'Role',
-      client: 'Client',
-      year: 'Year',
+    caseStudy: {
       overview: 'Overview',
       challenge: 'Challenge',
       process: 'Process',
-      outcome: 'Outcome',
-      back: 'Back to projects',
+      solutions: 'Solutions',
+      learnings: 'Learnings',
+      moreProjects: 'More projects',
+    },
+    footer: {
+      email: 'Email',
+      behance: 'Behance',
+      linkedin: 'LinkedIn',
+      rights: '© 2026 Anny Mamani · Product Designer. All rights reserved.',
     },
   },
 } as const;
-
-export function getLangFromUrl(url: URL): Lang {
-  const [, lang] = url.pathname.split('/');
-  if (lang === 'en') return 'en';
-  return 'es';
-}
 
 export function useTranslations(lang: Lang) {
   return ui[lang];

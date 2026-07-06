@@ -1,0 +1,21 @@
+---
+import type { Lang } from '../../i18n/config';
+import type { CaseStudyHeader } from '../../data/types';
+import { pick } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  header: CaseStudyHeader;
+}
+
+const { lang, header } = Astro.props;
+const accent = header.accent ?? 'var(--color-accent-olive)';
+---
+
+<header class="cs-case-header pt-[160px] pb-12">
+  <div class="cs-case-header__panel" style={`--header-accent: ${accent}`}>
+    <p class="cs-case-header__year">{pick(header.year, lang)}</p>
+    <h1 class="cs-case-header__title">{pick(header.title, lang)}</h1>
+    <p class="cs-case-header__subtitle">{pick(header.subtitle, lang)}</p>
+  </div>
+</header>

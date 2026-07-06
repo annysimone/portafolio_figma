@@ -1,9 +1,9 @@
 ---
-import ProjectPage from '../components/figma/ProjectPage.astro';
+import CaseStudyPage from '../views/CaseStudyPage.astro';
+import { getCaseStudy } from '../data/site';
+
+const study = getCaseStudy('project_3');
+if (!study) throw new Error('Case study project_3 not found');
 ---
-<ProjectPage
-  title="Pacífico Seguros — Seguro de Sepelio — Anny Mamani"
-  description="Seguro de Sepelio — Pacífico Seguros 2025"
-  image="/assets/projects/project_3-full.png"
-  alt="Case study Pacífico Seguros"
-/>
+
+<CaseStudyPage lang="es" study={study} />

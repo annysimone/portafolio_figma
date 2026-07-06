@@ -27,3 +27,4 @@ pnpm-debug.log*
 Portafolio_sp.site
 imports/figma-export/images/
 imports/figma-export/canvas.fig
+.vercel

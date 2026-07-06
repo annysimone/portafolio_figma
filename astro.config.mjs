@@ -7,8 +7,16 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://portafolio-sp.vercel.app',
+  site: 'https://annymamaniportafolioux.vercel.app',
   compressHTML: true,
+
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 
   vite: {
     plugins: [tailwindcss()],

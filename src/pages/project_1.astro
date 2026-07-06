@@ -1,9 +1,9 @@
 ---
-import ProjectPage from '../components/figma/ProjectPage.astro';
+import CaseStudyPage from '../views/CaseStudyPage.astro';
+import { getCaseStudy } from '../data/site';
+
+const study = getCaseStudy('project_1');
+if (!study) throw new Error('Case study project_1 not found');
 ---
-<ProjectPage
-  title="ASSI. Interbank — Anny Mamani"
-  description="Plataforma de venta de productos financieros — Interbank 2020-2024"
-  image="/assets/projects/project_1-full.png"
-  alt="Case study ASSI Interbank"
-/>
+
+<CaseStudyPage lang="es" study={study} />

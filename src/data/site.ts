@@ -1,0 +1,126 @@
+import type { CaseStudy, ProjectPreview } from './types';
+import { project1CaseStudy } from './case-studies/project-1';
+import { project2CaseStudy } from './case-studies/project-2';
+import { project3CaseStudy } from './case-studies/project-3';
+import { project4CaseStudy } from './case-studies/project-4';
+
+export const contact = {
+  email: 'annysimone@gmail.com',
+  phone: '+51 949 295 796',
+  phoneHref: 'tel:+51949295796',
+  behance: 'https://www.behance.net/AnnyMamani',
+  linkedin: 'https://www.linkedin.com/in/amamanigue/',
+};
+
+export const homeProjects: ProjectPreview[] = [
+  {
+    id: 'pacifico-sepelio',
+    slug: 'project_3',
+    year: { es: '2025', en: '2025' },
+    title: { es: 'Pacífico Seguros', en: 'Pacífico Seguros' },
+    image: '/assets/original/home-pacifico.png',
+    imageAlt: {
+      es: 'Pacífico Seguros — Seguro de Sepelio',
+      en: 'Pacífico Seguros — Funeral insurance',
+    },
+    href: '/project_3',
+    accent: '#ab0782',
+    borderAccent: '#6e660a',
+    featuredOnAbout: true,
+    aboutLabel: { es: 'Seguro de Sepelio', en: 'Funeral insurance' },
+    aboutImage: '/assets/original/about-pacifico.png',
+  },
+  {
+    id: 'gestion-horas',
+    slug: 'project_4',
+    year: { es: 'Pacífico Seguros', en: 'Pacífico Seguros' },
+    title: { es: 'TOM 3.0 Pacífico', en: 'TOM 3.0 Pacífico' },
+    image: '/assets/original/home-gestion-horas.png',
+    imageAlt: {
+      es: 'Gestión de horas y tareas — TOM 3.0',
+      en: 'Time and task management — TOM 3.0',
+    },
+    href: '/project_4',
+    accent: '#0034ad',
+    borderAccent: '#0034ad',
+    featuredOnAbout: true,
+    aboutLabel: {
+      es: 'Plataforma de gestión de horas y tareas',
+      en: 'Time and task management platform',
+    },
+    aboutImage: '/assets/original/about-gestion-horas.png',
+  },
+  {
+    id: 'interbank',
+    slug: 'project_1',
+    year: { es: '2020-2024', en: '2020-2024' },
+    title: { es: 'Interbank', en: 'Interbank' },
+    image: '/assets/original/home-interbank.png',
+    imageAlt: { es: 'Interbank ASSI', en: 'Interbank ASSI' },
+    href: '/project_1',
+    accent: '#6e660a',
+    borderAccent: '#ab0782',
+    featuredOnAbout: true,
+    aboutLabel: { es: 'ASSI plataforma de venta', en: 'ASSI sales platform' },
+    aboutImage: '/assets/projects/assi.jpg',
+  },
+  {
+    id: 'appcres',
+    slug: 'project_2',
+    year: { es: '2019', en: '2019' },
+    title: { es: 'AppCres', en: 'AppCres' },
+    image: '/assets/original/home-appcres.png',
+    imageAlt: { es: 'AppCres', en: 'AppCres' },
+    href: '/project_2',
+    accent: '#0034ad',
+    borderAccent: '#0034ad',
+    aboutLabel: {
+      es: 'Plataforma de gestión de bonos',
+      en: 'Bond management platform',
+    },
+    aboutImage: '/assets/projects/appcres.jpg',
+  },
+  {
+    id: 'appcress',
+    slug: 'appcress',
+    year: { es: '2019', en: '2019' },
+    title: { es: 'AppCress', en: 'AppCress' },
+    image: '/assets/original/home-appcress.png',
+    imageAlt: { es: 'AppCress', en: 'AppCress' },
+    href: '#',
+    accent: 'var(--color-text)',
+    borderAccent: '#6e660a',
+    status: 'in-progress',
+  },
+];
+
+export const aboutFeaturedProjects = ['project_1', 'project_4', 'project_3']
+  .map((slug) => homeProjects.find((p) => p.slug === slug))
+  .filter((p): p is ProjectPreview => Boolean(p));
+
+export const caseStudies: Record<string, CaseStudy> = {
+  project_1: project1CaseStudy,
+  project_2: project2CaseStudy,
+  project_3: project3CaseStudy,
+  project_4: project4CaseStudy,
+};
+
+/** Related projects footer — matches Figma Site per case study page. */
+export const moreProjectsBySlug: Record<string, string[]> = {
+  project_1: ['project_4', 'project_3'],
+  project_2: ['project_4', 'project_1'],
+  project_3: ['project_4', 'project_1'],
+  project_4: ['project_1', 'project_3'],
+};
+
+export function getMoreProjects(currentSlug: string): string[] {
+  return moreProjectsBySlug[currentSlug] ?? [];
+}
+
+export function getCaseStudy(slug: string): CaseStudy | undefined {
+  return caseStudies[slug];
+}
+
+export function getProjectPreview(slug: string): ProjectPreview | undefined {
+  return homeProjects.find((p) => p.slug === slug);
+}

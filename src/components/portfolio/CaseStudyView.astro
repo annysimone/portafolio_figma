@@ -1,0 +1,137 @@
+---
+import type { Lang } from '../../i18n/config';
+import type { CaseStudy } from '../../data/types';
+import { getMoreProjects } from '../../data/site';
+import { pick } from '../../i18n/utils';
+import CaseStudyBlock from './CaseStudyBlock.astro';
+import CaseStudyHeader from './CaseStudyHeader.astro';
+import MoreProjects from './MoreProjects.astro';
+
+interface Props {
+  lang: Lang;
+  study: CaseStudy;
+}
+
+const { lang, study } = Astro.props;
+---
+
+<article class="w-full max-w-[1200px] mx-auto px-6 md:px-12 pb-20">
+  {
+    study.blocks ? (
+      <>
+        {study.header && <CaseStudyHeader lang={lang} header={study.header} />}
+        <div class={`cs-case-study-flow pb-12 ${study.header ? '' : 'pt-[160px]'}`}>
+          {study.blocks.map((block, i) => (
+            <CaseStudyBlock lang={lang} block={block} index={i} />
+          ))}
+        </div>
+      </>
+    ) : (
+      <>
+        <header class="pt-[160px] pb-12">
+          {study.overview && (
+            <div class="prose-portfolio font-manjari text-[clamp(20px,2.5vw,28px)] leading-[1.35] tracking-[-0.5px] text-[var(--color-text)]">
+              <p>{pick(study.overview, lang)}</p>
+            </div>
+          )}
+        </header>
+        {study.sections?.map((section) => (
+          <section class="py-10 border-t border-[var(--color-border)]" aria-labelledby={`section-${section.id}`}>
+            <h2 id={`section-${section.id}`} class="cs-section-heading font-source-code font-medium text-xl tracking-[-0.72px] mb-6">
+              {pick(section.title, lang)}
+            </h2>
+            <div class="cs-case-study-flow">
+              {section.blocks.map((block, i) => (
+                <CaseStudyBlock lang={lang} block={block} index={i} />
+              ))}
+            </div>
+          </section>
+        ))}
+        {study.learnings && (
+          <section class="py-10 border-t border-[var(--color-border)]">
+            <h2 class="cs-section-heading font-source-code font-medium text-xl tracking-[-0.72px] mb-6">Aprendizajes</h2>
+            <ol class="font-manjari text-lg leading-[1.5] w-full list-decimal pl-5 flex flex-col gap-3">
+              {pick(study.learnings, lang).map((item) => (
+                <li>{item}</li>
+              ))}
+            </ol>
+          </section>
+        )}
+      </>
+    )
+  }
+
+  <MoreProjects lang={lang} slugs={getMoreProjects(study.slug)} />
+</article>
+
+<script>
+  function initGalleryCarousels() {
+    document.querySelectorAll('[data-gallery-wrap]').forEach((wrap) => {
+      const track = wrap.querySelector('[data-gallery-track]');
+      if (!track || wrap.dataset.galleryReady === 'true') return;
+      wrap.dataset.galleryReady = 'true';
+
+      const slides = Array.from(track.querySelectorAll('[data-gallery-slide]'));
+      const prev = wrap.querySelector('[data-gallery-prev]');
+      const next = wrap.querySelector('[data-gallery-next]');
+      const counter = wrap.querySelector('[data-gallery-counter]');
+      const dots = Array.from(wrap.querySelectorAll('[data-gallery-dot]'));
+      const total = slides.length;
+
+      if (total <= 1) {
+        wrap.classList.add('cs-gallery-carousel-wrap--single');
+        return;
+      }
+
+      const getActiveIndex = () => {
+        const trackRect = track.getBoundingClientRect();
+        const trackCenter = trackRect.left + trackRect.width / 2;
+        let closest = 0;
+        let closestDistance = Infinity;
+
+        slides.forEach((slide, index) => {
+          const slideRect = slide.getBoundingClientRect();
+          const slideCenter = slideRect.left + slideRect.width / 2;
+          const distance = Math.abs(slideCenter - trackCenter);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closest = index;
+          }
+        });
+
+        return closest;
+      };
+
+      const goTo = (index) => {
+        const target = slides[Math.max(0, Math.min(total - 1, index))];
+        target?.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      };
+
+      const update = () => {
+        const active = getActiveIndex();
+        if (counter) counter.textContent = `${active + 1} / ${total}`;
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('is-active', index === active);
+          dot.setAttribute('aria-selected', index === active ? 'true' : 'false');
+        });
+        wrap.classList.toggle('is-at-start', active === 0);
+        wrap.classList.toggle('is-at-end', active === total - 1);
+      };
+
+      prev?.addEventListener('click', () => goTo(getActiveIndex() - 1));
+      next?.addEventListener('click', () => goTo(getActiveIndex() + 1));
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          const index = Number(dot.getAttribute('data-gallery-dot'));
+          if (!Number.isNaN(index)) goTo(index);
+        });
+      });
+      track.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    });
+  }
+
+  initGalleryCarousels();
+  document.addEventListener('astro:page-load', initGalleryCarousels);
+</script>
