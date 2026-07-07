@@ -33,7 +33,7 @@ export const homeProjects: ProjectPreview[] = [
   {
     id: 'gestion-horas',
     slug: 'project_4',
-    year: { es: 'Pacífico Seguros', en: 'Pacífico Seguros' },
+    year: { es: '2025', en: '2025' },
     title: { es: 'TOM 3.0 Pacífico', en: 'TOM 3.0 Pacífico' },
     image: '/assets/original/home-gestion-horas.png',
     imageAlt: {
@@ -70,13 +70,13 @@ export const homeProjects: ProjectPreview[] = [
     year: { es: '2019', en: '2019' },
     title: { es: 'AppCres', en: 'AppCres' },
     image: '/assets/original/home-appcres.png',
-    imageAlt: { es: 'AppCres', en: 'AppCres' },
+    imageAlt: { es: 'AppCres — plataforma de inversiones', en: 'AppCres — investment platform' },
     href: '/project_2',
     accent: '#0034ad',
     borderAccent: '#0034ad',
     aboutLabel: {
-      es: 'Plataforma de gestión de bonos',
-      en: 'Bond management platform',
+      es: 'Plataforma de gestión de inversiones',
+      en: 'Investment management platform',
     },
     aboutImage: '/assets/projects/appcres.jpg',
   },

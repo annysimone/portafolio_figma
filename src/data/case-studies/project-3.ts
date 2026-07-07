@@ -44,17 +44,17 @@ export const project3CaseStudy: CaseStudy = {
       extraSpacingTop: 24,
       items: [
         {
-          title: { es: 'E-commerce', en: 'E-commerce' },
+          title: { es: 'Canal digital sin conversión', en: 'Digital channel without conversion' },
           body: {
-            es: 'Solución end to end que permita cotizar, sin pasarela de pago.',
-            en: 'End-to-end quoting solution without a payment gateway.',
+            es: 'Telemarketing pausado y sin flujo activo de cotización en línea.',
+            en: 'Telemarketing paused with no active online quoting flow.',
           },
         },
         {
-          title: { es: 'Landing', en: 'Landing' },
+          title: { es: 'Landing sin captura de leads', en: 'Landing without lead capture' },
           body: {
-            es: 'Captura de leads, primer paso hacia el proceso de cotización.',
-            en: 'Lead capture as the first step toward the quoting process.',
+            es: 'Página informativa sin conversión ni inicio del proceso comercial.',
+            en: 'Informational page with no conversion or commercial process kickoff.',
           },
         },
       ],
@@ -75,8 +75,8 @@ export const project3CaseStudy: CaseStudy = {
       items: [
         {
           title: {
-            es: 'Disminuir data entrys',
-            en: 'Reduce data entry',
+            es: 'Reducir registros manuales',
+            en: 'Reduce manual data entry',
           },
           body: {
             es: 'Actual tiempo de llenado estimado es 15 min aprox.',
@@ -93,8 +93,8 @@ export const project3CaseStudy: CaseStudy = {
             en: 'Cognitive overload during form completion.',
           },
           postIt: {
-            es: 'Por hacer: Ajustes en diseño e interacciones por issues técnicos',
-            en: 'To do: Design and interaction adjustments for technical issues',
+            es: 'Ajusté diseño e interacciones para resolver fricciones técnicas del flujo.',
+            en: 'Adjusted design and interactions to resolve technical flow friction.',
           },
         },
         {
@@ -113,8 +113,8 @@ export const project3CaseStudy: CaseStudy = {
             ],
           },
           postIt: {
-            es: 'Por hacer: Integrar datos recopilados al formato de Salesforce',
-            en: 'To do: Integrate collected data into Salesforce format',
+            es: 'Integré el formato de datos al estándar de Salesforce.',
+            en: 'Integrated data format to Salesforce standards.',
           },
         },
       ],
@@ -148,8 +148,8 @@ export const project3CaseStudy: CaseStudy = {
             en: 'Covering benefits, coverage, and exclusions.',
           },
           postIt: {
-            es: 'Por hacer: Replantear arquitectura de información',
-            en: 'To do: Rethink information architecture',
+            es: 'Reorganicé la arquitectura de información para clarificar valor y coberturas.',
+            en: 'Reorganized information architecture to clarify value and coverage.',
           },
         },
         {
@@ -331,6 +331,28 @@ export const project3CaseStudy: CaseStudy = {
           wide: true,
         },
       ],
+    },
+    {
+      type: 'heading',
+      level: 2,
+      text: { es: 'Resultados', en: 'Outcomes' },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'E-commerce con formulario inteligente orientado a reducir el llenado de ~15 min hacia 5–8 min.',
+          'Landing con captura de leads, comparativa de planes y secciones de cobertura y FAQs.',
+          'Arquitectura de producto conectando cotización, beneficios y flujo e-commerce.',
+          'Benchmark competitivo aplicado a pricing, adquisición y propuesta de valor.',
+        ],
+        en: [
+          'E-commerce with smart form design targeting fill time reduction from ~15 min toward 5–8 min.',
+          'Landing with lead capture, plan comparison, and coverage and FAQ sections.',
+          'Product architecture connecting quoting, benefits, and e-commerce flow.',
+          'Competitive benchmark applied to pricing, acquisition, and value proposition.',
+        ],
+      },
     },
   ],
   relatedSlugs: ['project_4', 'project_1'],

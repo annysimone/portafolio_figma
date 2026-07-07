@@ -398,6 +398,28 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
+      text: { es: 'Resultados', en: 'Outcomes' },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Flujos de Préstamos, Compra Deuda y Consulta rediseñados hacia la meta ANS de 6–8 min.',
+          'Menos scroll y campos agrupados en tareas críticas de venta.',
+          'Bandejas de gestión con acceso más directo a tasas, comisiones y derivación.',
+          'Interacciones optimizadas para teclado, menos data entry y menos clics por transacción.',
+        ],
+        en: [
+          'Personal Loans, Debt Purchase, and Inquiry flows redesigned toward the 6–8 min ANS target.',
+          'Less scroll and grouped fields in critical sales tasks.',
+          'Management queues with more direct access to rates, fees, and case forwarding.',
+          'Interactions optimized for keyboard use, less data entry, and fewer clicks per transaction.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 2,
       text: { es: 'Aprendizajes', en: 'Learnings' },
     },
     {

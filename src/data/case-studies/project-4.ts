@@ -287,6 +287,28 @@ export const project4CaseStudy: CaseStudy = {
         en: 'Dynamic Assignments dashboard with drag & drop and workload distribution by squad',
       },
     },
+    {
+      type: 'heading',
+      level: 2,
+      text: { es: 'Resultados', en: 'Outcomes' },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Dashboard de Asignaciones con vista de carga por Squad, filtros avanzados y drag & drop.',
+          'Menú lateral y quick actions priorizados según tareas frecuentes de usuarios.',
+          'Arquitectura replanteada para escalar onboarding, licencias y skills.',
+          'Métricas TTC, TSR y Error Rate definidas como baseline para decisiones de diseño.',
+        ],
+        en: [
+          'Assignments dashboard with Squad workload view, advanced filters, and drag & drop.',
+          'Sidebar and quick actions prioritized based on users\' frequent tasks.',
+          'Information architecture reworked to scale onboarding, licenses, and skills.',
+          'TTC, TSR, and Error Rate metrics defined as a baseline for design decisions.',
+        ],
+      },
+    },
   ],
   relatedSlugs: ['project_1', 'project_3'],
 };

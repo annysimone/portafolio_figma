@@ -12,9 +12,9 @@ export const ui = {
     home: {
       title: 'Anny Mamani — Product Designer',
       description:
-        'Soy Anny Mamani, Product Designer con mucho enfoque en procesos.',
+        'Product Designer en fintech, seguros y plataformas internas. Casos de estudio en Interbank, Pacífico Seguros y ACRES.',
       intro:
-        'Soy Anny Mamani, Product Designer con mucho enfoque en procesos. Me encanta transformar ideas y procesos complejos en productos digitales intuitivos y centrados en el usuario.',
+        'Diseño productos digitales en industrias reguladas: transformo procesos complejos en experiencias claras, medibles y centradas en el usuario.',
       view: 'Ver',
       inProgress: 'En proceso',
     },
@@ -56,9 +56,9 @@ export const ui = {
     home: {
       title: 'Anny Mamani — Product Designer',
       description:
-        'I am Anny Mamani, a Product Designer with a strong focus on process.',
+        'Product Designer in fintech, insurance, and internal platforms. Case studies at Interbank, Pacífico Seguros, and ACRES.',
       intro:
-        'I am Anny Mamani, a Product Designer with a strong focus on process. I love turning complex ideas and workflows into intuitive, user-centered digital products.',
+        'I design digital products in regulated industries—turning complex processes into clear, measurable, user-centered experiences.',
       view: 'View',
       inProgress: 'In progress',
     },

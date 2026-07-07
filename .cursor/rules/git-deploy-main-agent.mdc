@@ -1,0 +1,42 @@
+---
+description: Git, push y deploy centralizados en el agente principal del portafolio
+alwaysApply: true
+---
+
+# Git y deploy — agente principal
+
+## Roles
+
+**Agente principal** (chat "Figma portafolio import steps"):
+- Commit, push a GitHub y deploy en Vercel
+- Branches / PRs cuando aplique
+- Sincronización Figma → código e import de assets
+
+**Otros agentes / chats de tarea** (contenido, UI, case studies):
+- Editar copy, estilos, componentes y datos en `src/`
+- Verificar con `npm run build` y preview en localhost
+- **No** hacer commit, push ni deploy salvo que el usuario lo pida explícitamente en ese chat
+- Al terminar, indicar "listo para commit" y resumir qué cambió
+
+## Repo y producción
+
+- Repo: `https://github.com/annysimone/portafolio_figma.git`
+- Rama por defecto: `main`
+- Producción: `https://portafolio-figma-nu.vercel.app`
+- Deploy manual: `npx vercel deploy --prod --yes`
+
+## Flujo de publicación
+
+1. Usuario verifica cambios en localhost
+2. Agente principal ejecuta: `git status` → `git add` → `git commit` → `git push origin main`
+3. Vercel despliega (automático si está conectado a GitHub, o deploy manual)
+4. Confirmar en la URL de producción con hard refresh
+
+## Branches
+
+- Cambios pequeños y verificados en solitario: commit directo en `main` está bien
+- Cambios grandes o experimentales: branch + PR antes de merge a `main`
+
+## Dev server
+
+Usar `astro dev --background` (no bloquear terminal). Gestionar con `astro dev stop`, `astro dev status`, `astro dev logs`.
