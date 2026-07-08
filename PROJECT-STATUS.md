@@ -11,6 +11,7 @@
 |-------|--------|
 | **Rama publicada** | `main` |
 | **Commit en producción** | `8dd870a` |
+| **Local `main` (sin desplegar)** | `5c97ff9` — refinamiento copy/KPIs P1–P4 (pendiente push + deploy por Principal) |
 | **URL principal** | https://annymamaniportafolioux.vercel.app |
 | **URL secundaria** | https://portafolio-figma-nu.vercel.app |
 | **Repo** | https://github.com/annysimone/portafolio_figma.git |
@@ -89,15 +90,24 @@ Detalle completo en **`BACKLOG.md`**. Resumen:
 - [x] **P1 parcial** (Sprint 2 — `863fecb`): mejoras copy en `project-1`, `project-3`, `project-4` (Aprendizajes P3/P4, puente narrativo, etc.)
 - [x] Sync URLs Vercel (`8dd870a`)
 
+### ✅ Hecho — sesión Soluciones/refinamiento (local `main`, sin desplegar)
+
+- [x] **Soluciones** potenciadas en los 4 proyectos (sesiones previas).
+- [x] **Refinamiento copy + coherencia de KPIs** completo en P1, P2, P3, P4:
+  - P2 AppCres + spacing post-its (`4cc9b52`)
+  - P1 ASSI — copy y relato del ANS (`9c1a87d`)
+  - P4 TOM 3.0 — flecha KPI unificada + reorden Asignaciones (`2dd7d9a`, `5c97ff9`)
+  - P3 Sepelio — pulido copy, KPIs verificados (`242897e`)
+- [x] **P1-2** Recorte copy AppCres — cubierto dentro del refinamiento de P2.
+
 ### ⏳ Pendiente — orden recomendado
 
 | Orden | ID | Tarea | Agente | Archivos |
 |-------|-----|-------|--------|----------|
-| 1 | **P1-2** | Recorte copy AppCres (project_2) | Backlog o Soluciones | `project-2.ts` |
+| 1 | **Deploy** | Push + deploy de `5c97ff9` (refinamiento P1–P4) + `sync:vercel-urls` | Principal | — |
 | 2 | **P1-5** | About multi-cliente (no solo ASSI) | Backlog | `ui.ts` |
-| 3 | **Soluciones** | Potenciar Solución por proyecto (1 sesión/proyecto) | Agente Soluciones | `project-{1..4}.ts` |
-| 4 | **P2-1…P2-4** | Metadata header, secciones unificadas, glosario, meta SEO | Backlog | types + case studies |
-| 5 | **P3** | Features producto (CV, sitemap, etc.) | Principal + backlog | — |
+| 3 | **P2-1…P2-4** | Metadata header, secciones unificadas, glosario, meta SEO | Backlog | types + case studies |
+| 4 | **P3** | Features producto (CV, sitemap, etc.) | Principal + backlog | — |
 
 ### 🔮 Agente Soluciones (plan paralelo al backlog)
 
@@ -125,6 +135,7 @@ Reglas: solo texto, Product Designer visible, ES+EN, no inventar métricas.
 | 2026-07-06 | Backlog | `03fc5ce` | Sprint 1 P0 en branch |
 | 2026-07-07 | Backlog/Principal | `863fecb` | Sprint 2 P1 parcial → merge main |
 | 2026-07-08 | Principal | `8dd870a` | Deploy + Vercel URL sync |
+| 2026-07-08 | Soluciones | `5c97ff9` | Refinamiento copy + KPIs P1–P4 (local, sin desplegar) |
 | | | | *(añadir fila al cerrar cada sesión)* |
 
 ---
