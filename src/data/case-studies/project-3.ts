@@ -29,8 +29,8 @@ export const project3CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'La venta de Seguro de Sepelio por el canal de Telemarketing fue pausada temporalmente. Solo se mantuvo una landing page informativa en la web principal de Pacífico Seguros que no generaba leads ni conversión, lo que representaba oportunidades perdidas de cotización de dicho producto.',
-        en: 'Funeral insurance sales via the telemarketing channel were temporarily paused. Only an informational landing page remained on Pacífico Seguros\' main website—it generated no leads or conversion, representing lost quoting opportunities for the product.',
+        es: 'La venta de Seguro de Sepelio por el canal de Telemarketing fue pausada temporalmente. Solo se mantuvo una landing page informativa en la web principal de Pacífico Seguros que no generaba leads ni conversión, lo que representaba oportunidades perdidas de cotización de dicho producto. Como Product Designer, diseñé el e-commerce de cotización y la landing de producto para reactivar el canal digital.',
+        en: 'Funeral insurance sales via the telemarketing channel were temporarily paused. Only an informational landing page remained on Pacífico Seguros\' main website—it generated no leads or conversion, representing lost quoting opportunities for the product. As Product Designer, I designed the quoting e-commerce and product landing to reactivate the digital channel.',
       },
     },
     {
@@ -79,8 +79,8 @@ export const project3CaseStudy: CaseStudy = {
             en: 'Reduce manual data entry',
           },
           body: {
-            es: 'Actual tiempo de llenado estimado es 15 min aprox.',
-            en: 'Current estimated fill time is approximately 15 minutes.',
+            es: 'Tiempo de llenado estimado en mapeo: ~12–15 min.',
+            en: 'Estimated fill time in process mapping: ~12–15 min.',
           },
         },
         {
@@ -105,16 +105,16 @@ export const project3CaseStudy: CaseStudy = {
           bodyLines: {
             es: [
               '↑ Form Completion Rate (por pasos)',
-              '↓ Time to Complete a 5-8 min.',
+              '↓ Time to Complete — proyección ~8–10 min (research + benchmark)',
             ],
             en: [
               '↑ Form completion rate (by step)',
-              '↓ Time to complete to 5-8 min.',
+              '↓ Time to complete — ~8–10 min projection (research + benchmark)',
             ],
           },
           postIt: {
-            es: 'Integré el formato de datos al estándar de Salesforce.',
-            en: 'Integrated data format to Salesforce standards.',
+            es: 'Especifiqué formato de datos alineado a estándar Salesforce para handoff a desarrollo.',
+            en: 'Specified data format aligned to Salesforce standards for development handoff.',
           },
         },
       ],
@@ -257,6 +257,13 @@ export const project3CaseStudy: CaseStudy = {
       text: { es: 'Soluciones', en: 'Solutions' },
     },
     {
+      type: 'paragraph',
+      text: {
+        es: 'Diseñé dos superficies complementarias para recuperar la cotización digital: una landing de producto que captura leads calificados y un e-commerce end-to-end — sin pasarela de pago — que reduce fricción desde el formulario hasta la confirmación. Las decisiones partieron del mapeo de proceso, el benchmark competitivo y la coordinación con el equipo técnico para viabilizar integraciones en desarrollo.',
+        en: 'I designed two complementary surfaces to restore digital quoting: a product landing that captures qualified leads and an end-to-end e-commerce flow — without a payment gateway — that reduces friction from form entry through confirmation. Decisions were grounded in process mapping, competitive benchmarking, and coordination with the technical team to enable integrations at development time.',
+      },
+    },
+    {
       type: 'heading',
       level: 3,
       text: {
@@ -267,8 +274,27 @@ export const project3CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Formulario inteligente con data por default según identificación del sistema, indicador de progreso, botón fijo en footer con guardado automático, e input search intuitivo para datos domiciliarios.',
-        en: 'Smart form with default data from system identification, progress indicator, fixed footer button with auto-save, and intuitive search input for address data.',
+        es: 'El e-commerce concentró la reducción de fricción: el mapeo estimó ~12–15 min en el flujo previo. Con prefill, progreso por pasos y menos campos manuales, la proyección del research apunta a ~8–10 min — coherente con cotizaciones digitales en seguros (intake progresivo, no meta de negocio acordada).',
+        en: 'The e-commerce flow focused friction reduction: process mapping estimated ~12–15 min in the prior flow. With prefill, step-by-step progress, and fewer manual fields, research projected ~8–10 min — aligned with digital insurance quoting patterns (progressive intake, not an agreed business target).',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Formulario inteligente con prefill según identificación del sistema — campos de solo lectura donde el dato ya existe.',
+          'Indicador de progreso y botón fijo en footer con guardado automático para retomar sin perder avance.',
+          'Input search para datos domiciliarios — menos tipeo manual en campos de alta fricción.',
+          'Reagrupación lógica de campos según findings del process mapping (individual vs. familiar, ramificaciones por detección).',
+          'Formato de datos especificado alineado a Salesforce — listo para implementación en desarrollo.',
+        ],
+        en: [
+          'Smart form with prefill from system identification — read-only fields where data already exists.',
+          'Progress indicator and fixed footer button with auto-save to resume without losing progress.',
+          'Search input for address data — less manual typing in high-friction fields.',
+          'Logical field regrouping based on process mapping findings (individual vs. family, system-detection branches).',
+          'Data format specified aligned to Salesforce — ready for implementation in development.',
+        ],
       },
     },
     {
@@ -305,8 +331,27 @@ export const project3CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Landing con cotización por DNI, comparativa de planes Individual y Familiar, y secciones de coberturas, exclusiones y FAQs.',
-        en: 'Landing with ID-based quoting, Individual and Family plan comparison, and coverage, exclusions, and FAQ sections.',
+        es: 'La landing reemplaza la página informativa sin conversión por un punto de entrada comercial: cotización por DNI, comparativa clara de planes y contenido de confianza antes de entrar al e-commerce.',
+        en: 'The landing replaces the non-converting informational page with a commercial entry point: ID-based quoting, clear plan comparison, and trust-building content before entering e-commerce.',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Form lead visible en hero — captura de leads calificados como primer paso hacia la cotización.',
+          'Comparativa de planes Individual y Familiar — decisión informada antes del flujo transaccional.',
+          'Secciones de coberturas, exclusiones y FAQs — propuesta de valor transparente en un producto sensible.',
+          'Arquitectura de información replanteada para conectar beneficios, planes y flujo e-commerce.',
+          'Escenarios de uso y soporte post venta como diferencial frente al benchmark competitivo.',
+        ],
+        en: [
+          'Visible lead form in hero — qualified lead capture as the first step toward quoting.',
+          'Individual and Family plan comparison — informed decision before the transactional flow.',
+          'Coverage, exclusions, and FAQ sections — transparent value proposition for a sensitive product.',
+          'Information architecture reworked to connect benefits, plans, and the e-commerce flow.',
+          'Use cases and post-sale support as a differentiator against the competitive benchmark.',
+        ],
       },
     },
     {
@@ -341,16 +386,45 @@ export const project3CaseStudy: CaseStudy = {
       type: 'list',
       items: {
         es: [
-          'E-commerce con formulario inteligente orientado a reducir el llenado de ~15 min hacia 5–8 min.',
-          'Landing con captura de leads, comparativa de planes y secciones de cobertura y FAQs.',
-          'Arquitectura de producto conectando cotización, beneficios y flujo e-commerce.',
+          'E-commerce y landing entregados como diseño listo para desarrollo — cotización digital sin pasarela de pago.',
+          'Formulario inteligente diseñado para reducir data entry y abandono; proyección de research ~12–15 min → ~8–10 min (benchmark seguros digitales, no meta de negocio).',
+          'Landing con captura de leads, comparativa de planes y secciones de cobertura, exclusiones y FAQs.',
+          'Arquitectura de producto conectando cotización, beneficios y flujo e-commerce end-to-end.',
+          'Formato de datos Salesforce especificado en diseño para handoff técnico.',
           'Benchmark competitivo aplicado a pricing, adquisición y propuesta de valor.',
         ],
         en: [
-          'E-commerce with smart form design targeting fill time reduction from ~15 min toward 5–8 min.',
-          'Landing with lead capture, plan comparison, and coverage and FAQ sections.',
-          'Product architecture connecting quoting, benefits, and e-commerce flow.',
+          'E-commerce and landing delivered as design ready for development — digital quoting without a payment gateway.',
+          'Smart form designed to reduce data entry and drop-off; research projection ~12–15 min → ~8–10 min (digital insurance benchmark, not a business target).',
+          'Landing with lead capture, plan comparison, and coverage, exclusions, and FAQ sections.',
+          'Product architecture connecting quoting, benefits, and end-to-end e-commerce flow.',
+          'Salesforce data format specified in design for technical handoff.',
           'Competitive benchmark applied to pricing, acquisition, and value proposition.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 2,
+      text: { es: 'Aprendizajes', en: 'Learnings' },
+    },
+    {
+      type: 'list',
+      ordered: true,
+      items: {
+        es: [
+          'En productos sensibles como seguros de sepelio, la transparencia en coberturas y exclusiones es tan crítica como simplificar el formulario.',
+          'Mapear el flujo end-to-end antes de diseñar pantallas evita retrabajo en ramificaciones (plan individual vs. familiar, detección por sistema).',
+          'Las estimaciones de tiempo del research orientan priorización — no sustituyen validación post-launch.',
+          'Coordinación temprana con desarrollo fue clave para especificar integraciones (Salesforce) sin bloquear el diseño.',
+          'El benchmark competitivo ayudó a posicionar soporte post venta y claridad de valor como diferenciadores reales.',
+        ],
+        en: [
+          'In sensitive products like funeral insurance, transparency on coverage and exclusions is as critical as simplifying the form.',
+          'Mapping the end-to-end flow before designing screens prevents rework on branches (individual vs. family plan, system detection).',
+          'Research time estimates guide prioritization — they do not replace post-launch validation.',
+          'Early coordination with development was key to specify integrations (Salesforce) without blocking design.',
+          'Competitive benchmarking helped position post-sale support and value clarity as real differentiators.',
         ],
       },
     },

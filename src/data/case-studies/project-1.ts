@@ -52,10 +52,10 @@ export const project1CaseStudy: CaseStudy = {
       type: 'cards',
       items: [
         {
-          title: { es: '% ANS elevado (12-15 min)', en: 'High ANS (12-15 min)' },
+          title: { es: 'ANS elevado (12-15 min)', en: 'High ANS (12-15 min)' },
           body: {
-            es: '(Acuerdo de Nivel de Servicio) influyendo en el costo operativo por ejecutivo de venta.',
-            en: '(Service Level Agreement) affecting operational cost per sales executive.',
+            es: 'Tiempo promedio por transacción en flujos complejos (Préstamos, TC, Compra Deuda) — coherente con venta asistida de productos con validación de Riesgos; por encima de la meta corporativa.',
+            en: 'Average time per transaction in complex flows (Loans, CC, Debt Purchase) — consistent with assisted sales of products requiring Risk validation; above the corporate target.',
           },
         },
         {
@@ -116,8 +116,8 @@ export const project1CaseStudy: CaseStudy = {
             en: 'ANS below corporate target',
           },
           body: {
-            es: '(meta: 6-8 min) lo que se traducía en ineficiencia operacional.',
-            en: '(target: 6-8 min) translating into operational inefficiency.',
+            es: '(meta corporativa: 6–8 min) — referencia interna Interbank para venta digital asistida optimizada.',
+            en: '(corporate target: 6–8 min) — Interbank internal reference for optimized assisted digital sales.',
           },
         },
       ],
@@ -163,7 +163,7 @@ export const project1CaseStudy: CaseStudy = {
           accent: '#6e660a',
           items: {
             es: [
-              '¿How might we?',
+              'How might we?',
               'Features de diseño',
               'Validación técnica',
               'Wireframing y prototipado',
@@ -305,7 +305,26 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
+      text: { es: 'CHECK', en: 'CHECK' },
+    },
+    {
+      type: 'paragraph',
+      text: {
+        es: 'En Check cerré el ciclo con handoff estructurado a desarrollo, iteración sobre feedback de QA visual y validación de criterios de aceptación con BAs — asegurando que cada solución fuera implementable dentro de las reglas de negocio e integraciones de ASSI.',
+        en: 'In Check I closed the loop with a structured handoff to development, iteration on visual QA feedback, and validation of acceptance criteria with BAs — ensuring each solution was implementable within ASSI\'s business rules and integrations.',
+      },
+    },
+    {
+      type: 'heading',
+      level: 2,
       text: { es: 'Soluciones', en: 'Solutions' },
+    },
+    {
+      type: 'paragraph',
+      text: {
+        es: 'Prioricé tres frentes alineados a la meta ANS corporativa (6–8 min), con proyección de diseño hacia ~9–10 min en flujos optimizados: reducir fricción en ventas complejas, habilitar productos sin regresar a ADQ y unificar usabilidad, contenido y look & feel. Cada solución conecta un pain cross con una decisión de diseño concreta.',
+        en: 'I prioritized three fronts aligned to the corporate ANS target (6–8 min), with a design projection toward ~9–10 min in optimized flows: reduce friction in complex sales, enable products without falling back to ADQ, and unify usability, content, and look & feel. Each solution connects a cross pain to a concrete design decision.',
+      },
     },
     {
       type: 'heading',
@@ -319,16 +338,16 @@ export const project1CaseStudy: CaseStudy = {
       type: 'list',
       items: {
         es: [
-          'Rediseño del card de producto para clarificar el estado post-calificación',
-          'Mejorar la jerarquía visual entre productos',
-          'Optimizar los CTA para agilizar el ANS',
-          'Aumentar desembolsos por canal Tiendas y Televentas',
+          'Card post-calificación con estado claro — el ejecutivo sabe qué sigue sin re-trabajar la pantalla.',
+          'Jerarquía visual entre productos — selección más rápida en el flujo de venta.',
+          'CTAs optimizados para acortar pasos hacia el cierre — impacto directo en ANS.',
+          'Diseño orientado a incrementar operaciones comerciales exitosas en Tiendas y Televentas.',
         ],
         en: [
-          'Redesign the product card to clarify post-qualification status',
-          'Improve visual hierarchy between products',
-          'Optimize CTAs to speed up ANS',
-          'Increase disbursements through Stores and Telesales channels',
+          'Post-qualification card with clear status — the executive knows what comes next without reworking the screen.',
+          'Visual hierarchy between products — faster selection in the sales flow.',
+          'CTAs optimized to shorten steps toward close — direct impact on ANS.',
+          'Design oriented toward increasing successful commercial operations in Stores and Telesales.',
         ],
       },
     },
@@ -347,20 +366,43 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 3,
+      text: {
+        es: 'Tarjetas de Crédito — flujos con Riesgos',
+        en: 'Credit cards — flows with Risk involvement',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'UI para escenarios de calificación y error con participación del perfil de Riesgos — mayor casuística que Cuentas o Préstamos.',
+          'Estados y mensajes claros en puntos de decisión — menos retrabajo del ejecutivo ante respuestas del sistema.',
+          'Consistencia visual y de contenido alineada a los tres pilares (usabilidad, contenido, look & feel).',
+        ],
+        en: [
+          'UI for qualification and error scenarios with Risk team involvement — more edge cases than Accounts or Personal Loans.',
+          'Clear states and messages at decision points — less executive rework when the system responds.',
+          'Visual and content consistency aligned to the three pillars (usability, content, look & feel).',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 3,
       text: { es: 'Compra Deuda Ataque', en: 'Debt purchase flow' },
     },
     {
       type: 'list',
       items: {
         es: [
-          'Flujo de venta con configuración de producto',
-          'Servicios asociados, emboce y entrega de tarjeta',
-          'Reducir scroll y agrupar campos relacionados',
+          'Flujo de venta con configuración de producto en menos pantallas — servicios asociados, emboce y entrega integrados.',
+          'Campos relacionados agrupados y menos scroll — proyección ~9–10 min por transacción (meta ANS: 6–8 min).',
+          'Configuración de producto más legible para ejecutivos con alta rotación de casos.',
         ],
         en: [
-          'Sales flow with product configuration',
-          'Associated services, card embossing and delivery',
-          'Reduce scroll and group related fields',
+          'Sales flow with product configuration in fewer screens — associated services, embossing, and delivery integrated.',
+          'Related fields grouped with less scroll — ~9–10 min per transaction projection (ANS target: 6–8 min).',
+          'More readable product configuration for executives handling high case volume.',
         ],
       },
     },
@@ -373,12 +415,14 @@ export const project1CaseStudy: CaseStudy = {
       type: 'list',
       items: {
         es: [
-          'Bandeja de gestión con acceso rápido a tasas y comisiones',
-          'Derivación de expedientes mediante modales informativos',
+          'Bandeja de gestión con acceso directo a tasas y comisiones — sin salir del flujo de consulta.',
+          'Derivación de expedientes con modales informativos — contexto claro antes de escalar a otro perfil.',
+          'Menos bandejas cruzadas — el ejecutivo resuelve más en un solo punto de gestión.',
         ],
         en: [
-          'Management queue with quick access to rates and fees',
-          'Case forwarding through informative modals',
+          'Management queue with direct access to rates and fees — without leaving the inquiry flow.',
+          'Case forwarding through informative modals — clear context before escalating to another profile.',
+          'Fewer cross-queue hops — the executive resolves more from a single management point.',
         ],
       },
     },
@@ -404,13 +448,15 @@ export const project1CaseStudy: CaseStudy = {
       type: 'list',
       items: {
         es: [
-          'Flujos de Préstamos, Compra Deuda y Consulta rediseñados hacia la meta ANS de 6–8 min.',
+          'Flujos de Préstamos, Tarjetas de Crédito, Compra Deuda y Consulta rediseñados — proyección ~9–10 min por transacción (meta corporativa ANS: 6–8 min).',
+          'Mayor volumen de operaciones comerciales exitosas — desembolsos, compra de deuda ejecutada y ventas con ingreso al banco — en Tiendas y Televentas, con tendencia proyectada a sostener el ascenso.',
           'Menos scroll y campos agrupados en tareas críticas de venta.',
           'Bandejas de gestión con acceso más directo a tasas, comisiones y derivación.',
           'Interacciones optimizadas para teclado, menos data entry y menos clics por transacción.',
         ],
         en: [
-          'Personal Loans, Debt Purchase, and Inquiry flows redesigned toward the 6–8 min ANS target.',
+          'Personal Loans, Credit Cards, Debt Purchase, and Inquiry flows redesigned — ~9–10 min per transaction projection (corporate ANS target: 6–8 min).',
+          'Higher volume of successful commercial operations — disbursements, executed debt purchases, and revenue-generating sales — in Stores and Telesales, with a projected trend to keep rising.',
           'Less scroll and grouped fields in critical sales tasks.',
           'Management queues with more direct access to rates, fees, and case forwarding.',
           'Interactions optimized for keyboard use, less data entry, and fewer clicks per transaction.',

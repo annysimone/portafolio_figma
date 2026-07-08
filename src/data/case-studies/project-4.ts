@@ -152,8 +152,8 @@ export const project4CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Por ser una plataforma ya en producción era necesario auditarla para mapear los features existentes; en paralelo investigué métricas que pudieran guiar mis decisiones de diseño aplicadas al dashboard de gestión (aún no teníamos números oficiales con los cuales contrastar, pero sí se tenía proyectado desarrollar un dashboard de reportes).',
-        en: 'As a platform already in production, it needed to be audited to map existing features; in parallel I researched metrics to guide design decisions for the management dashboard (we did not yet have official numbers to benchmark against, but a reporting dashboard was planned).',
+        es: 'Por ser una plataforma ya en producción, la audité para mapear features y flujos reales; en paralelo definí métricas de diseño como baseline para guiar priorización — sin números históricos con los que contrastar.',
+        en: 'As a platform already in production, I audited it to map real features and flows; in parallel I defined design metrics as a baseline to guide prioritization — with no historical numbers to benchmark against.',
       },
     },
     {
@@ -163,22 +163,22 @@ export const project4CaseStudy: CaseStudy = {
         {
           title: { es: 'Auditoría de interfaz actual', en: 'Current interface audit' },
           body: {
-            es: 'La plataforma tenía módulos en ambientes de certificación y producción',
-            en: 'The platform had modules in certification and production environments',
+            es: 'Recorrí módulos en certificación y producción para mapear flujos, patrones visuales y fricción antes de proponer cambios.',
+            en: 'I walked through modules in certification and production to map flows, visual patterns, and friction before proposing changes.',
           },
           findingsLabel: { es: 'FINDINGS', en: 'FINDINGS' },
           findings: {
             es: [
-              'Navegación compleja con jerarquías poco claras',
-              'Elementos visuales inconsistentes (tipografía, colores, espaciados)',
+              'Navegación profunda con jerarquías poco claras — pérdida de contexto entre módulos',
+              'Inconsistencia visual (tipografía, color, espaciado)',
               'Falta de feedback visual en acciones críticas',
-              'Procesos fragmentados',
+              'Procesos fragmentados para tareas recurrentes',
             ],
             en: [
-              'Complex navigation with unclear hierarchies',
-              'Inconsistent visual elements (typography, colors, spacing)',
+              'Deep navigation with unclear hierarchies — loss of context between modules',
+              'Visual inconsistency (typography, color, spacing)',
               'Lack of visual feedback on critical actions',
-              'Fragmented processes',
+              'Fragmented processes for recurring tasks',
             ],
           },
         },
@@ -188,44 +188,44 @@ export const project4CaseStudy: CaseStudy = {
             en: 'User and stakeholder interviews',
           },
           body: {
-            es: 'Varios perfiles gestionan esta herramienta con diferentes permisos de visualización',
-            en: 'Various profiles manage this tool with different viewing permissions',
+            es: 'Entrevisté admins, líderes y usuarios operativos con distintos permisos para entender cómo gestionan carga y registro diario.',
+            en: 'I interviewed admins, leads, and operational users with different permissions to understand how they manage workload and daily registration.',
           },
           findingsLabel: { es: 'FINDINGS', en: 'FINDINGS' },
           findings: {
             es: [
-              'Dificultad para obtener visión general de los equipos',
-              'Registro de horas y tareas tedioso y poco intuitivo',
-              'Admins necesitaban mayor claridad en la visualización de cargas masivas',
+              'Sin vista consolidada de equipos — difícil evaluar distribución de carga por Squad',
+              'Registro de horas percibido como tedioso y poco intuitivo',
+              'Admins requerían mayor claridad al revisar cargas masivas y reasignaciones',
             ],
             en: [
-              'Difficulty getting an overview of teams',
-              'Tedious and unintuitive hours and task registration',
-              'Admins needed greater clarity in bulk load visualization',
+              'No consolidated team view — hard to assess workload distribution by Squad',
+              'Hours registration perceived as tedious and unintuitive',
+              'Admins needed greater clarity when reviewing bulk loads and reassignments',
             ],
           },
         },
         {
-          title: { es: 'Establecer métricas*', en: 'Establish metrics*' },
+          title: { es: 'Métricas de diseño*', en: 'Design metrics*' },
           body: {
-            es: 'como baseline para identificar puntos de fricción y establecer objetivos medibles',
-            en: 'as a baseline to identify friction points and set measurable goals',
+            es: 'Indicadores como baseline para priorizar fricción y evaluar propuestas — sin datos históricos en la plataforma.',
+            en: 'Indicators as a baseline to prioritize friction and evaluate proposals — with no historical data on the platform.',
           },
           findings: {
             es: [
-              'Time to Complete (TTC) (⬇️ tiempo de llenado)',
-              'Task Success Rate (TSR) (⬆️ % gestión en módulo de Asignaciones)',
-              'Error Rate (⬇️ % de error al evitar data incorrecta o duplicada)',
+              'Time to Complete (TTC) — reducir tiempo de llenado en Registro y Tarifas',
+              'Task Success Rate (TSR) — completar gestión en Asignaciones sin salir del módulo',
+              'Error Rate — prevenir data duplicada o incorrecta en registros masivos',
             ],
             en: [
-              'Time to Complete (TTC) (⬇️ fill time)',
-              'Task Success Rate (TSR) (⬆️ % management in Assignments module)',
-              'Error Rate (⬇️ % error by avoiding incorrect or duplicate data)',
+              'Time to Complete (TTC) — reduce fill time in Registration and Rates',
+              'Task Success Rate (TSR) — complete management in Assignments without leaving the module',
+              'Error Rate — prevent duplicate or incorrect data in bulk registrations',
             ],
           },
           footnote: {
-            es: '*aún no manejaban métricas reales, pero éstas me sirvieron para justificar las decisiones de diseño y alimentar el módulo de Reportería posterior',
-            en: '*they did not yet manage real metrics, but these helped me justify design decisions and feed the subsequent Reporting module',
+            es: '*No existían métricas oficiales; estos indicadores guiaron la priorización y validación de decisiones de diseño.',
+            en: '*No official metrics existed; these indicators guided prioritization and validation of design decisions.',
           },
         },
       ],
@@ -238,8 +238,69 @@ export const project4CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Luego del research y las reuniones con los usuarios de la plataforma pude reconocer que valoraban más dashboards informativos sobre menús rebuscados y profundos, y que necesitaban acceder rápidamente a tareas frecuentes. Bajo estas necesidades basé los features en el menú lateral, los filtros de búsqueda y la posterior experimentación usando Figma Make para el Módulo de Asignaciones.',
-        en: 'After research and meetings with platform users, I found they valued informative dashboards over convoluted, deep menus and needed quick access to frequent tasks. Based on these needs, I focused on the sidebar menu, search filters, and Figma Make experimentation for the Assignments module.',
+        es: 'La respuesta de diseño apuntó a convertir TOM 3.0 en una plataforma de gestión visible: dashboards accionables en lugar de menús profundos, tareas frecuentes al alcance inmediato y una arquitectura preparada para escalar. Replanteé la navegación lateral y la IA con card sorting; sobre esa base, rediseñé Registro de horas y Tarifas para reducir fricción en captura y consulta, y concentré la innovación de interacción en Asignaciones — el módulo donde la visión de carga por Squad requería un salto cualitativo.',
+        en: 'The design response aimed to turn TOM 3.0 into a visible management platform: actionable dashboards instead of deep menus, frequent tasks within immediate reach, and architecture ready to scale. I reworked the sidebar and information architecture through card sorting; on that foundation, I redesigned Hours registration and Rates to reduce friction in data entry and lookup, and focused interaction innovation on Assignments — the module where Squad workload visibility required a qualitative leap.',
+      },
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: {
+        es: 'Registro de horas — menos pasos, más claridad',
+        en: 'Hours registration — fewer steps, clearer flow',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Bandeja de registro con jerarquía visual más clara y feedback en acciones críticas.',
+          'Formulario de colaborador con campos agrupados por contexto, orientado a reducir tiempo de llenado.',
+          'Consistencia tipográfica y de espaciado alineada al nuevo sistema de diseño.',
+        ],
+        en: [
+          'Registration queue with clearer visual hierarchy and feedback on critical actions.',
+          'Collaborator form with fields grouped by context, oriented toward reduced fill time.',
+          'Typographic and spacing consistency aligned to the new design system.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: {
+        es: 'Tarifas — consulta y gestión simplificada',
+        en: 'Rates — simplified lookup and management',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Acceso más directo a tarifas desde la navegación replanteada, sin recorridos innecesarios.',
+          'Estructura de contenido consistente con el resto de módulos para bajar la curva de aprendizaje.',
+          'Formularios orientados a minimizar data entry en tareas repetitivas de administración.',
+        ],
+        en: [
+          'More direct rate access from the reworked navigation, without unnecessary paths.',
+          'Content structure consistent with other modules to lower the learning curve.',
+          'Forms oriented toward minimizing data entry in repetitive admin tasks.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: {
+        es: 'Asignaciones — Dashboard dinámico',
+        en: 'Assignments — Dynamic dashboard',
+      },
+    },
+    {
+      type: 'paragraph',
+      text: {
+        es: 'Aquí apliqué la mayor innovación: un dashboard de alto nivel inspirado en patrones de gestión ágil (referencia Jira), prototipado e iterado con Figma Make para validar drag & drop, filtros y distribución de carga antes del handoff.',
+        en: 'This is where I applied the greatest innovation: a high-level dashboard inspired by agile management patterns (Jira reference), prototyped and iterated with Figma Make to validate drag & drop, filters, and workload distribution before handoff.',
       },
     },
     {
@@ -252,29 +313,21 @@ export const project4CaseStudy: CaseStudy = {
       },
     },
     {
-      type: 'heading',
-      level: 3,
-      text: {
-        es: 'Módulo de Asignaciones — Dashboard dinámico',
-        en: 'Assignments module — Dynamic dashboard',
-      },
-    },
-    {
       type: 'list',
       items: {
         es: [
-          'Vista de alto nivel con distribución de carga de trabajo por Squads según el trimestre.',
-          'Cards con iniciativas actualizadas (nombre, estado, porcentaje).',
-          'Filtros avanzados y quick actions para tareas frecuentes.',
-          'Drag & drop para reasignación rápida.',
-          'Indicadores visuales de estado y capacidad requerida.',
+          'Vista de carga de trabajo por Squads según trimestre — visibilidad operativa sin salir del módulo.',
+          'Cards de iniciativas con estado y avance (%), actualizadas en contexto.',
+          'Filtros avanzados y quick actions para las tareas más frecuentes de admins y líderes.',
+          'Drag & drop para reasignación rápida entre colaboradores e iniciativas.',
+          'Indicadores visuales de estado y capacidad requerida por squad.',
         ],
         en: [
-          'High-level view with workload distribution by Squads per quarter.',
-          'Cards with updated initiatives (name, status, percentage).',
-          'Advanced filters and quick actions for frequent tasks.',
-          'Drag & drop for quick reassignment.',
-          'Visual indicators for status and required capacity.',
+          'Workload view by Squads per quarter — operational visibility without leaving the module.',
+          'Initiative cards with status and progress (%), updated in context.',
+          'Advanced filters and quick actions for admins\' and leads\' most frequent tasks.',
+          'Drag & drop for quick reassignment between collaborators and initiatives.',
+          'Visual indicators of status and required capacity per squad.',
         ],
       },
     },
@@ -296,16 +349,43 @@ export const project4CaseStudy: CaseStudy = {
       type: 'list',
       items: {
         es: [
-          'Dashboard de Asignaciones con vista de carga por Squad, filtros avanzados y drag & drop.',
-          'Menú lateral y quick actions priorizados según tareas frecuentes de usuarios.',
-          'Arquitectura replanteada para escalar onboarding, licencias y skills.',
-          'Métricas TTC, TSR y Error Rate definidas como baseline para decisiones de diseño.',
+          'Dashboard de Asignaciones entregado con vista de carga por Squad, filtros avanzados y drag & drop — listo para desarrollo.',
+          'Registro de horas y Tarifas rediseñados hacia menor fricción en captura y consulta, alineados al nuevo sistema visual.',
+          'Menú lateral y quick actions priorizados según tareas frecuentes identificadas en entrevistas.',
+          'Arquitectura replanteada para escalar onboarding, licencias y skills sin rediseño estructural.',
+          'Métricas TTC, TSR y Error Rate definidas como baseline para priorizar y validar decisiones de diseño.',
         ],
         en: [
-          'Assignments dashboard with Squad workload view, advanced filters, and drag & drop.',
-          'Sidebar and quick actions prioritized based on users\' frequent tasks.',
-          'Information architecture reworked to scale onboarding, licenses, and skills.',
-          'TTC, TSR, and Error Rate metrics defined as a baseline for design decisions.',
+          'Assignments dashboard delivered with Squad workload view, advanced filters, and drag & drop — ready for development.',
+          'Hours registration and Rates redesigned toward lower friction in data entry and lookup, aligned to the new visual system.',
+          'Sidebar and quick actions prioritized based on frequent tasks identified in interviews.',
+          'Information architecture reworked to scale onboarding, licenses, and skills without structural redesign.',
+          'TTC, TSR, and Error Rate metrics defined as a baseline to prioritize and validate design decisions.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 2,
+      text: { es: 'Aprendizajes', en: 'Learnings' },
+    },
+    {
+      type: 'list',
+      ordered: true,
+      items: {
+        es: [
+          'En plataformas legacy en producción, auditar antes de proponer evita rediseños desconectados del uso real.',
+          'Los usuarios operativos priorizan visibilidad de carga sobre navegación profunda — los dashboards resuelven mejor que los menús.',
+          'Card sorting cerrado fue clave para justificar una IA escalable sin sobre-ingeniería de categorías.',
+          'Figma Make aceleró la validación de interacciones complejas (drag & drop, filtros) antes del handoff técnico.',
+          'Sin métricas oficiales, TTC, TSR y Error Rate como baseline orientaron qué módulos y flujos priorizar en el rediseño.',
+        ],
+        en: [
+          'On legacy production platforms, auditing before proposing prevents redesigns disconnected from real usage.',
+          'Operational users prioritize workload visibility over deep navigation — dashboards solve better than menus.',
+          'Closed card sorting was key to justifying scalable IA without over-engineering categories.',
+          'Figma Make accelerated validation of complex interactions (drag & drop, filters) before technical handoff.',
+          'Without official metrics, TTC, TSR, and Error Rate as a baseline guided which modules and flows to prioritize in the redesign.',
         ],
       },
     },
