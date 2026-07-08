@@ -1,6 +1,7 @@
 # Backlog técnico — Portafolio Anny Mamani
 
-> **Última base publicada:** commit `d47a80f` · producción: https://portafolio-figma-nu.vercel.app  
+> **Estado en vivo:** ver **`PROJECT-STATUS.md`** (producción, pendientes, orden entre agentes).  
+> **Producción:** `main` @ `8dd870a` · https://annymamaniportafolioux.vercel.app  
 > **Alcance de este backlog:** copy estratégico, consistencia narrativa y metadata en texto.  
 > **Fuera de alcance (por ahora):** nuevas imágenes, diagramas de proceso, prototipos embebidos, features nuevas de producto.
 
@@ -14,7 +15,17 @@
 | **Nivel de trabajo interno** | Análisis, recorte de copy, coherencia narrativa y correcciones con **criterio de nivel senior** — calidad alta, sin reflejarlo en el título del rol. |
 | **Componentes visuales** | **No cambiar layout:** post-its, cards, galerías con scroll, imágenes, grids, flechas, espaciados. |
 | **Qué sí editamos** | Texto dentro de bloques existentes (`project-*.ts`, `ui.ts`, `site.ts`): títulos, párrafos, bullets, post-its, captions — más corto y profesional, **sin perder sentido ni contexto**. |
-| **Producción** | Trabajo en **branch paralelo**; la versión publicada en Vercel **no se toca** hasta que tú apruebes merge + deploy. |
+| **Producción** | Trabajo en **branch** desde `main` actual; merge + deploy solo **Principal** tras tu OK |
+
+---
+
+## Estado P1 tras deploy Principal
+
+- [x] **P1-1, P1-3, P1-4** — parcialmente en `863fecb` (project-1, project-3, project-4)
+- [ ] **P1-2** — AppCres recorte (`project-2.ts`) — **siguiente prioridad**
+- [ ] **P1-5** — About multi-cliente (`ui.ts`)
+
+Ver **`PROJECT-STATUS.md`** para orden completo y registro de sesiones.
 
 ---
 
@@ -43,14 +54,12 @@ Ventaja: cambios acotados, fáciles de revisar en localhost antes de merge.
 **No.** Git guarda cada versión como una foto (commit). Hoy:
 
 ```
-main (GitHub + Vercel)  →  commit d47a80f  →  lo que ves en producción
+main (producción)  →  8dd870a  →  Vercel (P0 + P1 parcial incluidos)
          │
-         └── content/portfolio-copy-v2  →  copia paralela donde editamos copy
+         └── content/portfolio-copy-v3  →  crear desde main para próximo trabajo
 ```
 
-- **Producción** sigue en `d47a80f` hasta que hagas merge a `main` y deploy.
-- Si algo no te gusta en la branch, se descarta o no se mergea — **main no cambia**.
-- Incluso después del merge, el commit anterior (`d47a80f`) queda en el historial por si necesitas volver atrás.
+- **`content/portfolio-copy-v2`** ya fue mergeada; no reutilizar.
 
 ---
 
@@ -58,12 +67,12 @@ main (GitHub + Vercel)  →  commit d47a80f  →  lo que ves en producción
 
 | Agente | Responsabilidad |
 |--------|-----------------|
-| **Este chat (contenido / backlog)** | Crear branch, editar copy, `npm run build`, commit en la branch |
-| **Principal** (Figma import / deploy) | Push de branch (opcional), merge a `main`, deploy Vercel |
+| **Principal** | Merge, push `main`, deploy Vercel, `sync:vercel-urls` |
+| **Backlog / Soluciones** | Copy en branch; actualizar `PROJECT-STATUS.md`; **no deploy** |
 
-Al cerrar una tarea, marcar `[x]` aquí y dejar nota: `Hecho en commit ______`.
+Al cerrar: actualizar **`PROJECT-STATUS.md`** (registro de sesiones) y marcar `[x]` aquí.
 
-**Branch activa:** `content/portfolio-copy-v2` (creada desde `main` @ `d47a80f`).
+**Próxima branch:** `content/portfolio-copy-v3` (desde `main` @ `8dd870a`).
 
 ---
 

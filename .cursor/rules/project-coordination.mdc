@@ -1,0 +1,26 @@
+---
+description: Coordinación multi-agente — leer estado antes de actuar
+alwaysApply: true
+---
+
+# Coordinación del portafolio
+
+## Obligatorio al iniciar cualquier tarea
+
+1. Leer **`PROJECT-STATUS.md`** (estado producción, pendientes, orden).
+2. Leer **`BACKLOG.md`** (detalle de ítems P0–P3).
+3. Ejecutar `git status` y confirmar rama (`main` vs branch de copy).
+
+## Roles
+
+- **Principal:** único que mergea a `main`, push producción y deploy Vercel + `npm run sync:vercel-urls`.
+- **Backlog / Soluciones / otros chats:** editar copy en branch; **no deploy**; actualizar `PROJECT-STATUS.md` al cerrar.
+
+## Antes de deploy
+
+Ver checklist en `PROJECT-STATUS.md`. No desplegar si hay trabajo en branch sin merge aprobado por la usuaria.
+
+## Al terminar una sesión
+
+- Commit en branch (o indicar "listo para commit" al Principal).
+- Actualizar tabla "Registro de sesiones" y pendientes en `PROJECT-STATUS.md`.
