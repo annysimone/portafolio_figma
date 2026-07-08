@@ -39,8 +39,8 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Considerando este contexto, hice un análisis de varios flujos digitales en la plataforma, detectando 3 puntos de dolor cross (cada proceso tenía los propios).',
-        en: 'In this context, I analyzed multiple digital flows on the platform and identified three cross-cutting pain points (each process had its own as well).',
+        es: 'Analicé varios flujos digitales de la plataforma y detecté 3 puntos de dolor transversales (además de los propios de cada proceso).',
+        en: 'I analyzed several of the platform\'s digital flows and identified three cross-cutting pain points (on top of each process\'s own).',
       },
     },
     {
@@ -54,15 +54,15 @@ export const project1CaseStudy: CaseStudy = {
         {
           title: { es: 'ANS elevado (12-15 min)', en: 'High ANS (12-15 min)' },
           body: {
-            es: 'Tiempo promedio por transacción en flujos complejos (Préstamos, TC, Compra Deuda) — coherente con venta asistida de productos con validación de Riesgos; por encima de la meta corporativa.',
-            en: 'Average time per transaction in complex flows (Loans, CC, Debt Purchase) — consistent with assisted sales of products requiring Risk validation; above the corporate target.',
+            es: '(Acuerdo de Nivel de Servicio) Tiempo promedio por transacción en flujos complejos (PP, TC, Compra Deuda); influye en el costo operativo por ejecutivo de venta.',
+            en: '(Service Level Agreement) Average time per transaction in complex flows (PL, CC, Debt Purchase); impacts operating cost per sales rep.',
           },
         },
         {
           title: { es: 'Limitados flujos de venta', en: 'Limited sales flows' },
           body: {
-            es: 'Disminuyendo la capacidad de venta de productos. Asesores recurren a plataforma actual existente (ADQ) que es más lenta.',
-            en: 'Reducing product sales capacity. Advisors fall back to the legacy ADQ platform, which is slower.',
+            es: 'Disminuyendo la capacidad de venta de productos. Los asesores recurren a la plataforma existente (ADQ), más lenta.',
+            en: 'Reducing product sales capacity. Advisors fall back to the existing ADQ platform, which is slower.',
           },
         },
         {
@@ -116,8 +116,8 @@ export const project1CaseStudy: CaseStudy = {
             en: 'ANS below corporate target',
           },
           body: {
-            es: '(meta corporativa: 6–8 min) — referencia interna Interbank para venta digital asistida optimizada.',
-            en: '(corporate target: 6–8 min) — Interbank internal reference for optimized assisted digital sales.',
+            es: '(meta corporativa: 6–8 min) — lo que se traducía en ineficiencia operacional.',
+            en: '(corporate target: 6–8 min) — which translated into operational inefficiency.',
           },
         },
       ],
@@ -279,15 +279,15 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Por la colaboración estrecha y continua con los Business Analysts, desarrollé competencias especializadas en process mapping, redacción de Historias de usuario y definición de criterios de aceptación funcionales. La sinergia multidisciplinaria con el Product Owner y el equipo de desarrollo técnico permitió profundizar mi comprensión de las reglas de negocio y arquitecturas de integración tecnológica.',
-        en: 'Through close collaboration with Business Analysts, I developed skills in process mapping, user story writing, and functional acceptance criteria. Working with the Product Owner and engineering team deepened my understanding of business rules and integration architecture.',
+        es: 'La colaboración continua con los Business Analysts fortaleció mis competencias en process mapping, historias de usuario y criterios de aceptación funcionales. Trabajar con el Product Owner y el equipo técnico profundizó mi comprensión de las reglas de negocio y las arquitecturas de integración.',
+        en: 'Continuous collaboration with Business Analysts strengthened my skills in process mapping, user stories, and functional acceptance criteria. Working with the Product Owner and engineering team deepened my understanding of business rules and integration architecture.',
       },
     },
     {
       type: 'paragraph',
       text: {
-        es: 'Todo esto me permitió traducir estratégicamente los requerimientos de negocio y necesidades de usuario en features específicos y diferenciados para optimizar los diversos procesos de venta de productos en ASSI, usando el framework HMW para reformular las necesidades de los ejecutivos en preguntas orientadas al desarrollo de features.',
-        en: 'This allowed me to translate business requirements and user needs into specific, differentiated features to optimize ASSI\'s sales processes, using the HMW framework to reframe executive needs as feature-oriented questions.',
+        es: 'Con esa base traduje los requerimientos de negocio y las necesidades de usuario en features concretos para optimizar los procesos de venta en ASSI, usando el framework HMW para reformular las necesidades de los ejecutivos en preguntas accionables.',
+        en: 'With that foundation, I translated business requirements and user needs into concrete features to optimize ASSI\'s sales processes, using the HMW framework to reframe executive needs as actionable questions.',
       },
     },
     {
@@ -322,8 +322,8 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Prioricé tres frentes alineados a la meta ANS corporativa (6–8 min), con proyección de diseño hacia ~9–10 min en flujos optimizados: reducir fricción en ventas complejas, habilitar productos sin regresar a ADQ y unificar usabilidad, contenido y look & feel. Cada solución conecta un pain cross con una decisión de diseño concreta.',
-        en: 'I prioritized three fronts aligned to the corporate ANS target (6–8 min), with a design projection toward ~9–10 min in optimized flows: reduce friction in complex sales, enable products without falling back to ADQ, and unify usability, content, and look & feel. Each solution connects a cross pain to a concrete design decision.',
+        es: 'Prioricé tres frentes para acercar los flujos complejos a la meta ANS corporativa (6–8 min): reducir la fricción en ventas complejas, habilitar productos sin regresar a ADQ y unificar usabilidad, contenido y look & feel. El rediseño proyecta pasar de 12–15 a ~9–10 min por transacción, conectando cada pain cross con una decisión de diseño concreta.',
+        en: 'I prioritized three fronts to bring complex flows closer to the corporate ANS target (6–8 min): reduce friction in complex sales, enable products without falling back to ADQ, and unify usability, content, and look & feel. The redesign projects a drop from 12–15 to ~9–10 min per transaction, connecting each cross pain to a concrete design decision.',
       },
     },
     {
@@ -396,12 +396,12 @@ export const project1CaseStudy: CaseStudy = {
       items: {
         es: [
           'Flujo de venta con configuración de producto en menos pantallas — servicios asociados, emboce y entrega integrados.',
-          'Campos relacionados agrupados y menos scroll — proyección ~9–10 min por transacción (meta ANS: 6–8 min).',
+          'Campos relacionados agrupados y menos scroll — menos tiempo por transacción, más cerca de la meta ANS.',
           'Configuración de producto más legible para ejecutivos con alta rotación de casos.',
         ],
         en: [
           'Sales flow with product configuration in fewer screens — associated services, embossing, and delivery integrated.',
-          'Related fields grouped with less scroll — ~9–10 min per transaction projection (ANS target: 6–8 min).',
+          'Related fields grouped with less scroll — less time per transaction, closer to the ANS target.',
           'More readable product configuration for executives handling high case volume.',
         ],
       },
@@ -449,15 +449,15 @@ export const project1CaseStudy: CaseStudy = {
       items: {
         es: [
           'Flujos de Préstamos, Tarjetas de Crédito, Compra Deuda y Consulta rediseñados — proyección ~9–10 min por transacción (meta corporativa ANS: 6–8 min).',
-          'Mayor volumen de operaciones comerciales exitosas — desembolsos, compra de deuda ejecutada y ventas con ingreso al banco — en Tiendas y Televentas, con tendencia proyectada a sostener el ascenso.',
-          'Menos scroll y campos agrupados en tareas críticas de venta.',
+          'Mayor volumen de operaciones comerciales exitosas — desembolsos, compra de deuda ejecutada y ventas con ingreso al banco — en Tiendas y Televentas.',
+          'Menos scroll y campos agrupados en tareas críticas durante la gestión.',
           'Bandejas de gestión con acceso más directo a tasas, comisiones y derivación.',
           'Interacciones optimizadas para teclado, menos data entry y menos clics por transacción.',
         ],
         en: [
           'Personal Loans, Credit Cards, Debt Purchase, and Inquiry flows redesigned — ~9–10 min per transaction projection (corporate ANS target: 6–8 min).',
-          'Higher volume of successful commercial operations — disbursements, executed debt purchases, and revenue-generating sales — in Stores and Telesales, with a projected trend to keep rising.',
-          'Less scroll and grouped fields in critical sales tasks.',
+          'Higher volume of successful commercial operations — disbursements, executed debt purchases, and revenue-generating sales — in Stores and Telesales.',
+          'Less scroll and grouped fields in critical tasks during handling.',
           'Management queues with more direct access to rates, fees, and case forwarding.',
           'Interactions optimized for keyboard use, less data entry, and fewer clicks per transaction.',
         ],
