@@ -29,8 +29,8 @@ export const project3CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'La venta de Seguro de Sepelio por el canal de Telemarketing fue pausada temporalmente. Solo se mantuvo una landing page informativa en la web principal de Pacífico Seguros que no generaba leads ni conversión, lo que representaba oportunidades perdidas de cotización de dicho producto. Como Product Designer, diseñé el e-commerce de cotización y la landing de producto para reactivar el canal digital.',
-        en: 'Funeral insurance sales via the telemarketing channel were temporarily paused. Only an informational landing page remained on Pacífico Seguros\' main website—it generated no leads or conversion, representing lost quoting opportunities for the product. As Product Designer, I designed the quoting e-commerce and product landing to reactivate the digital channel.',
+        es: 'La venta de Seguro de Sepelio por el canal de Telemarketing fue pausada temporalmente. Solo se mantuvo una landing page informativa en la web principal de Pacífico Seguros que no generaba leads ni conversión, lo que representaba oportunidades de cotización perdidas. Como Product Designer, diseñé el e-commerce de cotización y la landing de producto para reactivar el canal digital.',
+        en: 'Funeral insurance sales via the telemarketing channel were temporarily paused. Only an informational landing page remained on Pacífico Seguros\' main website—it generated no leads or conversion, representing lost quoting opportunities. As Product Designer, I designed the quoting e-commerce and product landing to reactivate the digital channel.',
       },
     },
     {
@@ -89,7 +89,7 @@ export const project3CaseStudy: CaseStudy = {
             en: 'Reduce abandonment rate',
           },
           body: {
-            es: 'Hay sobrecarga cognitiva durante el llenado del formulario.',
+            es: 'Sobrecarga cognitiva durante el llenado del formulario.',
             en: 'Cognitive overload during form completion.',
           },
           postIt: {
@@ -158,7 +158,7 @@ export const project3CaseStudy: CaseStudy = {
             en: 'Post-sale support',
           },
           body: {
-            es: 'Como diferencial competitivo (escenarios de uso y FAQ\'s).',
+            es: 'Como diferencial competitivo (escenarios de uso y FAQs).',
             en: 'As a competitive differentiator (use cases and FAQs).',
           },
         },
