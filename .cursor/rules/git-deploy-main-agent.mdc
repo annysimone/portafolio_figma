@@ -22,15 +22,18 @@ alwaysApply: true
 
 - Repo: `https://github.com/annysimone/portafolio_figma.git`
 - Rama por defecto: `main`
-- Producción: `https://portafolio-figma-nu.vercel.app`
+- **URL principal (compartir):** `https://annymamaniportafolioux.vercel.app`
+- **URL secundaria (proyecto):** `https://portafolio-figma-nu.vercel.app`
 - Deploy manual: `npx vercel deploy --prod --yes`
+- Sincronizar URLs: `npm run sync:vercel-urls` (ver regla `vercel-urls-sync.mdc`)
 
 ## Flujo de publicación
 
 1. Usuario verifica cambios en localhost
 2. Agente principal ejecuta: `git status` → `git add` → `git commit` → `git push origin main`
 3. Vercel despliega (automático si está conectado a GitHub, o deploy manual)
-4. Confirmar en la URL de producción con hard refresh
+4. **Sincronizar alias:** `npm run sync:vercel-urls` (obligatorio hasta dominio propio)
+5. Confirmar ambas URLs de producción con hard refresh
 
 ## Branches
 

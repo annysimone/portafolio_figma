@@ -1,0 +1,42 @@
+---
+description: Sincronizar URLs de producción Vercel en cada deploy (hasta dominio propio)
+alwaysApply: true
+---
+
+# URLs de producción Vercel
+
+## URLs oficiales (hasta dominio propio)
+
+| Rol | URL |
+|-----|-----|
+| **Principal (compartir públicamente)** | `https://annymamaniportafolioux.vercel.app` |
+| **Secundaria (proyecto Vercel)** | `https://portafolio-figma-nu.vercel.app` |
+
+Ambas deben mostrar **el mismo deploy de producción** siempre.
+
+## Obligatorio en cada deploy
+
+Tras `git push origin main` y deploy (auto o manual), el agente principal **siempre**:
+
+1. Confirmar que producción está en `READY`
+2. Sincronizar el alias personalizado al deploy actual:
+   ```bash
+   npm run sync:vercel-urls
+   ```
+   Equivalente manual:
+   ```bash
+   npx vercel alias set portafolio-figma-nu.vercel.app annymamaniportafolioux.vercel.app
+   ```
+3. Verificar con `npx vercel alias ls` que `annymamaniportafolioux.vercel.app` apunta al mismo source que `portafolio-figma-nu.vercel.app`
+4. Confirmar al usuario ambas URLs + hard refresh (`Cmd+Shift+R`)
+
+## Config del proyecto
+
+- `astro.config.mjs` → `site: 'https://annymamaniportafolioux.vercel.app'`
+- En mensajes de release, listar **primero** la URL principal
+
+## Cuando haya dominio propio
+
+- Sustituir la URL principal por el dominio custom (ej. `annymamani.com`)
+- Mantener sincronización alias solo si sigue usándose `*.vercel.app` como redirect o backup
+- Actualizar esta regla y `astro.config.mjs` con el dominio definitivo
