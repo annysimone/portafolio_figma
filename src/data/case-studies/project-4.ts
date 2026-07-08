@@ -120,8 +120,8 @@ export const project4CaseStudy: CaseStudy = {
             en: 'Reduce friction in critical tasks',
           },
           body: {
-            es: 'Módulos: Registro de horas, Asignaciones, Tarifas (⬇️ tiempo de llenado de campos de registro).',
-            en: 'Modules: Hours registration, Assignments, Rates (⬇️ time to fill registration fields).',
+            es: 'Módulos: Registro de horas, Asignaciones, Tarifas (↓ tiempo de llenado de campos de registro).',
+            en: 'Modules: Hours registration, Assignments, Rates (↓ time to fill registration fields).',
           },
           postIt: {
             es: 'cómo: Dashboard dinámico: Drag & drop, referencia Jira',
