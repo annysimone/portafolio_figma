@@ -289,6 +289,15 @@ export const project4CaseStudy: CaseStudy = {
       },
     },
     {
+      type: 'image',
+      src: `${P}/solucion-preview.jpg`,
+      maxWidth: 1080,
+      alt: {
+        es: 'Pantallas del módulo de Asignaciones con filtros avanzados y tabla de colaboradores',
+        en: 'Assignments module screens with advanced filters and collaborator table',
+      },
+    },
+    {
       type: 'heading',
       level: 3,
       text: {
@@ -301,15 +310,6 @@ export const project4CaseStudy: CaseStudy = {
       text: {
         es: 'Aquí apliqué la mayor innovación: un dashboard de alto nivel inspirado en patrones de gestión ágil (referencia Jira), prototipado e iterado con Figma Make para validar drag & drop, filtros y distribución de carga antes del handoff.',
         en: 'This is where I applied the greatest innovation: a high-level dashboard inspired by agile management patterns (Jira reference), prototyped and iterated with Figma Make to validate drag & drop, filters, and workload distribution before handoff.',
-      },
-    },
-    {
-      type: 'image',
-      src: `${P}/solucion-preview.jpg`,
-      maxWidth: 1080,
-      alt: {
-        es: 'Pantallas del módulo de Asignaciones con filtros avanzados y tabla de colaboradores',
-        en: 'Assignments module screens with advanced filters and collaborator table',
       },
     },
     {
