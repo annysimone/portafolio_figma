@@ -380,7 +380,7 @@ body {
 
 .cs-card--postits-ref {
   padding-bottom: 2.75rem;
-  min-height: 7.5rem;
+  min-height: 6.75rem;
 }
 
 .cs-card--postits-yellow {
@@ -398,7 +398,7 @@ body {
 
 @media (min-width: 1024px) {
   .cs-card--postits-ref {
-    min-height: 8.25rem;
+    min-height: 7.5rem;
   }
 }
 

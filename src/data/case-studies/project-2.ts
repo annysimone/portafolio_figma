@@ -35,8 +35,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'ACRES Sociedad Agente de Bolsa (ACRES SAB), parte del grupo ACRES Finance, brinda soluciones de financiamiento y alternativas de inversión en el mercado de capitales, enfrentaba un modelo operativo algo obsoleto que limitaba su escalabilidad.',
-        en: 'ACRES Sociedad Agente de Bolsa (ACRES SAB), part of the ACRES Finance group, provides financing solutions and investment alternatives in the capital markets, but faced a somewhat obsolete operating model that limited its scalability.',
+        es: 'ACRES Sociedad Agente de Bolsa (ACRES SAB), del grupo ACRES Finance, ofrece financiamiento e inversión en el mercado de capitales, pero su modelo operativo obsoleto limitaba la escalabilidad del negocio.',
+        en: 'ACRES Sociedad Agente de Bolsa (ACRES SAB), part of ACRES Finance, offers financing and investment in the capital markets, but its outdated operating model limited the business\'s scalability.',
       },
     },
     {
@@ -81,7 +81,7 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Bajo este contexto, se detectó las siguientes oportunidades estratégicas:',
+        es: 'Bajo este contexto, se detectaron las siguientes oportunidades estratégicas:',
         en: 'In this context, the following strategic opportunities were identified:',
       },
     },
@@ -126,8 +126,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Además de incrementar el número de clientes, era importante darles seguridad y eficiencia transaccional. Bajo este panorama, la propuesta de valor sobre la que enfocaríamos nuestro esfuerzo estaba enmarcada en:',
-        en: 'Beyond growing the customer base, it was critical to provide security and transactional efficiency. Our value proposition focused on:',
+        es: 'Más allá de captar clientes, era clave darles seguridad y eficiencia transaccional. La propuesta de valor se enfocó en:',
+        en: 'Beyond acquiring clients, security and transactional efficiency were key. The value proposition focused on:',
       },
     },
     {
@@ -142,8 +142,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Dado que era un producto y rubro completamente nuevos para mí, apliqué el framework del Doble Diamante adaptado al contexto específico del proyecto, estructurando mi trabajo en 4 etapas: Descubrir, Analizar, Diseñar y Entregar.',
-        en: 'Since the product and industry were entirely new to me, I applied the Double Diamond framework adapted to the project context, structuring my work across four stages: Discover, Analyze, Design, and Deliver.',
+        es: 'Al ser un producto y rubro nuevos para mí, apliqué el Doble Diamante adaptado al proyecto, en 4 etapas: Descubrir, Analizar, Diseñar y Entregar.',
+        en: 'As the product and industry were new to me, I applied the Double Diamond adapted to the project, across four stages: Discover, Analyze, Design, and Deliver.',
       },
     },
     {
@@ -232,8 +232,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Con la documentación disponible, las reuniones de definición con la PO, LT y otros stakeholders, pude armar un diagrama de procesos para entender el ecosistema completo de funcionalidades de la plataforma y cómo la integraríamos a la Web pública. La complejidad estaba en las validaciones técnicas e integraciones con APIs internas y de terceros.',
-        en: 'Using available documentation and meetings with the PO, tech lead, and stakeholders, I mapped processes to understand the full platform feature ecosystem and how it would integrate with the public website. Complexity centered on technical validations and integrations with internal and third-party APIs.',
+        es: 'Con la documentación y reuniones con PO, LT y stakeholders, armé un diagrama de procesos para entender el ecosistema de la plataforma y su integración con la web pública. La complejidad estaba en las validaciones técnicas e integraciones con APIs internas y de terceros.',
+        en: 'From documentation and meetings with the PO, tech lead, and stakeholders, I built a process diagram to understand the platform ecosystem and its integration with the public website. Complexity lay in technical validations and integrations with internal and third-party APIs.',
       },
     },
     {
@@ -247,16 +247,16 @@ export const project2CaseStudy: CaseStudy = {
       type: 'list',
       items: {
         es: [
-          'Comprensión integral del producto (características y complejidad)',
-          'Entender el proceso de afiliación y registro de nuevos inversores en la plataforma',
-          'Conocer las validaciones de identidad y protocolos de seguridad implementados durante la afiliación y sus implicancias tecnológicas y operativas',
-          'Trazabilidad completa de funcionalidades y servicios disponibles en la plataforma',
+          'Comprensión integral del producto y su complejidad.',
+          'Entendimiento del proceso de afiliación y registro de nuevos inversores.',
+          'Validaciones de identidad y protocolos de seguridad, con sus implicancias técnicas y operativas.',
+          'Trazabilidad completa de funcionalidades y servicios de la plataforma.',
         ],
         en: [
-          'Full product understanding (features and complexity)',
-          'Affiliation and new investor registration process',
-          'Identity validation and security protocols during affiliation and their technical/operational implications',
-          'Complete traceability of available platform features and services',
+          'Full understanding of the product and its complexity.',
+          'Understanding of the affiliation and new-investor registration process.',
+          'Identity validations and security protocols, with technical and operational implications.',
+          'Complete traceability of platform features and services.',
         ],
       },
     },
@@ -297,8 +297,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Para ser un inversor activo en la plataforma se requería realizar ciertos procedimientos y validaciones de identidad que podrían resultar abrumadores para los usuarios, asi que, utilicé algunos artefactos que me permitieran detectar los touchpoints de fricción, pains en cuanto a preferencias de inversión y consecuentes oportunidades de mejora.',
-        en: 'To be an active investor on the platform required certain procedures and identity validations that could overwhelm users, so I used artifacts that helped me identify friction touchpoints, pains around investment preferences, and resulting improvement opportunities.',
+        es: 'Ser inversor activo exigía procedimientos y validaciones de identidad que podían abrumar al usuario. Usé artefactos de UX para detectar touchpoints de fricción, pains de inversión y oportunidades de mejora.',
+        en: 'Becoming an active investor required procedures and identity validations that could overwhelm users. I used UX artifacts to identify friction touchpoints, investment pains, and improvement opportunities.',
       },
     },
     {
@@ -405,8 +405,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Estos insights me permitieron detectar Jobs To Be Done que los usuarios deberían completar al registrarse en la plataforma y durante su permanencia en ella. Para encontrar propuestas funcionales y de interacción que resolvieran esas tareas apliqué ¿How Might We...? lo cuál me ayudó a delimitar funcionalidades centradas en los pains específicos del usuario.',
-        en: 'These insights helped me identify Jobs To Be Done that users should complete when registering on the platform and throughout their ongoing use. To find functional and interaction proposals that would address those tasks, I applied How Might We...?, which helped me define features focused on the user\'s specific pains.',
+        es: 'Con estos insights definí los Jobs To Be Done del usuario al registrarse y durante su uso. Apliqué How Might We para traducirlos en funcionalidades centradas en sus pains específicos.',
+        en: 'With these insights I defined the user\'s Jobs To Be Done at registration and during use. I applied How Might We to translate them into features focused on their specific pains.',
       },
     },
     {
@@ -449,15 +449,15 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Debido a la naturaleza del producto, la plataforma debe incluir funcionalidades fundamentales como inicio de sesión, firma electrónica y la posibilidad de descargar aplicaciones o calculadora de inversiones.',
-        en: 'Given the product nature, the platform needed core features including sign-in, e-signature, and access to apps or the investment calculator.',
+        es: 'Por la naturaleza del producto, la plataforma debía incluir funcionalidades base: inicio de sesión, firma electrónica, descarga de apps y calculadora de inversión.',
+        en: 'Given the product\'s nature, the platform needed core features: sign-in, e-signature, app download, and investment calculator.',
       },
     },
     {
       type: 'paragraph',
       text: {
-        es: 'Para garantizar una experiencia óptima, enfoqué mis esfuerzos en que estas funciones sean de fácil y rápida ejecución. Los objetivos principales fueron:',
-        en: 'To ensure an optimal experience, I focused on making these functions easy and quick to use. The main objectives were:',
+        es: 'Prioricé que estas funciones fueran fáciles y rápidas de ejecutar. Los objetivos principales:',
+        en: 'I prioritized making these functions easy and fast to use. The main objectives:',
       },
     },
     {
@@ -480,85 +480,85 @@ export const project2CaseStudy: CaseStudy = {
       rows: [
         {
           userNeed: {
-            es: 'Cuando quiero hacer crecer mi dinero, necesito una forma simple y confiable de acceder a oportunidades de inversión, para poder aumentar mi patrimonio sin complicaciones técnicas o burocráticas.',
-            en: 'When I want to grow my money, I need a simple, reliable way to access investment opportunities, so I can increase my wealth without technical or bureaucratic complications.',
+            es: 'Quiero hacer crecer mi dinero con una forma simple y confiable de invertir, sin trabas técnicas ni burocráticas.',
+            en: 'I want to grow my money through a simple, reliable way to invest, without technical or bureaucratic hurdles.',
           },
           hmw: {
-            es: '¿Cómo podríamos simplificar el acceso a oportunidades de inversión para que cualquier persona pueda hacer crecer su dinero, sin necesidad de conocimientos tecnológicos avanzados ni enfrentar barreras burocráticas tradicionales?',
-            en: 'How might we simplify access to investment opportunities so anyone can grow their money, without needing advanced technical knowledge or facing traditional bureaucratic barriers?',
+            es: '¿Cómo simplificar el acceso a la inversión para cualquier persona, sin conocimientos técnicos ni barreras burocráticas?',
+            en: 'How might we simplify access to investing for anyone, without technical knowledge or bureaucratic barriers?',
           },
           guidelines: {
-            es: 'Brindar seguridad a los usuarios durante los procesos complejos como: afiliación, creación de cuenta, descarga de app, firma electrónica, calculadora de inversión, etc, siempre mostrando información valiosa',
-            en: 'Provide users with security during complex processes such as affiliation, account creation, app download, e-signature, investment calculator, etc., always showing valuable information',
+            es: 'Dar seguridad en procesos complejos (afiliación, cuenta, firma electrónica, calculadora) mostrando siempre información de valor.',
+            en: 'Provide security in complex processes (affiliation, account, e-signature, calculator), always surfacing valuable information.',
           },
           features: {
             es: [
-              'Botones para "Iniciar sesión" y "Crear cuenta" claros y en un lugar visible',
-              'Mostrar con énfasis el botón "Calculadora de inversión"',
-              'En cada bloque de la web derivar mediante un "call to action" a los productos en los que puede invertir',
-              'Crear un acceso directo a la descarga de la aplicación para la firma electrónica',
-              'Colocar en el banner principal de la web pública, que están supervisados y regulados por la SMV',
+              'CTAs claros y visibles de "Iniciar sesión" y "Crear cuenta"',
+              'Botón "Calculadora de inversión" con énfasis visual',
+              'CTA por sección hacia productos invertibles',
+              'Acceso directo a la app de firma electrónica',
+              'Regulación SMV visible en el banner principal',
             ],
             en: [
-              'Clear, visible buttons for "Sign in" and "Create account"',
-              'Emphasize the "Investment calculator" button',
-              'In each web section, use a call to action toward investable products',
-              'Create direct access to download the e-signature application',
-              'On the public website main banner, state supervision and regulation by SMV',
+              'Clear, visible "Sign in" and "Create account" CTAs',
+              'Emphasized "Investment calculator" button',
+              'Section-level CTAs toward investable products',
+              'Direct access to the e-signature app',
+              'SMV regulation visible on the main banner',
             ],
           },
         },
         {
           userNeed: {
-            es: 'Cuando quiero invertir y gestionar mis inversiones necesito recibir ayuda e información precisa y continua para poder tomar decisiones informadas al usar activamente la plataforma.',
-            en: 'When I want to invest and manage my investments I need accurate, ongoing help and information so I can make informed decisions while actively using the platform.',
+            es: 'Al invertir y gestionar mis inversiones necesito ayuda e información precisa y continua para decidir con criterio.',
+            en: 'While investing and managing my investments I need accurate, ongoing help and information to decide with confidence.',
           },
           hmw: {
-            es: '¿Cómo podríamos proporcionar soporte e información precisa de manera continua a los usuarios durante todo su journey de inversión, desde la afiliación hasta el uso regular de la plataforma?',
-            en: 'How might we provide accurate, continuous support and information to users throughout their investment journey, from affiliation to regular platform use?',
+            es: '¿Cómo dar soporte e información precisa a lo largo de todo el journey, de la afiliación al uso regular?',
+            en: 'How might we provide accurate support and information across the whole journey, from affiliation to regular use?',
           },
           guidelines: {
-            es: 'Dar la ayuda e información precisa a los usuarios y que esté presente durante todo el proceso, no sólo de afiliación si no también cuando ya usen la plataforma de inversión',
-            en: 'Provide users with accurate help and information present throughout the entire process, not only during affiliation but also when they already use the investment platform',
+            es: 'Acompañar con ayuda precisa en todo el proceso, no solo en afiliación sino también en el uso activo de la plataforma.',
+            en: 'Support with accurate help throughout the process, not only during affiliation but also in active platform use.',
           },
           features: {
             es: [
-              'Proceso de onboarding al ingresar a la plataforma',
-              'Acceso a FAQ\'s en el footer de la web pública, uso de "tool tips" en términos más técnicos',
-              'Creación de un personaje a modo de guía, que esté presente en todas las vistas de la plataforma',
+              'Onboarding al ingresar a la plataforma',
+              'FAQs en el footer y tooltips en términos técnicos',
+              'Personaje guía presente en todas las vistas',
             ],
             en: [
-              'Onboarding process when entering the platform',
-              'Access to FAQs in the public website footer, use of tooltips on more technical terms',
-              'Creation of a guide character present across all platform views',
+              'Onboarding when entering the platform',
+              'FAQs in the footer and tooltips on technical terms',
+              'Guide character present across all views',
             ],
           },
         },
         {
           userNeed: {
-            es: 'Cuando quiero hacer una inversión riesgosa, necesito una forma de evaluar y gestionar ese riesgo de manera informada, para poder tomar decisiones financieras que no pongan en peligro mi estabilidad económica ni afecten negativamente a mi familia.',
-            en: 'When I want to make a risky investment, I need a way to evaluate and manage that risk in an informed way, so I can make financial decisions that don\'t threaten my economic stability or negatively affect my family.',
+            es: 'Ante una inversión riesgosa necesito evaluar y gestionar ese riesgo de forma informada, sin poner en peligro mi estabilidad ni la de mi familia.',
+            en: 'Facing a risky investment I need to evaluate and manage that risk in an informed way, without threatening my stability or my family\'s.',
           },
           hmw: {
-            es: '¿Cómo podríamos crear una experiencia confiable que permita evaluar riesgos de inversión de manera simple y didáctica, brindándoles confianza y herramientas para tomar decisiones financieras sin sentirse abrumados por terminología compleja?',
-            en: 'How might we create a trustworthy experience that lets users evaluate investment risk simply and didactically, giving them confidence and tools to make financial decisions without feeling overwhelmed by complex terminology?',
+            es: '¿Cómo evaluar el riesgo de inversión de forma simple y didáctica, dando confianza sin terminología compleja?',
+            en: 'How might we evaluate investment risk simply and didactically, building confidence without complex terminology?',
           },
           guidelines: {
-            es: 'Desde la web pública enseñar de manera didáctica y concreta el paso a paso de cómo invertir, usando términos simples y dando confianza al usuario en todo momento.',
-            en: 'From the public website, teach the step-by-step of how to invest in a didactic and concrete way, using simple terms and giving the user confidence at all times.',
+            es: 'Enseñar desde la web pública el paso a paso de cómo invertir, con términos simples y confianza en todo momento.',
+            en: 'Teach the step-by-step of how to invest from the public website, with simple terms and confidence throughout.',
           },
           features: {
             es: [
-              'Graficar el paso a paso del proceso de afiliación en el home de la web pública',
-              'Utilizar un wording simple y entendible',
-              'Digitalizar los contratos de intermediación',
-              'Crear / mostrar notificaciones para explicar procesos, informar y/o alertar',
+              'Paso a paso visual de la afiliación en el home',
+              'Wording simple y entendible',
+              'Contratos de intermediación digitalizados',
+              'Notificaciones para explicar, informar y alertar',
             ],
             en: [
-              'Graph the step-by-step affiliation process on the public website home',
-              'Use simple, understandable wording',
-              'Digitize brokerage agreements',
-              'Create / show notifications to explain processes, inform, and/or alert',
+              'Visual step-by-step affiliation on the home',
+              'Simple, understandable wording',
+              'Digitized brokerage agreements',
+              'Notifications to explain, inform, and alert',
             ],
           },
         },
@@ -581,16 +581,16 @@ export const project2CaseStudy: CaseStudy = {
       ordered: true,
       items: {
         es: [
-          'Reestructurar el mapa de sitio inicial propuesto como base del proyecto. La profundización en las necesidades del usuario me hizo entender que era necesario facilitar los accesos a procesos obligatorios y con cierta complejidad.',
-          'Plantear la propuesta en wireframes de mediana fidelidad con los features y procesos priorizados en la fase de Análisis.',
-          'Crear un user flow completo de la plataforma',
-          'Diseñar la plataforma tomando el estilo de la web pública (implementada en paralelo) y ciñéndome a una plantilla que sería usada por el equipo de desarrolladores.',
+          'Reestructurar el mapa de sitio para facilitar el acceso a procesos obligatorios y complejos.',
+          'Plantear wireframes de mediana fidelidad con los features priorizados en Análisis.',
+          'Crear el user flow completo de la plataforma.',
+          'Diseñar la UI sobre el estilo de la web pública (en paralelo) y una plantilla lista para desarrollo.',
         ],
         en: [
-          'Restructuring the initial sitemap proposed as the project baseline. Deepening user needs helped me understand it was necessary to facilitate access to mandatory processes with certain complexity.',
-          'Proposing medium-fidelity wireframes with features and processes prioritized in the Analysis phase.',
-          'Creating a complete platform user flow',
-          'Designing the platform using the style of the public website (implemented in parallel) and adhering to a template that would be used by the development team.',
+          'Restructure the sitemap to ease access to mandatory, complex processes.',
+          'Propose medium-fidelity wireframes with the features prioritized in Analysis.',
+          'Create the platform\'s complete user flow.',
+          'Design the UI on the public website style (built in parallel) and a dev-ready template.',
         ],
       },
     },
@@ -602,8 +602,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Enfoqué y centralicé mi esfuerzo en que la reestructuración de la arquitectura de información y cada funcionalidad esté orientada a futuros resultados medibles para el negocio, para esto debía:',
-        en: 'I focused on restructuring information architecture so every feature was oriented toward measurable business outcomes; to do this I needed to:',
+        es: 'Reestructuré la arquitectura de información orientando cada funcionalidad a resultados medibles de negocio. Para ello debía:',
+        en: 'I restructured information architecture, orienting each feature toward measurable business outcomes. To do so I needed to:',
       },
     },
     {
@@ -648,13 +648,13 @@ export const project2CaseStudy: CaseStudy = {
           },
           indicators: {
             es: [
-              '↓ Churn (primera sesión)\n↓ Fricción en proceso de adopción',
-              'Time to Value (información y respuestas útiles y más rápidas sobre sus inversiones)',
-              '↑ Task Success Rate (cumple sus objetivos sin ayuda)',
+              '↓ Churn (primera sesión)\n↓ Fricción en la adopción',
+              '↓ Time to Value (llega antes a su primera inversión / respuesta útil)',
+              '↑ Task Success Rate (cumple objetivos sin ayuda)',
             ],
             en: [
-              '↓ Churn (first session)\n↓ Adoption process friction',
-              'Time to Value (useful, faster information and answers about their investments)',
+              '↓ Churn (first session)\n↓ Adoption friction',
+              '↓ Time to Value (reaches first investment / useful answer sooner)',
               '↑ Task Success Rate (achieves goals without help)',
             ],
           },
@@ -677,8 +677,8 @@ export const project2CaseStudy: CaseStudy = {
             en: ['Available transactions', 'App download', 'Electronic signature'],
           },
           indicators: {
-            es: ['↑ Lifetime Value (LTV)\n↑ Lealtad'],
-            en: ['↑ Lifetime Value (LTV)\n↑ Loyalty'],
+            es: ['↑ Activación transaccional\n↑ Transacciones completadas'],
+            en: ['↑ Transactional activation\n↑ Completed transactions'],
           },
         },
       ],
@@ -717,8 +717,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Luego de iteraciones sobre los wireframes, se diseñó la propuesta visual tomando como base el estilo de la web pública que estaba implementándose en paralelo.',
-        en: 'After wireframe iterations, the visual proposal was designed using the public website style being implemented in parallel as the base.',
+        es: 'Tras iterar sobre los wireframes, diseñé la propuesta visual tomando como base el estilo de la web pública que se implementaba en paralelo.',
+        en: 'After wireframe iterations, I designed the visual proposal using the public website style being implemented in parallel as the base.',
       },
     },
     {
@@ -759,20 +759,128 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
+      text: { es: 'Solución', en: 'Solution' },
+    },
+    {
+      type: 'paragraph',
+      text: {
+        es: 'La solución unificó web pública y plataforma de inversión en un journey digital end-to-end: desde el primer contacto hasta la firma electrónica y la gestión activa de inversiones. Tres decisiones de diseño — derivadas de los HMW y del research emocional — estructuran la propuesta: acceso sin fricción, confianza continua y evaluación de riesgo didáctica.',
+        en: 'The solution unified the public website and investment platform into an end-to-end digital journey: from first contact through e-signature to active investment management. Three design decisions — derived from HMW and emotional research — structure the proposal: frictionless access, continuous trust, and didactic risk evaluation.',
+      },
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: {
+        es: 'Acceso sin fricción — web pública + plataforma',
+        en: 'Frictionless access — public website + platform',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'CTAs claros de "Iniciar sesión" y "Crear cuenta" en posición visible — primer paso hacia la afiliación digital.',
+          'Calculadora de inversión con énfasis visual — reduce barrera de entrada sin conocimiento bursátil previo.',
+          'Derivación por sección hacia productos invertibles — cada bloque de la web empuja hacia acción concreta.',
+          'Acceso directo a descarga de app de firma electrónica (QR en plataforma) — cierra el gap entre web y operación.',
+          'Regulación SMV visible en banner principal — confianza regulatoria desde el primer contacto.',
+          'Contratos de intermediación digitalizados — elimina dependencia de contratos físicos.',
+        ],
+        en: [
+          'Clear, visible "Sign in" and "Create account" CTAs — first step toward digital affiliation.',
+          'Investment calculator with visual emphasis — lowers entry barrier without prior market knowledge.',
+          'Section-level CTAs toward investable products — each web block drives concrete action.',
+          'Direct access to e-signature app download (QR on platform) — closes the gap between web and operations.',
+          'SMV regulation visible on main banner — regulatory trust from first contact.',
+          'Digitized brokerage agreements — removes dependence on physical contracts.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: {
+        es: 'Confianza continua — acompañamiento en todo el journey',
+        en: 'Continuous trust — guidance throughout the journey',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Onboarding al ingresar a la plataforma — orientación en la primera sesión, no solo en afiliación.',
+          'FAQs en footer de web pública + tooltips en términos técnicos — ayuda contextual sin salir del flujo.',
+          'Personaje guía presente en vistas clave — continuidad de acompañamiento más allá del onboarding.',
+          'Notificaciones para explicar procesos, informar y alertar — transparencia en cada transacción.',
+        ],
+        en: [
+          'Onboarding when entering the platform — guidance in the first session, not only during affiliation.',
+          'FAQs on public website footer + tooltips on technical terms — contextual help without leaving the flow.',
+          'Guide character present in key views — ongoing accompaniment beyond onboarding.',
+          'Notifications to explain processes, inform, and alert — transparency in every transaction.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 3,
+      text: {
+        es: 'Riesgo didáctico — invertir sin sentirse abrumado',
+        en: 'Didactic risk — investing without feeling overwhelmed',
+      },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Paso a paso visual del proceso de afiliación en el home de la web pública — reduce vergüenza por ignorancia y miedo al fracaso detectados en research.',
+          'Wording simple y entendible — traduce jerga bursátil a lenguaje cotidiano.',
+          'Gráfica del flujo de inversión didáctica — el usuario evalúa riesgo con herramientas, no solo con intermediarios.',
+          'Arquitectura de información alineada a KPIs (productos, onboarding, cuenta SAB, efectivo/firma) — cada módulo con propósito medible definido como baseline de diseño.',
+        ],
+        en: [
+          'Visual step-by-step of the affiliation process on the public website home — reduces shame from lack of knowledge and fear of failure identified in research.',
+          'Simple, understandable wording — translates market jargon into everyday language.',
+          'Didactic investment flow graphic — users evaluate risk with tools, not only through intermediaries.',
+          'Information architecture aligned to KPIs (products, onboarding, SAB account, cash/signature) — each module with a defined measurable purpose as a design baseline.',
+        ],
+      },
+    },
+    {
+      type: 'heading',
+      level: 2,
       text: { es: 'ENTREGAR', en: 'DELIVER' },
     },
     {
       type: 'paragraph',
       text: {
-        es: 'No se realizó un primer testeo con usuarios reales, pero sí fue necesario validar la integración con la aplicación de firma electrónica de un proveedor externo. Para esto, se prototiparon los flujos e iteraron con el equipo técnico hasta lograr una experiencia funcional.',
-        en: 'There was no initial testing with real users, but validating integration with a third-party e-signature app was essential. Flows were prototyped and iterated with the technical team until a functional experience was achieved.',
+        es: 'No hubo UAT con usuarios reales en esta fase; validé en cambio la integración con la app de firma electrónica de un proveedor externo — prototipando e iterando con el equipo técnico hasta una experiencia funcional. Al ser un producto desde cero, definí KPIs por módulo como baseline de diseño (sin métricas históricas previas).',
+        en: 'There was no UAT with real users in this phase; instead I validated integration with a third-party e-signature app — prototyping and iterating with the technical team until a functional experience was achieved. As a greenfield product, I defined KPIs per module as a design baseline (with no prior historical metrics).',
       },
     },
     {
-      type: 'paragraph',
-      text: {
-        es: 'Como se empezó desde cero no teníamos métricas previas con las que comparar; sin embargo, orientar estratégicamente las funcionalidades hacia indicadores y métricas de valor para los usuarios y el negocio permitió adelantar la entrega de un proceso consistente y escalable.',
-        en: 'Starting from scratch meant no baseline metrics to compare against; however, aligning features with user and business value indicators enabled delivering a consistent, scalable process.',
+      type: 'heading',
+      level: 2,
+      text: { es: 'Resultados', en: 'Outcomes' },
+    },
+    {
+      type: 'list',
+      items: {
+        es: [
+          'Plataforma de inversión + web pública diseñadas como journey digital end-to-end — afiliación, firma y gestión en un solo ecosistema.',
+          'Onboarding digital que reemplaza contratos físicos y procesos presenciales — orientado a capturar inversores digitales emergentes (2019).',
+          'Integración de firma electrónica validada con equipo técnico — flujo funcional antes del handoff.',
+          'IA replanteada con KPIs por módulo (cross-selling, churn, retención, activación transaccional) como baseline de diseño.',
+          'Dashboard con calculadora, QR de firma, gestión de cuentas y notificaciones — entregado listo para desarrollo.',
+        ],
+        en: [
+          'Investment platform + public website designed as an end-to-end digital journey — affiliation, signature, and management in one ecosystem.',
+          'Digital onboarding replacing physical contracts and in-person processes — oriented toward capturing emerging digital investors (2019).',
+          'E-signature integration validated with the technical team — functional flow before handoff.',
+          'Information architecture reworked with KPIs per module (cross-selling, churn, retention, transactional activation) as a design baseline.',
+          'Dashboard with calculator, signature QR, account management, and notifications — delivered ready for development.',
+        ],
       },
     },
     {
@@ -785,18 +893,18 @@ export const project2CaseStudy: CaseStudy = {
       ordered: true,
       items: {
         es: [
-          'Autonomía sobre las decisiones de diseño. La colaboración y comunicación directa con el Líder Técnico fue una constante a lo largo del proyecto, lo cual aceleró las aprobaciones de las definiciones y del diseño.',
-          'Entender las reglas de negocio y producto. Los asesores de inversión eran expertos en el rubro y debía estar al nivel de sus conocimientos para fundamentar mis propuestas de solución.',
-          'La complejidad del proceso de validación de identidad. A pesar de ser un servicio tercerizado, implicó mucho trabajo colaborativo y de integración.',
-          'Mantener informado al usuario y "Security-First Mindset". Desde el uso de diferentes medios para el envío de comunicaciones y notificaciones por las transacciones efectuadas, el Onboarding inicial al utilizar la plataforma, hasta la percepción de seguridad al realizar operaciones.',
-          'Entendimiento de procesos. Este proyecto fue mi primer acercamiento al Process Mapping como herramienta para profundizar en reglas de negocio y simplificar procesos complejos.',
+          'Autonomía sobre las decisiones de diseño. La colaboración directa con el Líder Técnico aceleró aprobaciones de definiciones y diseño.',
+          'Entender las reglas de negocio y producto. Los asesores de inversión eran expertos en el rubro — debía fundamentar propuestas al nivel de sus conocimientos.',
+          'La complejidad del proceso de validación de identidad. A pesar de ser un servicio tercerizado, implicó mucho trabajo colaborativo e integración.',
+          'Mantener informado al usuario con "Security-First Mindset" — comunicaciones multicanal, notificaciones transaccionales, onboarding y percepción de seguridad en operaciones.',
+          'Process Mapping como herramienta central para traducir reglas de negocio en flujos simplificados y features accionables.',
         ],
         en: [
-          'Design decision autonomy. Direct collaboration and communication with the tech lead was constant throughout the project, speeding up definition and design approvals.',
-          'Understanding business and product rules. Investment advisors were industry experts; I needed to match their knowledge level to justify my solution proposals.',
+          'Design decision autonomy. Direct collaboration with the tech lead accelerated definition and design approvals.',
+          'Understanding business and product rules. Investment advisors were industry experts — I needed to justify proposals at their knowledge level.',
           'Complexity of identity validation. Despite being a third-party service, it required extensive collaborative and integration work.',
-          'Keeping users informed with a "Security-First Mindset" — from multi-channel communications and transaction notifications to initial onboarding and security perception when performing operations.',
-          'Process understanding. This project was my first deep dive into Process Mapping as a tool to explore business rules and simplify complex workflows.',
+          'Keeping users informed with a "Security-First Mindset" — multi-channel communications, transaction notifications, onboarding, and security perception in operations.',
+          'Process Mapping as a core tool to translate business rules into simplified flows and actionable features.',
         ],
       },
     },
