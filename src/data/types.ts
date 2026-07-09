@@ -139,8 +139,6 @@ export type CaseStudy = {
   meta: {
     title: Localized<string>;
     description: Localized<string>;
-    /** Imagen Open Graph al compartir el case study */
-    ogImage?: string;
   };
   header?: CaseStudyHeader;
   blocks?: CaseStudyBlock[];

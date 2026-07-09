@@ -143,3 +143,8 @@ export function getCaseStudy(slug: string): CaseStudy | undefined {
 export function getProjectPreview(slug: string): ProjectPreview | undefined {
   return homeProjects.find((p) => p.slug === slug);
 }
+
+/** OG / share: misma imagen principal que la tarjeta del Home. */
+export function getProjectShareImage(slug: string): string | undefined {
+  return getProjectPreview(slug)?.image;
+}

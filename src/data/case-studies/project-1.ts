@@ -13,7 +13,6 @@ export const project1CaseStudy: CaseStudy = {
       es: 'Rediseño de ASSI, la plataforma de venta de Interbank: flujos más claros y consistentes orientados a reducir el ANS y sostener el crecimiento de desembolsos.',
       en: 'Redesign of ASSI, Interbank\'s sales platform: clearer, more consistent flows aimed at reducing handling time (ANS) and sustaining disbursement growth.',
     },
-    ogImage: `${P}/prestamos-personales.jpg`,
   },
   header: {
     year: { es: '2020-2024', en: '2020-2024' },

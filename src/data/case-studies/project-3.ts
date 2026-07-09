@@ -13,7 +13,6 @@ export const project3CaseStudy: CaseStudy = {
       es: 'Canal digital del Seguro de Sepelio de Pacífico: e-commerce y captura de leads orientados a habilitar la conversión más allá del televentas.',
       en: 'Digital channel for Pacífico\'s funeral insurance: e-commerce and lead capture aimed at enabling conversion beyond the telesales channel.',
     },
-    ogImage: `${P}/solucion-ecommerce-mobile.png`,
   },
   header: {
     year: { es: '2025', en: '2025' },
