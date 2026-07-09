@@ -54,6 +54,11 @@ export const project1CaseStudy: CaseStudy = {
     },
     {
       type: 'heading',
+      level: 2,
+      text: { es: 'Desafío', en: 'Challenge' },
+    },
+    {
+      type: 'heading',
       level: 3,
       text: { es: 'Situación', en: 'Situation' },
     },
@@ -125,8 +130,8 @@ export const project1CaseStudy: CaseStudy = {
             en: 'ANS below corporate target',
           },
           body: {
-            es: '(meta corporativa: 6–8 min) — lo que se traducía en ineficiencia operacional.',
-            en: '(corporate target: 6–8 min) — which translated into operational inefficiency.',
+            es: 'Meta corporativa: 6–8 min — por debajo del tiempo observado en flujos complejos.',
+            en: 'Corporate target: 6–8 min — below the time observed in complex flows.',
           },
         },
       ],
@@ -208,6 +213,11 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
+      text: { es: 'Proceso', en: 'Process' },
+    },
+    {
+      type: 'heading',
+      level: 3,
       text: { es: 'THINK', en: 'THINK' },
     },
     {
@@ -282,7 +292,7 @@ export const project1CaseStudy: CaseStudy = {
     },
     {
       type: 'heading',
-      level: 2,
+      level: 3,
       text: { es: 'MAKE', en: 'MAKE' },
     },
     {
@@ -313,7 +323,7 @@ export const project1CaseStudy: CaseStudy = {
     },
     {
       type: 'heading',
-      level: 2,
+      level: 3,
       text: { es: 'CHECK', en: 'CHECK' },
     },
     {
@@ -326,7 +336,7 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
-      text: { es: 'Soluciones', en: 'Solutions' },
+      text: { es: 'Solución', en: 'Solution' },
     },
     {
       type: 'paragraph',
@@ -462,7 +472,7 @@ export const project1CaseStudy: CaseStudy = {
           'Mayor volumen de operaciones comerciales exitosas — desembolsos, compra de deuda ejecutada y ventas con ingreso al banco — en Tiendas y Televentas.',
           'Menos scroll y campos agrupados en tareas críticas durante la gestión.',
           'Bandejas de gestión con acceso más directo a tasas, comisiones y derivación.',
-          'Interacciones optimizadas para teclado, menos data entry y menos clics por transacción.',
+          'Interacciones optimizadas para teclado, menos registro manual de datos y menos clics por transacción.',
         ],
         en: [
           'Personal Loans, Credit Cards, Debt Purchase, and Inquiry flows redesigned — ~9–10 min per transaction projection (corporate ANS target: 6–8 min).',

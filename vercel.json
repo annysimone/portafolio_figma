@@ -1,5 +1,15 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    { "source": "/project_1", "destination": "/work/interbank-assi", "permanent": true },
+    { "source": "/project_2", "destination": "/work/appcres", "permanent": true },
+    { "source": "/project_3", "destination": "/work/pacifico-sepelio", "permanent": true },
+    { "source": "/project_4", "destination": "/work/tom-3-pacifico", "permanent": true },
+    { "source": "/en/project_1", "destination": "/en/work/interbank-assi", "permanent": true },
+    { "source": "/en/project_2", "destination": "/en/work/appcres", "permanent": true },
+    { "source": "/en/project_3", "destination": "/en/work/pacifico-sepelio", "permanent": true },
+    { "source": "/en/project_4", "destination": "/en/work/tom-3-pacifico", "permanent": true }
+  ]
 }

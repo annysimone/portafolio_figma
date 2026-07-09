@@ -72,9 +72,28 @@ body {
   text-decoration: none;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   left: 1rem;
   top: 1rem;
+}
+
+/* Accessible focus ring (keyboard only) */
+a:focus-visible,
+button:focus-visible,
+[tabindex='0']:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-media-zoom,
+  .cs-media-zoom__img,
+  .cs-nav-cta,
+  .cs-project-nav__link,
+  .cs-gallery-carousel {
+    transition: none !important;
+  }
 }
 
 .prose-portfolio p + p {

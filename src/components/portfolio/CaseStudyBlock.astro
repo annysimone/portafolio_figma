@@ -14,7 +14,7 @@ const { lang, block, index } = Astro.props;
 const hmwLabels = {
   es: {
     need: 'Jobs to be done',
-    hmw: '¿How might we…?',
+    hmw: 'How might we…?',
     guidelines: 'Lineamientos de diseño',
     features: 'Features',
   },
@@ -445,7 +445,13 @@ const hmwLabels = {
           })}
         </div>
       ) : (
-        <div class="cs-gallery-carousel-wrap" data-gallery-wrap>
+        <div
+          class="cs-gallery-carousel-wrap"
+          data-gallery-wrap
+          role="region"
+          aria-roledescription="carousel"
+          aria-label={block.title ? pick(block.title, lang) : (lang === 'es' ? 'Galería de imágenes' : 'Image gallery')}
+        >
           <div class="cs-gallery-carousel-shell">
             <button
               type="button"
@@ -520,7 +526,11 @@ const hmwLabels = {
             </button>
           </div>
           <div class="cs-gallery-carousel-meta">
-            <span class="cs-gallery-counter font-source-code text-xs tracking-[-0.04em] text-[var(--color-text-muted)]" data-gallery-counter>
+            <span
+              class="cs-gallery-counter font-source-code text-xs tracking-[-0.04em] text-[var(--color-text-muted)]"
+              data-gallery-counter
+              aria-live="polite"
+            >
               1 / {block.images.length}
             </span>
             <div class="cs-gallery-dots" role="tablist" aria-label={lang === 'es' ? 'Diapositivas del carrusel' : 'Carousel slides'}>

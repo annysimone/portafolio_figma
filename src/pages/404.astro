@@ -1,0 +1,26 @@
+---
+import Portfolio from '../layouts/Portfolio.astro';
+import { useTranslations } from '../i18n/ui';
+import { localizedPath } from '../i18n/utils';
+
+const isEn = Astro.url.pathname.startsWith('/en');
+const lang = isEn ? 'en' : 'es';
+const t = useTranslations(lang);
+const homeHref = localizedPath('/', lang);
+
+Astro.response.status = 404;
+---
+
+<Portfolio title={t.notFound.title} description={t.notFound.description} lang={lang}>
+  <main class="flex flex-col items-center justify-center min-h-[50vh] px-6 py-32 text-center max-w-xl mx-auto">
+    <p class="font-source-code text-sm tracking-[-0.04em] text-[var(--color-text-muted)] m-0">
+      {t.notFound.heading}
+    </p>
+    <h1 class="font-manjari text-[clamp(2rem,5vw,3rem)] tracking-[-0.04em] mt-4 mb-6">
+      {t.notFound.body}
+    </h1>
+    <a href={homeHref} class="cs-nav-cta">
+      {t.notFound.backHome}
+    </a>
+  </main>
+</Portfolio>

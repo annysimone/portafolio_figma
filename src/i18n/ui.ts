@@ -34,9 +34,10 @@ export const ui = {
     },
     caseStudy: {
       overview: 'Overview',
-      challenge: 'Challenge',
+      challenge: 'Desafío',
       process: 'Proceso',
-      solutions: 'Soluciones',
+      solutions: 'Solución',
+      outcomes: 'Resultados',
       learnings: 'Aprendizajes',
       moreProjects: 'Más proyectos',
       prevProject: 'Anterior',
@@ -47,6 +48,16 @@ export const ui = {
       behance: 'Behance',
       linkedin: 'LinkedIn',
       rights: '© 2026 Anny Mamani · Product Designer. Todos los derechos reservados.',
+    },
+    a11y: {
+      skipToContent: 'Saltar al contenido',
+    },
+    notFound: {
+      title: 'Página no encontrada — Anny Mamani',
+      description: 'La página que buscas no existe en este portafolio.',
+      heading: '404',
+      body: 'No encontramos esta página. Puedes volver al inicio y explorar los case studies.',
+      backHome: 'Volver al inicio',
     },
   },
   en: {
@@ -84,7 +95,8 @@ export const ui = {
       overview: 'Overview',
       challenge: 'Challenge',
       process: 'Process',
-      solutions: 'Solutions',
+      solutions: 'Solution',
+      outcomes: 'Outcomes',
       learnings: 'Learnings',
       moreProjects: 'More projects',
       prevProject: 'Previous',
@@ -95,6 +107,16 @@ export const ui = {
       behance: 'Behance',
       linkedin: 'LinkedIn',
       rights: '© 2026 Anny Mamani · Product Designer. All rights reserved.',
+    },
+    a11y: {
+      skipToContent: 'Skip to content',
+    },
+    notFound: {
+      title: 'Page not found — Anny Mamani',
+      description: 'The page you are looking for does not exist on this portfolio.',
+      heading: '404',
+      body: 'We could not find this page. Head back home to explore the case studies.',
+      backHome: 'Back to home',
     },
   },
 } as const;

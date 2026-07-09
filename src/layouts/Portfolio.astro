@@ -3,9 +3,12 @@ import '../styles/global.css';
 import type { Lang } from '../i18n/config';
 import { defaultLang } from '../i18n/config';
 import { alternateLangPath } from '../i18n/utils';
+import { useTranslations } from '../i18n/ui';
+import { contact } from '../data/site';
 import Navigation from '../components/portfolio/Navigation.astro';
 import Footer from '../components/portfolio/Footer.astro';
 import ThemeInit from '../components/ui/ThemeInit.astro';
+import VercelAnalytics from '@vercel/analytics/astro';
 
 interface Props {
   lang: Lang;
@@ -30,6 +33,17 @@ const canonical = new URL(Astro.url.pathname, site);
 const altLang = lang === 'es' ? 'en' : 'es';
 const altHref = new URL(alternateLangPath(Astro.url.pathname, altLang), site);
 const ogImageUrl = new URL(ogImage, site).href;
+const t = useTranslations(lang);
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Anny Mamani',
+  jobTitle: 'Product Designer',
+  url: site.href,
+  email: contact.email,
+  sameAs: [contact.linkedin, contact.behance],
+};
 ---
 
 <!doctype html>
@@ -57,10 +71,11 @@ const ogImageUrl = new URL(ogImage, site).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     <ThemeInit />
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to content</a>
+    <a href="#main-content" class="skip-link">{t.a11y.skipToContent}</a>
     <div class="relative min-h-screen flex flex-col items-center px-4 sm:px-[50px] bg-[var(--color-bg)] text-[var(--color-text)]">
       <Navigation {lang} {current} />
       <div id="main-content" class="w-full">
@@ -68,5 +83,6 @@ const ogImageUrl = new URL(ogImage, site).href;
       </div>
       {!hideFooter && <Footer lang={lang} />}
     </div>
+    <VercelAnalytics />
   </body>
 </html>

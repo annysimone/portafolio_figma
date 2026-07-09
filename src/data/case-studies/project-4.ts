@@ -96,7 +96,7 @@ export const project4CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
-      text: { es: 'Challenge', en: 'Challenge' },
+      text: { es: 'Desafío', en: 'Challenge' },
     },
     {
       type: 'paragraph',
@@ -288,7 +288,7 @@ export const project4CaseStudy: CaseStudy = {
         es: [
           'Acceso más directo a tarifas desde la navegación replanteada, sin recorridos innecesarios.',
           'Estructura de contenido consistente con el resto de módulos para bajar la curva de aprendizaje.',
-          'Formularios orientados a minimizar data entry en tareas repetitivas de administración.',
+          'Formularios orientados a minimizar el registro de datos en tareas repetitivas de administración.',
         ],
         en: [
           'More direct rate access from the reworked navigation, without unnecessary paths.',

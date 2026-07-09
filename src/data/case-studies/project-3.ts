@@ -21,8 +21,8 @@ export const project3CaseStudy: CaseStudy = {
     accent: '#ab0782',
     role: { es: 'Product Designer', en: 'Product Designer' },
     scope: {
-      es: 'E-commerce + landing de captación de leads',
-      en: 'E-commerce + lead-capture landing',
+      es: 'e-commerce + landing de captación de leads',
+      en: 'e-commerce + lead-capture landing',
     },
     outcome: {
       es: 'Canal digital habilitado para convertir sin depender del televentas',
@@ -45,7 +45,7 @@ export const project3CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
-      text: { es: 'Challenge', en: 'Challenge' },
+      text: { es: 'Desafío', en: 'Challenge' },
     },
     {
       type: 'cards',
@@ -205,8 +205,8 @@ export const project3CaseStudy: CaseStudy = {
       type: 'heading',
       level: 3,
       text: {
-        es: 'Mapping Process E-commerce',
-        en: 'E-commerce process mapping',
+        es: 'Mapeo de proceso e-commerce',
+        en: 'e-commerce process mapping',
       },
     },
     {
@@ -233,7 +233,7 @@ export const project3CaseStudy: CaseStudy = {
         en: 'Mapping process findings',
       },
       alt: {
-        es: 'Tres findings del mapeo: data entry, coordinación técnica y optimización de flujo',
+        es: 'Tres findings del mapeo: registro de datos, coordinación técnica y optimización de flujo',
         en: 'Three mapping findings: data entry, technical coordination, and flow optimization',
       },
     },
@@ -264,7 +264,7 @@ export const project3CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
-      text: { es: 'Soluciones', en: 'Solutions' },
+      text: { es: 'Solución', en: 'Solution' },
     },
     {
       type: 'paragraph',

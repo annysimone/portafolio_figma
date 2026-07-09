@@ -51,7 +51,7 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
-      text: { es: 'Challenge', en: 'Challenge' },
+      text: { es: 'Desafío', en: 'Challenge' },
     },
     {
       type: 'cards',
@@ -90,8 +90,8 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'paragraph',
       text: {
-        es: 'Bajo este contexto, se detectaron las siguientes oportunidades estratégicas:',
-        en: 'In this context, the following strategic opportunities were identified:',
+        es: 'Bajo este contexto, identifiqué las siguientes oportunidades estratégicas:',
+        en: 'In this context, I identified the following strategic opportunities:',
       },
     },
     {
@@ -236,6 +236,11 @@ export const project2CaseStudy: CaseStudy = {
     {
       type: 'heading',
       level: 2,
+      text: { es: 'Proceso', en: 'Process' },
+    },
+    {
+      type: 'heading',
+      level: 3,
       text: { es: 'DESCUBRIR', en: 'DISCOVER' },
     },
     {
@@ -300,7 +305,7 @@ export const project2CaseStudy: CaseStudy = {
     },
     {
       type: 'heading',
-      level: 2,
+      level: 3,
       text: { es: 'ANALIZAR', en: 'ANALYZE' },
     },
     {
@@ -575,7 +580,7 @@ export const project2CaseStudy: CaseStudy = {
     },
     {
       type: 'heading',
-      level: 2,
+      level: 3,
       text: { es: 'DISEÑAR', en: 'DESIGN' },
     },
     {
@@ -858,7 +863,7 @@ export const project2CaseStudy: CaseStudy = {
     },
     {
       type: 'heading',
-      level: 2,
+      level: 3,
       text: { es: 'ENTREGAR', en: 'DELIVER' },
     },
     {

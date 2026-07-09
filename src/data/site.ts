@@ -1,4 +1,5 @@
 import type { CaseStudy, ProjectPreview } from './types';
+import { caseStudyPaths } from './routes';
 import { project1CaseStudy } from './case-studies/project-1';
 import { project2CaseStudy } from './case-studies/project-2';
 import { project3CaseStudy } from './case-studies/project-3';
@@ -29,7 +30,7 @@ export const homeProjects: ProjectPreview[] = [
       es: 'Pacífico Seguros — Seguro de Sepelio',
       en: 'Pacífico Seguros — Funeral insurance',
     },
-    href: '/project_3',
+    href: caseStudyPaths.project_3,
     accent: '#ab0782',
     borderAccent: '#6e660a',
     featuredOnAbout: true,
@@ -46,7 +47,7 @@ export const homeProjects: ProjectPreview[] = [
       es: 'Gestión de horas y tareas — TOM 3.0',
       en: 'Time and task management — TOM 3.0',
     },
-    href: '/project_4',
+    href: caseStudyPaths.project_4,
     accent: '#0034ad',
     borderAccent: '#0034ad',
     featuredOnAbout: true,
@@ -63,7 +64,7 @@ export const homeProjects: ProjectPreview[] = [
     title: { es: 'Interbank', en: 'Interbank' },
     image: '/assets/original/home-interbank.png',
     imageAlt: { es: 'Interbank ASSI', en: 'Interbank ASSI' },
-    href: '/project_1',
+    href: caseStudyPaths.project_1,
     accent: '#6e660a',
     borderAccent: '#ab0782',
     featuredOnAbout: true,
@@ -77,7 +78,7 @@ export const homeProjects: ProjectPreview[] = [
     title: { es: 'AppCres', en: 'AppCres' },
     image: '/assets/original/home-appcres.png',
     imageAlt: { es: 'AppCres — plataforma de inversiones', en: 'AppCres — investment platform' },
-    href: '/project_2',
+    href: caseStudyPaths.project_2,
     accent: '#0034ad',
     borderAccent: '#0034ad',
     aboutLabel: {

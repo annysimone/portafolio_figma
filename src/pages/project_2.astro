@@ -1,9 +1,4 @@
 ---
-import CaseStudyPage from '../views/CaseStudyPage.astro';
-import { getCaseStudy } from '../data/site';
-
-const study = getCaseStudy('project_2');
-if (!study) throw new Error('Case study project_2 not found');
+import { caseStudyPaths } from '../data/routes';
+return Astro.redirect(caseStudyPaths.project_2, 301);
 ---
-
-<CaseStudyPage lang="es" study={study} />

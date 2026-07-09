@@ -33,11 +33,11 @@
 | `main` | ✅ Producción + último merge | Trabajar desde aquí o crear branch nueva **desde** `main` |
 | `content/portfolio-copy-v2` | ⚠️ Obsoleta | Mergeada en `main` hasta `863fecb`; **1 commit detrás** (`8dd870a`). No usar — borrar tras confirmar |
 
-**Próxima branch de copy (cuando retomes backlog):**
+**Próxima branch de trabajo:**
 
 ```bash
 git checkout main && git pull origin main
-git checkout -b content/portfolio-copy-v3
+git checkout -b content/portfolio-copy-v4   # Sprint 5 (en curso, sin commit aún)
 ```
 
 ---

@@ -54,6 +54,17 @@
 - [x] **N0-3** Botón CV (PDF) en About *(pendiente subir los archivos PDF)*
 - [x] **N0-4** OG image por proyecto (fix del bug que usaba siempre project_1) + tags Twitter
 
+### Sprint 5 — SEO, rutas y accesibilidad (branch `content/portfolio-copy-v4`, sin desplegar)
+- [x] **N1-3** Slugs legibles `/work/*` + redirects 301 desde `/project_*` (Astro + vercel.json)
+- [x] **N2-1** `@astrojs/sitemap` + página `404.astro` bilingüe
+- [x] **N2-3** JSON-LD `Person` en layout
+- [x] **N2-4** Vercel Analytics (`@vercel/analytics`)
+- [x] **N1-4** A11y: skip link bilingüe, `:focus-visible`, `prefers-reduced-motion`, aria en carrusel
+- [x] **N1-1** Spine unificado (h2 macro + subfases h3; sin mover bloques)
+- [x] **N2-5** Glosario/tono (voz activa, casing, HMW label, ANS sin repetir definición)
+- [ ] **N1-2** Testimonios — omitido (sin citas disponibles)
+- [ ] **N2-2** Optimización imágenes (`astro:assets`) — diferido (tocaría componentes de imagen)
+
 ---
 
 ## 🔜 Backlog nuevo (post-actualización)
@@ -71,9 +82,8 @@ Ordenado por impacto. Cada ítem = 1 sesión / PR pequeño. DoD = "definición d
 - **Archivos:** `Navigation.astro`, `ui.ts`, `global.css`
 - **DoD:** Botón visible en todas las páginas que abre correo.
 
-#### N0-3 · CV en PDF descargable  ⏳ falta archivo
+#### N0-3 · CV en PDF descargable  ✅ hecho
 - **Archivos:** `AboutPage.astro`, `site.ts` (`cvHref`), `public/cv/`
-- **Pendiente:** subir `public/cv/anny-mamani-cv-es.pdf` y `...-en.pdf`.
 - **DoD:** Botón descarga el PDF correcto por idioma, sin 404.
 
 #### N0-4 · OG images  ✅ hecho *(opcional: OG dedicada)*
@@ -83,41 +93,33 @@ Ordenado por impacto. Cada ítem = 1 sesión / PR pequeño. DoD = "definición d
 
 ### 🟧 P1 — Credibilidad y consistencia
 
-#### N1-1 · Spine de secciones unificado
-- **Archivos:** `project-*.ts`, `ui.ts`
-- **Qué:** Mismos h2 y orden en los 4: Overview → Desafío → Proceso → Solución → Resultados → Aprendizajes.
-- **DoD:** Los 4 case studies leen con la misma estructura.
+#### N1-1 · Spine de secciones unificado  ✅ hecho
+- Macro h2: Overview → Desafío → Proceso → Solución → Resultados → Aprendizajes.
+- Subfases del proyecto (THINK/MAKE/CHECK, DESCUBRIR/…) pasan a h3 bajo **Proceso**; bloques sin reordenar.
 
-#### N1-2 · Testimonios / recomendaciones
-- **Archivos:** nuevo bloque en `types.ts` + `CaseStudyBlock.astro` (o sección en About)
-- **Qué:** 1–2 citas reales (líder, PO, compañero) con nombre y cargo.
-- **DoD:** Prueba social visible; requiere que Anny consiga las citas.
+#### N1-2 · Testimonios / recomendaciones  ⏸ omitido
+- Sin citas disponibles por ahora.
 
-#### N1-3 · Slugs legibles
-- **Qué:** `/work/interbank-assi` en vez de `/project_1` (con redirects de las rutas viejas).
-- **DoD:** URLs descriptivas sin romper enlaces existentes.
+#### N1-3 · Slugs legibles  ✅ hecho
+- **Rutas:** `/work/interbank-assi`, `/work/appcres`, `/work/pacifico-sepelio`, `/work/tom-3-pacifico` (+ `/en/work/...`)
+- **Redirects:** `/project_1`…`project_4` → nuevas rutas (301)
 
-#### N1-4 · Auditoría de accesibilidad
-- **Qué:** Contraste AA, `alt` en todas las imágenes, foco de teclado visible, `aria` en carruseles.
-- **DoD:** Sin errores críticos en auditoría (Lighthouse/axe).
+#### N1-4 · Auditoría de accesibilidad  ✅ parcial
+- Skip link bilingüe, `:focus-visible`, `prefers-reduced-motion`, aria en carrusel.
+- **Pendiente futuro:** auditoría Lighthouse/axe completa.
 
 ### 🟨 P2 — Pulido y descubribilidad
 
-#### N2-1 · Sitemap + página 404
-- **Qué:** `@astrojs/sitemap` + `404.astro` bilingüe.
+#### N2-1 · Sitemap + página 404  ✅ hecho
 
-#### N2-2 · Optimización de imágenes
-- **Qué:** `astro:assets`, lazy-load, tamaños responsivos.
-- **DoD:** Mejora medible de peso/LCP.
+#### N2-2 · Optimización de imágenes  ⏸ diferido
 
-#### N2-3 · Datos estructurados (JSON-LD `Person`)
-- **Qué:** Schema con nombre, rol, ubicación, enlaces sociales.
+#### N2-3 · Datos estructurados (JSON-LD `Person`)  ✅ hecho
 
-#### N2-4 · Analytics ligero
-- **Qué:** Plausible o Vercel Analytics (sin cookies invasivas).
+#### N2-4 · Analytics ligero  ✅ hecho (Vercel Analytics; activar en dashboard Vercel)
 
-#### N2-5 · Glosario y tono transversal
-- **Qué:** ANS definido una sola vez, voz activa, casing consistente (`e-commerce`, `lead capture`).
+#### N2-5 · Glosario y tono transversal  ✅ hecho
+- Voz activa (P2), casing `e-commerce`, HMW sin `¿`, ANS definido una vez en P1, ES sin anglicismos sueltos donde aplica.
 
 ### 🟩 P3 — Diferenciadores (opcional)
 - [ ] TOC sticky en case studies
