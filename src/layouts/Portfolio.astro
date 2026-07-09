@@ -29,6 +29,7 @@ const site = Astro.site ?? new URL('https://annymamaniportafolioux.vercel.app');
 const canonical = new URL(Astro.url.pathname, site);
 const altLang = lang === 'es' ? 'en' : 'es';
 const altHref = new URL(alternateLangPath(Astro.url.pathname, altLang), site);
+const ogImageUrl = new URL(ogImage, site).href;
 ---
 
 <!doctype html>
@@ -49,11 +50,12 @@ const altHref = new URL(alternateLangPath(Astro.url.pathname, altLang), site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
-    <meta property="og:image" content={new URL(ogImage, site).href} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:secure_url" content={ogImageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, site).href} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <title>{title}</title>
     <ThemeInit />
   </head>

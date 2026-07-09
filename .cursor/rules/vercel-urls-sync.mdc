@@ -35,6 +35,25 @@ Tras `git push origin main` y deploy (auto o manual), el agente principal **siem
 - `astro.config.mjs` → `site: 'https://annymamaniportafolioux.vercel.app'`
 - En mensajes de release, listar **primero** la URL principal
 
+## SSO / Deployment Protection (crítico para OG)
+
+El proyecto **no debe tener SSO/Vercel Authentication** en deployments públicos. Si está activo, WhatsApp/LinkedIn reciben `302` a login y **no muestran preview**.
+
+Verificar acceso público (debe ser `HTTP 200`, no `302`):
+
+```bash
+curl -sI "https://annymamaniportafolioux.vercel.app/project_1" | head -1
+curl -sI "https://annymamaniportafolioux.vercel.app/assets/original/home-pacifico.png" | head -1
+```
+
+Si hay SSO activo, desactivar:
+
+```bash
+npx vercel project protection disable portafolio-figma --sso
+```
+
+Tras cambiar protección, pedir al usuario **refrescar caché OG** (LinkedIn Post Inspector / compartir de nuevo en WhatsApp).
+
 ## Cuando haya dominio propio
 
 - Sustituir la URL principal por el dominio custom (ej. `annymamani.com`)
