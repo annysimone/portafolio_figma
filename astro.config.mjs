@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://annymamaniportafolioux.vercel.app',
+  site: 'https://portafolio-figma-nu.vercel.app',
   compressHTML: true,
 
   i18n: {

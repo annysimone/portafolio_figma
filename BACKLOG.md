@@ -1,7 +1,7 @@
 # Backlog — Portafolio Anny Mamani
 
 > **Estado en vivo:** ver **`PROJECT-STATUS.md`** (producción, pendientes, roles).
-> **Producción:** `main` @ `8dd870a` · https://annymamaniportafolioux.vercel.app
+> **Producción:** `main` · https://portafolio-figma-nu.vercel.app
 > **Rol visible:** solo **Product Designer** (nunca "Senior" en la UI).
 > **Regla de layout:** no cambiar estructura de post-its, cards, galerías ni imágenes sin acuerdo; editar texto dentro de bloques existentes. Los cambios de componentes/imágenes van coordinados (ver roles).
 

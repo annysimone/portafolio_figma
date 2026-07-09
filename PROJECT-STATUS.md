@@ -12,8 +12,7 @@
 | **Rama publicada** | `main` |
 | **Commit en producción** | `8dd870a` |
 | **Local `main` (sin desplegar)** | `94f403a` — refinamiento copy/KPIs P1–P4 (pendiente push + deploy por Principal) |
-| **URL principal** | https://annymamaniportafolioux.vercel.app |
-| **URL secundaria** | https://portafolio-figma-nu.vercel.app |
+| **URL producción** | https://portafolio-figma-nu.vercel.app |
 | **Repo** | https://github.com/annysimone/portafolio_figma.git |
 
 ### Historial reciente en `main`

@@ -10,8 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy:vercel": "vercel deploy --prod",
-    "sync:vercel-urls": "node scripts/sync-vercel-urls.mjs"
+    "deploy:vercel": "vercel deploy --prod"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.1",

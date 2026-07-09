@@ -25,7 +25,7 @@ const {
   ogImage = '/og-image.png',
 } = Astro.props;
 
-const site = Astro.site ?? new URL('https://annymamaniportafolioux.vercel.app');
+const site = Astro.site ?? new URL('https://portafolio-figma-nu.vercel.app');
 const canonical = new URL(Astro.url.pathname, site);
 const altLang = lang === 'es' ? 'en' : 'es';
 const altHref = new URL(alternateLangPath(Astro.url.pathname, altLang), site);
