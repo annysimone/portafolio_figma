@@ -13,6 +13,7 @@ export const project2CaseStudy: CaseStudy = {
       es: 'Diseño de AppCres: onboarding e inversión en el mercado de capitales simplificados para reducir la barrera de entrada de nuevos inversionistas.',
       en: 'Design of AppCres: simplified onboarding and investing in the capital markets to lower the entry barrier for new investors.',
     },
+    ogImage: `${P}/ui-pantallas.jpg`,
   },
   header: {
     year: { es: '2019', en: '2019' },

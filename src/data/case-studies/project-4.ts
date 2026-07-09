@@ -13,6 +13,7 @@ export const project4CaseStudy: CaseStudy = {
       es: 'Rediseño de TOM 3.0, plataforma interna de gestión de horas y tareas de Pacífico: registro más ágil y guiado, con vistas claras de carga por equipo.',
       en: 'Redesign of TOM 3.0, Pacífico\'s internal time- and task-management platform: faster, guided time tracking with clear team-workload views.',
     },
+    ogImage: `${P}/asignaciones-dashboard.jpg`,
   },
   header: {
     year: { es: '2025', en: '2025' },

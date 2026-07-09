@@ -12,7 +12,11 @@ interface Props {
 }
 
 const { lang, study } = Astro.props;
-const ogImage = getProjectPreview(study.slug)?.image ?? study.gallery?.[0] ?? '/og-image.png';
+const ogImage =
+  study.meta.ogImage ??
+  getProjectPreview(study.slug)?.image ??
+  study.gallery?.[0] ??
+  '/og-image.png';
 ---
 
 <Portfolio
