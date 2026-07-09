@@ -44,11 +44,16 @@ const altHref = new URL(alternateLangPath(Astro.url.pathname, altLang), site);
     <link rel="alternate" hreflang={altLang} href={altHref.href} />
     <link rel="alternate" hreflang="x-default" href={new URL(alternateLangPath(Astro.url.pathname, defaultLang), site).href} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anny Mamani — Product Designer" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_PE' : 'en_US'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
     <meta property="og:image" content={new URL(ogImage, site).href} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, site).href} />
     <title>{title}</title>
     <ThemeInit />
   </head>

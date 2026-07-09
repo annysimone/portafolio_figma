@@ -1,255 +1,158 @@
-# Backlog técnico — Portafolio Anny Mamani
+# Backlog — Portafolio Anny Mamani
 
-> **Estado en vivo:** ver **`PROJECT-STATUS.md`** (producción, pendientes, orden entre agentes).  
-> **Producción:** `main` @ `8dd870a` · https://annymamaniportafolioux.vercel.app  
-> **Alcance de este backlog:** copy estratégico, consistencia narrativa y metadata en texto.  
-> **Fuera de alcance (por ahora):** nuevas imágenes, diagramas de proceso, prototipos embebidos, features nuevas de producto.
+> **Estado en vivo:** ver **`PROJECT-STATUS.md`** (producción, pendientes, roles).
+> **Producción:** `main` @ `8dd870a` · https://annymamaniportafolioux.vercel.app
+> **Rol visible:** solo **Product Designer** (nunca "Senior" en la UI).
+> **Regla de layout:** no cambiar estructura de post-its, cards, galerías ni imágenes sin acuerdo; editar texto dentro de bloques existentes. Los cambios de componentes/imágenes van coordinados (ver roles).
 
 ---
 
-## Acotaciones acordadas
+## Acotaciones acordadas (aplican a todo)
 
 | Tema | Regla |
 |------|--------|
-| **Título de perfil** | Solo **Product Designer** en todo lo visible (Home, About, headers, metadata). **No** mostrar “Senior” como seniority. |
-| **Nivel de trabajo interno** | Análisis, recorte de copy, coherencia narrativa y correcciones con **criterio de nivel senior** — calidad alta, sin reflejarlo en el título del rol. |
-| **Componentes visuales** | **No cambiar layout:** post-its, cards, galerías con scroll, imágenes, grids, flechas, espaciados. |
-| **Qué sí editamos** | Texto dentro de bloques existentes (`project-*.ts`, `ui.ts`, `site.ts`): títulos, párrafos, bullets, post-its, captions — más corto y profesional, **sin perder sentido ni contexto**. |
-| **Producción** | Trabajo en **branch** desde `main` actual; merge + deploy solo **Principal** tras tu OK |
+| **Título de perfil** | Solo **Product Designer** en todo lo visible. **No** mostrar "Senior". |
+| **Nivel interno** | Análisis, recorte y coherencia con **criterio senior** — calidad alta sin reflejarlo en el título. |
+| **Layout** | No romper el layout acordado. Ajustes visuales (tamaños, spacing, nuevos bloques) van coordinados y verificados. |
+| **Qué editamos** | Texto en `project-*.ts`, `ui.ts`, `site.ts`; componentes/estilos solo con verificación de build + revisión en localhost. |
+| **Producción** | Trabajo en **branch** desde `main`; merge + deploy **solo Principal** tras OK de Anny. |
 
 ---
 
-## Estado P1 tras deploy Principal
+## ✅ Archivo — cumplido (histórico)
 
-- [x] **P1-1, P1-3, P1-4** — parcialmente en `863fecb` (project-1, project-3, project-4)
-- [ ] **P1-2** — AppCres recorte (`project-2.ts`) — **siguiente prioridad**
-- [ ] **P1-5** — About multi-cliente (`ui.ts`)
+> No borrar. Referencia de lo ya hecho y en qué commit.
 
-Ver **`PROJECT-STATUS.md`** para orden completo y registro de sesiones.
+### Sprint 0 — Migración e infraestructura
+- [x] Migración Figma Sites → Astro (estructura ES/EN, assets) — `d47a80f`
+- [x] Repo GitHub + deploy Vercel + doble URL con `sync:vercel-urls` — `8dd870a`
+- [x] Reglas de coordinación (`PROJECT-STATUS.md`, `project-coordination.mdc`, `git-deploy-main-agent.mdc`)
 
----
+### Sprint 1 — P0 copy (`03fc5ce`)
+- [x] P0-1 Eliminar copy WIP en Project 3 ("Por hacer", "data entrys")
+- [x] P0-2 Reencuadrar Challenge de Project 3 como dolores
+- [x] P0-3 Bloque Resultados en P1, P3, P4
+- [x] P0-4 Alinear metadata en `site.ts` (año gestión-horas, AppCres inversiones)
+- [x] P0-5 Home intro sin redundancia
 
-## Cómo trabajar este backlog
+### Sprint 2 — P1 narrativa (`863fecb`)
+- [x] P1-1 Project 1 — cerrar arcos narrativos
+- [x] P1-3 Project 3 — rol, cierre y tono + Aprendizajes
+- [x] P1-4 Project 4 — puente Challenge → Solución + Aprendizajes
 
-### ¿Modo Task / Agent por ítem?
+### Sesión Soluciones + refinamiento (local `main`, sin desplegar)
+- [x] Soluciones potenciadas en los 4 proyectos (P4 → P3 → P1 → P2)
+- [x] Refinamiento copy + KPIs: P2 AppCres (`4cc9b52`), P1 ANS (`9c1a87d`), P4 flecha KPI + Asignaciones (`2dd7d9a`, `5c97ff9`), P3 Sepelio (`242897e`)
+- [x] P1-2 Recorte AppCres — cubierto en el refinamiento de P2
 
-**Sí, a partir de ahora.** Cada ítem del backlog = 1 sesión de agente (o 1 PR pequeño).  
-Ventaja: cambios acotados, fáciles de revisar en localhost antes de merge.
-
-### ¿Branch?
-
-**Sí, recomendado** para esta fase de mejoras de copy (ya publicaste `main`).
-
-| Paso | Comando / acción |
-|------|------------------|
-| Crear branch | `git checkout -b content/portfolio-copy-v2` |
-| Trabajar ítems | 1–3 tareas por sesión |
-| Verificar | `npm run build` + preview en localhost |
-| Publicar | Merge a `main` → commit/push/deploy en **agente principal** |
-
-**No commitear en `main` directo** salvo hotfixes urgentes.
-
-### ¿Pierdo la versión publicada?
-
-**No.** Git guarda cada versión como una foto (commit). Hoy:
-
-```
-main (producción)  →  8dd870a  →  Vercel (P0 + P1 parcial incluidos)
-         │
-         └── content/portfolio-copy-v3  →  crear desde main para próximo trabajo
-```
-
-- **`content/portfolio-copy-v2`** ya fue mergeada; no reutilizar.
+### Sesión Backlog + Case study (branch `content/portfolio-copy-v3`, `d0ea617` en adelante)
+- [x] P1-5 About multi-cliente en `ui.ts` (Interbank, Pacífico, ACRES con años)
+- [x] P2-4 `meta.description` outcome-first en los 4 proyectos
+- [x] Ajustes visuales: `widthReduce` por imagen, post-its responsive
+- [x] **N0-1** Header con `role · scope · outcome` en los 4 case studies *(valores direccionales — validar con Anny)*
+- [x] **N0-2** CTA de contacto persistente en nav ("Conversemos" / "Let's talk")
+- [x] **N0-3** Botón CV (PDF) en About *(pendiente subir los archivos PDF)*
+- [x] **N0-4** OG image por proyecto (fix del bug que usaba siempre project_1) + tags Twitter
 
 ---
 
-### División de agentes
+## 🔜 Backlog nuevo (post-actualización)
 
-| Agente | Responsabilidad |
-|--------|-----------------|
-| **Principal** | Merge, push `main`, deploy Vercel, `sync:vercel-urls` |
-| **Backlog / Soluciones** | Copy en branch; actualizar `PROJECT-STATUS.md`; **no deploy** |
+Ordenado por impacto. Cada ítem = 1 sesión / PR pequeño. DoD = "definición de hecho".
 
-Al cerrar: actualizar **`PROJECT-STATUS.md`** (registro de sesiones) y marcar `[x]` aquí.
+### 🟥 P0 — Antes de compartir con clientes/recruiters
 
-**Próxima branch:** `content/portfolio-copy-v3` (desde `main` @ `8dd870a`).
+#### N0-1 · Header `role · scope · outcome`  ✅ hecho *(falta validación de contenido)*
+- **Archivos:** `types.ts`, `CaseStudyHeader.astro`, `project-*.ts`, `global.css`
+- **Pendiente:** Anny valida los textos de `scope` y `outcome` de cada proyecto (hoy direccionales).
+- **DoD:** Panel hero muestra rol + alcance + resultado validados en los 4.
 
----
+#### N0-2 · CTA de contacto persistente  ✅ hecho
+- **Archivos:** `Navigation.astro`, `ui.ts`, `global.css`
+- **DoD:** Botón visible en todas las páginas que abre correo.
 
-## Principios de copy (Product Designer)
+#### N0-3 · CV en PDF descargable  ⏳ falta archivo
+- **Archivos:** `AboutPage.astro`, `site.ts` (`cvHref`), `public/cv/`
+- **Pendiente:** subir `public/cv/anny-mamani-cv-es.pdf` y `...-en.pdf`.
+- **DoD:** Botón descarga el PDF correcto por idioma, sin 404.
 
-Aplicar en **todos** los ítems de texto.
+#### N0-4 · OG images  ✅ hecho *(opcional: OG dedicada)*
+- **Archivos:** `Portfolio.astro`, `CaseStudyPage.astro`
+- **Opcional futuro:** diseñar una OG con foto + nombre + rol (mejor preview que el screenshot del proyecto).
+- **DoD:** Cada URL muestra preview correcta al compartir en LinkedIn/WhatsApp.
 
-**Visible al lector:** rol = **Product Designer** (nunca “Senior Product Designer” ni equivalentes).
+### 🟧 P1 — Credibilidad y consistencia
 
-**Estándar interno del backlog:** redactar y corregir con profundidad de **nivel senior** — impacto, decisiones, trade-offs, outcomes, voz activa, cero WIP — sin usar esa palabra en el copy del portafolio.
+#### N1-1 · Spine de secciones unificado
+- **Archivos:** `project-*.ts`, `ui.ts`
+- **Qué:** Mismos h2 y orden en los 4: Overview → Desafío → Proceso → Solución → Resultados → Aprendizajes.
+- **DoD:** Los 4 case studies leen con la misma estructura.
 
-1. **Impacto primero** — qué problema de negocio/usuario, qué cambió (aunque sea direccional).
-2. **Menos texto, más decisión** — cortar repetición; cada párrafo debe aportar contexto, decisión o resultado.
-3. **Voz activa y ownership** — “Diseñé / Prioricé / Definí” vs “se diseñó / se detectó”.
-4. **Coherencia problema → solución** — si Challenge menciona 3 módulos, Solution o Outcomes deben cerrarlos (o acotar el scope).
-5. **Sin WIP publicado** — nada de “Por hacer”, “primer acercamiento”, notas internas.
-6. **ES + EN en paralelo** — cada edición en `project-*.ts` debe actualizar ambos idiomas.
-7. **Solo texto, mismo layout** — no mover post-its, no cambiar variantes de cards ni galerías; editar strings dentro de bloques existentes.
+#### N1-2 · Testimonios / recomendaciones
+- **Archivos:** nuevo bloque en `types.ts` + `CaseStudyBlock.astro` (o sección en About)
+- **Qué:** 1–2 citas reales (líder, PO, compañero) con nombre y cargo.
+- **DoD:** Prueba social visible; requiere que Anny consiga las citas.
 
----
+#### N1-3 · Slugs legibles
+- **Qué:** `/work/interbank-assi` en vez de `/project_1` (con redirects de las rutas viejas).
+- **DoD:** URLs descriptivas sin romper enlaces existentes.
 
-## P0 — Corregir antes de compartir el portafolio
+#### N1-4 · Auditoría de accesibilidad
+- **Qué:** Contraste AA, `alt` en todas las imágenes, foco de teclado visible, `aria` en carruseles.
+- **DoD:** Sin errores críticos en auditoría (Lighthouse/axe).
 
-### P0-1 · Eliminar copy WIP en Project 3
-- [x] Hecho en Sprint 1 (`content/portfolio-copy-v2`)
-- **Archivo:** `src/data/case-studies/project-3.ts`
-- **Qué:** Reemplazar post-its `"Por hacer: …"` por entregables en pasado o eliminar post-its.
-- **También:** corregir `"data entrys"` → `"data entry"` / `"registros"`.
-- **DoD:** Cero strings “Por hacer” en el build.
+### 🟨 P2 — Pulido y descubribilidad
 
-### P0-2 · Reencuadrar Challenge en Project 3
-- [x] Hecho en Sprint 1 (`content/portfolio-copy-v2`)
-- **Archivo:** `src/data/case-studies/project-3.ts`
-- **Qué:** Cards E-commerce / Landing = **dolores** (canal pausado, formularios 15 min, cero conversión). Mover entregables a Soluciones.
-- **DoD:** Un recruiter entiende el problema en 10 s sin leer Overview entero.
+#### N2-1 · Sitemap + página 404
+- **Qué:** `@astrojs/sitemap` + `404.astro` bilingüe.
 
-### P0-3 · Bloque Resultados en P1, P3, P4
-- [x] Hecho en Sprint 1 (`content/portfolio-copy-v2`)
-- **Archivos:** `project-1.ts`, `project-3.ts`, `project-4.ts`
-- **Qué:** Añadir sección `Resultados` / `Outcomes` (heading h2 + 3–4 bullets o cards `row3`) **antes** del footer de related projects.
-- **Contenido:** Cerrar métricas/objetivos ya mencionados (ANS, TTC, tiempo de formulario, etc.) aunque sea direccional.
-- **DoD:** Cada case study termina con impacto explícito, no solo solución.
+#### N2-2 · Optimización de imágenes
+- **Qué:** `astro:assets`, lazy-load, tamaños responsivos.
+- **DoD:** Mejora medible de peso/LCP.
 
-### P0-4 · Alinear metadata en `site.ts`
-- [x] Hecho en Sprint 1 (`content/portfolio-copy-v2`)
-- **Archivo:** `src/data/site.ts`
-- **Qué:**
-  - `gestion-horas.year` → `2025` (no “Pacífico Seguros” en el campo year del home).
-  - AppCres `aboutLabel`: “Plataforma de gestión de **inversiones**” (alinear con `project-2` header).
-  - Revisar `imageAlt` / títulos vs headers de case studies.
-- **DoD:** Home, About y case study dicen lo mismo del producto.
+#### N2-3 · Datos estructurados (JSON-LD `Person`)
+- **Qué:** Schema con nombre, rol, ubicación, enlaces sociales.
 
-### P0-5 · Home intro sin redundancia
-- [x] Hecho en Sprint 1 (`content/portfolio-copy-v2`)
-- **Archivo:** `src/i18n/ui.ts` (+ `HomePage.astro` si hace falta)
-- **Qué:** Un solo mensaje de identidad en el hero; `description` para SEO o merge en intro más corta.
-- **Objetivo:** Headline = rol + dominio + diferenciador (fintech, seguros, plataformas internas).
-- **DoD:** No repetir “Soy Anny Mamani…” dos veces en el fold.
+#### N2-4 · Analytics ligero
+- **Qué:** Plausible o Vercel Analytics (sin cookies invasivas).
 
----
+#### N2-5 · Glosario y tono transversal
+- **Qué:** ANS definido una sola vez, voz activa, casing consistente (`e-commerce`, `lead capture`).
 
-## P1 — Narrativa senior y recorte estratégico
-
-### P1-1 · Project 1 — Cerrar arcos narrativos
-- **Archivo:** `project-1.ts`
-- **Qué:**
-  - Unificar Situación vs Impacto (evitar repetir ANS).
-  - Overview menciona Tarjetas de Crédito → añadir 1 línea en Soluciones **o** quitar CC del Overview.
-  - Fase CHECK en `phases` → añadir párrafo breve CHECK **o** quitar Check del diagrama.
-  - Recortar MAKE a ~3 oraciones (decisiones, no “desarrollé competencias”).
-  - Aprendizajes: 3–4 bullets orientados a outcome.
-- **DoD:** Think → Make → Check → Soluciones → Resultados fluye sin huecos.
-
-### P1-2 · Project 2 — Recorte masivo (sin quitar secciones visuales)
-- **Archivo:** `project-2.ts`
-- **Qué recortar (solo texto):**
-  - Overview oportunidades: 3 párrafos → 1.
-  - Lista DESCUBRIR: 4 bullets → 2 o 1 resumen.
-  - Cards objetivos investigación: eliminar si duplican ANALIZAR.
-  - Párrafo insights: 2 frases máximo.
-  - Filas HMW: 1 oración por celda (need, hmw, guidelines).
-  - IA + KPIs: una sola lista, no duplicar “measurable outcomes”.
-  - ENTREGAR: reencuadrar ausencia de UAT (qué se validó igualmente).
-  - Aprendizaje 5: quitar “primer acercamiento”.
-- **DoD:** ~30–40% menos palabras; misma estructura visual.
-
-### P1-3 · Project 3 — Rol, cierre y tono
-- **Archivo:** `project-3.ts`
-- **Qué:**
-  - Overview: 2.ª oración con rol y scope (“Product Designer — e-commerce + landing”).
-  - Añadir `Aprendizajes` (3–4 bullets).
-  - Unificar casing: `e-commerce`, `lead capture form`.
-- **DoD:** Misma profundidad de cierre que P1/P2.
-
-### P1-4 · Project 4 — Puente Challenge → Solución
-- **Archivo:** `project-4.ts`
-- **Qué:**
-  - Párrafo puente post-Challenge (“Del kickoff + auditoría priorizamos…”).
-  - Objetivos mencionan Horas / Asignaciones / Tarifas → acotar copy a lo documentado **o** 1 bullet cada uno en Solución (texto, sin imágenes nuevas).
-  - Añadir `Aprendizajes` + reforzar `Resultados` (P0-3).
-- **DoD:** No prometer módulos sin mención en Solución/Resultados.
-
-### P1-5 · About alineado al portafolio completo
-- **Archivo:** `src/i18n/ui.ts` → `about.body`
-- **Qué:** 2 párrafos cortos: positioning (plataformas reguladas) + highlights Interbank / Pacífico / ACRES con años.
-- **DoD:** About ya no lee como “solo ASSI”.
-
----
-
-## P2 — Consistencia estructural (texto + tipos)
-
-### P2-1 · Metadata en header de case study
-- **Archivos:** `src/data/types.ts`, `CaseStudyHeader.astro`, `project-{1..4}.ts`
-- **Campos nuevos (texto):** `role`, `scope`, `outcome` (Localized).
-- **DoD:** Panel hero muestra rol + scope + outcome en los 4 proyectos.
-
-### P2-2 · Arquitectura de secciones unificada
-- **Archivos:** todos los `project-*.ts`
-- **Spine objetivo:** Overview → Desafío → Proceso → Solución → Resultados → Aprendizajes.
-- **DoD:** Mismos h2 (ES/EN) y orden lógico en los 4; renombrar `Challenge`/`Proceso`/`Solución` de forma consistente.
-
-### P2-3 · Glosario y tono transversal
-- **Archivos:** todos los `project-*.ts`
-- **Qué:** Pasada final de terminología (ANS definido una vez, voz activa, sin passive junior).
-- **Fixes rápidos:**
-  - P2 L84: “se detectaron las”
-  - P2 L300: “así que”
-  - P1 HMW label sin “¿”
-- **DoD:** Mismo tono profesional en ES y EN.
-
-### P2-4 · `meta.description` por proyecto
-- **Archivos:** `project-{1..4}.ts`
-- **Qué:** Una línea outcome-first por proyecto (SEO + LinkedIn preview).
-- **DoD:** Descriptions alineadas con header.outcome.
-
----
-
-## P3 — Backlog diferido (no priorizar ahora)
-
-Funcionalidades de producto — **después** de cerrar P0–P2:
-
-- [ ] Slugs legibles (`/work/interbank-assi`)
-- [ ] CV PDF descargable
-- [ ] CTA persistente + Calendly
-- [ ] `@astrojs/sitemap` + 404
-- [ ] Dark mode activo
-- [ ] Figma embeds / before-after
-- [ ] Analytics (Plausible)
+### 🟩 P3 — Diferenciadores (opcional)
 - [ ] TOC sticky en case studies
+- [ ] Dark mode pulido (revisar contraste en todos los bloques)
+- [ ] Micro-interacciones / transiciones de página
+- [ ] Sección "Cómo colaboro" / proceso de trabajo
+- [ ] Before/after o embeds de Figma
+- [ ] Dominio propio (retomar cuando Anny decida)
 
 ---
 
-## Orden de ejecución sugerido
+## Cómo trabajar cada ítem
 
-```
-Sprint 1 (P0)     → P0-1, P0-2, P0-4, P0-5, P0-3
-Sprint 2 (P1)     → P1-5, P1-3, P1-4, P1-1
-Sprint 3 (P1+P2)  → P1-2 (AppCres, el más largo), P2-1, P2-2, P2-3, P2-4
-Publicar          → merge content/portfolio-copy-v2 → agente principal deploy
-```
-
----
-
-## Plantilla de commit (copy)
-
-```
-Mejorar copy estratégico en [project_X / home / about].
-
-Resume narrativa, cierra outcomes y alinea tono profesional sin cambiar layout ni assets visuales.
-```
+1. Leer `PROJECT-STATUS.md` + este archivo + `git status`.
+2. Branch de trabajo desde `main` (una activa a la vez).
+3. 1–3 ítems por sesión; `npm run build` OK; revisión en localhost.
+4. Commit en la **branch** (cualquier agente de trabajo puede commitear en branch).
+5. **Solo Principal:** merge a `main` + push + deploy Vercel + `sync:vercel-urls`.
+6. Al cerrar: mover el ítem a "Archivo — cumplido" con su commit y actualizar `PROJECT-STATUS.md`.
 
 ---
 
-## Checklist pre-publicación (cada sprint)
+## Plantilla de commit
+
+```
+[área] Descripción corta del cambio.
+
+Qué mejora y por qué, sin cambiar layout/assets salvo lo indicado.
+```
+
+## Checklist pre-publicación
 
 - [ ] `npm run build` sin errores
-- [ ] Revisión visual ES: Home, About, 4 case studies
-- [ ] Revisión visual EN: mismas rutas bajo `/en/`
-- [ ] Sin strings WIP (“Por hacer”, “TODO”, referencias Figma internas)
-- [ ] Agente principal: merge → push → Vercel
+- [ ] Revisión ES: Home, About, 4 case studies
+- [ ] Revisión EN: mismas rutas bajo `/en/`
+- [ ] Sin strings WIP ("Por hacer", "TODO")
+- [ ] PDFs de CV subidos si el botón está activo
+- [ ] Principal: merge → push → Vercel → `sync:vercel-urls`

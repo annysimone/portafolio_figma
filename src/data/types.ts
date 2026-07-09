@@ -125,6 +125,12 @@ export type CaseStudyHeader = {
   title: Localized<string>;
   subtitle: Localized<string>;
   accent?: string;
+  /** Rol desempeñado (visible en el panel del header) */
+  role?: Localized<string>;
+  /** Alcance del trabajo: qué se diseñó */
+  scope?: Localized<string>;
+  /** Resultado/impacto principal, direccional */
+  outcome?: Localized<string>;
 };
 
 /** Sequential narrative — preferred for full case studies. */

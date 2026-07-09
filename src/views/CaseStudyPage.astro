@@ -3,6 +3,7 @@ import type { Lang } from '../i18n/config';
 import type { CaseStudy } from '../data/types';
 import Portfolio from '../layouts/Portfolio.astro';
 import CaseStudyView from '../components/portfolio/CaseStudyView.astro';
+import { getProjectPreview } from '../data/site';
 import { pick } from '../i18n/utils';
 
 interface Props {
@@ -11,13 +12,14 @@ interface Props {
 }
 
 const { lang, study } = Astro.props;
+const ogImage = getProjectPreview(study.slug)?.image ?? study.gallery?.[0] ?? '/og-image.png';
 ---
 
 <Portfolio
   lang={lang}
   title={pick(study.meta.title, lang)}
   description={pick(study.meta.description, lang)}
-  ogImage={study.blocks ? '/assets/projects/project_1/situacion-impacto.jpg' : study.gallery?.[0]}
+  ogImage={ogImage}
 >
   <CaseStudyView lang={lang} study={study} />
 </Portfolio>

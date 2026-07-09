@@ -6,16 +6,39 @@ import { pick } from '../../i18n/utils';
 interface Props {
   lang: Lang;
   header: CaseStudyHeader;
+  compactTop?: boolean;
 }
 
-const { lang, header } = Astro.props;
+const { lang, header, compactTop = false } = Astro.props;
 const accent = header.accent ?? 'var(--color-accent-olive)';
+
+const metaLabels = {
+  es: { role: 'Rol', scope: 'Alcance', outcome: 'Resultado' },
+  en: { role: 'Role', scope: 'Scope', outcome: 'Outcome' },
+} as const;
+const labels = metaLabels[lang];
+
+const metaItems = [
+  header.role && { label: labels.role, value: pick(header.role, lang) },
+  header.scope && { label: labels.scope, value: pick(header.scope, lang) },
+  header.outcome && { label: labels.outcome, value: pick(header.outcome, lang) },
+].filter((item): item is { label: string; value: string } => Boolean(item));
 ---
 
-<header class="cs-case-header pt-[160px] pb-12">
+<header class:list={['cs-case-header pb-12', compactTop ? 'pt-4' : 'pt-[160px]']}>
   <div class="cs-case-header__panel" style={`--header-accent: ${accent}`}>
     <p class="cs-case-header__year">{pick(header.year, lang)}</p>
     <h1 class="cs-case-header__title">{pick(header.title, lang)}</h1>
     <p class="cs-case-header__subtitle">{pick(header.subtitle, lang)}</p>
+    {metaItems.length > 0 && (
+      <dl class="cs-case-header__meta">
+        {metaItems.map((item) => (
+          <div class="cs-case-header__meta-item">
+            <dt class="cs-case-header__meta-label">{item.label}</dt>
+            <dd class="cs-case-header__meta-value">{item.value}</dd>
+          </div>
+        ))}
+      </dl>
+    )}
   </div>
 </header>

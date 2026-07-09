@@ -30,18 +30,20 @@ const projects = slugs.map((slug) => getProjectPreview(slug)).filter(Boolean);
         return (
           <article class="flex flex-col gap-6">
             <div class="flex flex-col gap-[19px]">
-              <h3
-                class="font-source-code font-medium text-base tracking-[-0.72px] underline m-0"
+              <a
+                href={href}
+                class="font-source-code font-medium text-base tracking-[-0.72px] underline m-0 no-underline hover:underline w-fit"
                 style={`color: ${project.accent}`}
               >
                 {label}
-              </h3>
-              <p
-                class="font-manjari leading-[1.2] text-[clamp(28px,3vw,48px)] tracking-[-2.16px] m-0"
+              </a>
+              <a
+                href={href}
+                class="cs-link-title font-manjari leading-[1.2] text-[clamp(28px,3vw,48px)] tracking-[-2.16px] m-0 no-underline w-fit"
                 style={`color: ${project.accent}`}
               >
                 {title}
-              </p>
+              </a>
               <a
                 href={href}
                 class="border flex h-8 items-center justify-center px-2.5 rounded font-source-code text-base tracking-[-0.72px] w-[70px] no-underline"
@@ -50,14 +52,18 @@ const projects = slugs.map((slug) => getProjectPreview(slug)).filter(Boolean);
                 {t.home.view}
               </a>
             </div>
-            <div class="aspect-square relative rounded shadow-md w-full overflow-hidden">
+            <a
+              href={href}
+              class="cs-media-zoom aspect-square relative rounded shadow-md w-full overflow-hidden block"
+              aria-label={title}
+            >
               <img
                 alt={imageAlt}
-                class="absolute inset-0 object-contain rounded size-full"
+                class="cs-media-zoom__img absolute inset-0 object-contain rounded size-full"
                 src={previewImage}
                 loading="lazy"
               />
-            </div>
+            </a>
           </article>
         );
       })

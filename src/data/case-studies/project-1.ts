@@ -22,6 +22,15 @@ export const project1CaseStudy: CaseStudy = {
       en: 'Financial product sales platform and internal management queues',
     },
     accent: '#6e660a',
+    role: { es: 'Product Designer', en: 'Product Designer' },
+    scope: {
+      es: 'Plataforma de venta + bandejas de gestión interna',
+      en: 'Sales platform + internal management queues',
+    },
+    outcome: {
+      es: 'Flujos más claros y consistentes, orientados a reducir el ANS y sostener el crecimiento de desembolsos',
+      en: 'Clearer, more consistent flows aimed at reducing handling time (ANS) and sustaining disbursement growth',
+    },
   },
   blocks: [
     {

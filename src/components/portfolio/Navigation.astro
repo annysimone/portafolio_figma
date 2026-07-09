@@ -2,6 +2,7 @@
 import type { Lang } from '../../i18n/config';
 import { localizedPath } from '../../i18n/utils';
 import { useTranslations } from '../../i18n/ui';
+import { contact } from '../../data/site';
 import LanguageSwitch from '../ui/LanguageSwitch.astro';
 
 interface Props {
@@ -15,7 +16,7 @@ const homeHref = localizedPath('/', lang);
 const aboutHref = localizedPath('/about', lang);
 ---
 
-<header class="absolute left-0 right-0 top-0 z-50 px-[50px] pt-[30px] pb-12" style={`background: var(--color-nav-gradient)`}>
+<header data-site-nav class="cs-nav-fixed fixed left-0 right-0 top-0 z-50 px-[50px] pt-[30px] pb-6" style={`background: var(--color-nav-gradient)`}>
   <nav class="flex items-center justify-between gap-4" aria-label="Principal">
     <a href={homeHref} class="flex gap-5 items-center no-underline text-[var(--color-text)]">
       <div class="relative rounded-full shadow-md shrink-0 size-16 overflow-hidden">
@@ -30,30 +31,48 @@ const aboutHref = localizedPath('/about', lang);
       <span class="font-manjari text-2xl tracking-[-1.08px]">Anny Mamani</span>
     </a>
 
-    <div class="flex flex-wrap gap-2.5 items-center justify-end font-source-code text-base tracking-[-0.72px]">
-      {
-        current === 'home' ? (
-          <span class="text-[var(--color-accent-pink)]" aria-current="page">
-            {t.nav.home}
-          </span>
-        ) : (
-          <a href={homeHref} class="text-[var(--color-accent-pink)] underline">
-            {t.nav.home}
-          </a>
-        )
-      }
-      {
-        current === 'about' ? (
-          <span class="text-[var(--color-text)]" aria-current="page">
-            {t.nav.about}
-          </span>
-        ) : (
-          <a href={aboutHref} class="text-[var(--color-text)] underline">
-            {t.nav.about}
-          </a>
-        )
-      }
+    <div class="flex flex-wrap gap-x-6 gap-y-2 items-center justify-end font-source-code text-base tracking-[-0.72px]">
+      <div class="flex items-center gap-5">
+        {
+          current === 'home' ? (
+            <span class="text-[var(--color-accent-pink)]" aria-current="page">
+              {t.nav.home}
+            </span>
+          ) : (
+            <a href={homeHref} class="text-[var(--color-accent-pink)] underline">
+              {t.nav.home}
+            </a>
+          )
+        }
+        {
+          current === 'about' ? (
+            <span class="text-[var(--color-text)]" aria-current="page">
+              {t.nav.about}
+            </span>
+          ) : (
+            <a href={aboutHref} class="text-[var(--color-text)] underline">
+              {t.nav.about}
+            </a>
+          )
+        }
+      </div>
+      <a href={`mailto:${contact.email}`} class="cs-nav-cta">
+        {t.nav.contact}
+      </a>
+      <span class="cs-nav-divider" aria-hidden="true"></span>
       <LanguageSwitch lang={lang} />
     </div>
   </nav>
 </header>
+
+<script>
+  function syncNavHeight() {
+    const nav = document.querySelector('[data-site-nav]');
+    if (!nav) return;
+    document.documentElement.style.setProperty('--nav-h', `${nav.offsetHeight}px`);
+  }
+  syncNavHeight();
+  window.addEventListener('resize', syncNavHeight);
+  window.addEventListener('load', syncNavHeight);
+  document.addEventListener('astro:page-load', syncNavHeight);
+</script>

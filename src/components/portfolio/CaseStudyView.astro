@@ -6,6 +6,7 @@ import { pick } from '../../i18n/utils';
 import CaseStudyBlock from './CaseStudyBlock.astro';
 import CaseStudyHeader from './CaseStudyHeader.astro';
 import MoreProjects from './MoreProjects.astro';
+import ProjectNav from './ProjectNav.astro';
 
 interface Props {
   lang: Lang;
@@ -19,7 +20,9 @@ const { lang, study } = Astro.props;
   {
     study.blocks ? (
       <>
-        {study.header && <CaseStudyHeader lang={lang} header={study.header} />}
+        <div class="cs-nav-spacer" aria-hidden="true"></div>
+        <ProjectNav lang={lang} slug={study.slug} />
+        {study.header && <CaseStudyHeader lang={lang} header={study.header} compactTop />}
         <div class={`cs-case-study-flow pb-12 ${study.header ? '' : 'pt-[160px]'}`}>
           {study.blocks.map((block, i) => (
             <CaseStudyBlock lang={lang} block={block} index={i} />

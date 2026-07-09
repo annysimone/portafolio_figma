@@ -19,6 +19,15 @@ export const project3CaseStudy: CaseStudy = {
     title: { es: 'Seguro de Sepelio.', en: 'Funeral insurance.' },
     subtitle: { es: 'Pacífico Seguros', en: 'Pacífico Seguros' },
     accent: '#ab0782',
+    role: { es: 'Product Designer', en: 'Product Designer' },
+    scope: {
+      es: 'E-commerce + landing de captación de leads',
+      en: 'E-commerce + lead-capture landing',
+    },
+    outcome: {
+      es: 'Canal digital habilitado para convertir sin depender del televentas',
+      en: 'Digital channel enabled to convert beyond the telesales channel',
+    },
   },
   blocks: [
     {

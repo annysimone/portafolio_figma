@@ -25,6 +25,15 @@ export const project2CaseStudy: CaseStudy = {
       en: 'Management, financing, and online investment alternatives in the capital markets.',
     },
     accent: '#0034ad',
+    role: { es: 'Product Designer', en: 'Product Designer' },
+    scope: {
+      es: 'Onboarding e inversión digital en el mercado de capitales',
+      en: 'Digital onboarding and investing in the capital markets',
+    },
+    outcome: {
+      es: 'Menor barrera de entrada para nuevos inversionistas',
+      en: 'Lower entry barrier for new investors',
+    },
   },
   blocks: [
     {

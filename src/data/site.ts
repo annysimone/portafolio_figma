@@ -12,6 +12,12 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/in/amamanigue/',
 };
 
+/** CV descargable por idioma. Colocar los PDF en public/cv/. */
+export const cvHref: Record<'es' | 'en', string> = {
+  es: '/cv/Anny_Mamani_CV_ES.pdf',
+  en: '/cv/Anny_Mamani_CV_EN.pdf',
+};
+
 export const homeProjects: ProjectPreview[] = [
   {
     id: 'pacifico-sepelio',
@@ -115,6 +121,19 @@ export const moreProjectsBySlug: Record<string, string[]> = {
 
 export function getMoreProjects(currentSlug: string): string[] {
   return moreProjectsBySlug[currentSlug] ?? [];
+}
+
+/** Orden de recorrido de proyectos para la navegación anterior/siguiente. */
+export const projectOrder = ['project_1', 'project_2', 'project_3', 'project_4'];
+
+export function getAdjacentProjects(slug: string): { prev?: string; next?: string } {
+  const index = projectOrder.indexOf(slug);
+  if (index === -1) return {};
+  const total = projectOrder.length;
+  return {
+    prev: projectOrder[(index - 1 + total) % total],
+    next: projectOrder[(index + 1) % total],
+  };
 }
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {

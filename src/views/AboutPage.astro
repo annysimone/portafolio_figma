@@ -2,7 +2,7 @@
 import type { Lang } from '../i18n/config';
 import Portfolio from '../layouts/Portfolio.astro';
 import ProjectPreviewCard from '../components/portfolio/ProjectPreviewCard.astro';
-import { aboutFeaturedProjects, contact } from '../data/site';
+import { aboutFeaturedProjects, contact, cvHref } from '../data/site';
 import { useTranslations } from '../i18n/ui';
 
 interface Props {
@@ -39,6 +39,16 @@ const paragraphs = t.about.body.split('\n\n');
         <div class="border-t border-[var(--color-border)] flex font-source-code gap-[19px] py-[30px] text-base tracking-[-0.72px] w-full">
           <span>{t.about.phone}</span>
           <a href={contact.phoneHref}>{contact.phone}</a>
+        </div>
+        <div class="border-t border-[var(--color-border)] flex flex-wrap gap-3 py-[30px] w-full">
+          <a href={cvHref.es} class="cs-cv-button" download>
+            <span aria-hidden="true">↓</span>
+            {t.about.cv} · ES
+          </a>
+          <a href={cvHref.en} class="cs-cv-button" download>
+            <span aria-hidden="true">↓</span>
+            {t.about.cv} · EN
+          </a>
         </div>
       </address>
     </section>

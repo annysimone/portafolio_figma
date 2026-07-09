@@ -22,6 +22,15 @@ export const project4CaseStudy: CaseStudy = {
     },
     subtitle: { es: 'Pacífico Seguros', en: 'Pacífico Seguros' },
     accent: '#0034ad',
+    role: { es: 'Product Designer', en: 'Product Designer' },
+    scope: {
+      es: 'Dashboard dinámico de horas, tareas y carga por equipo',
+      en: 'Dynamic dashboard for hours, tasks, and team workload',
+    },
+    outcome: {
+      es: 'Registro más ágil y guiado, con vistas claras de carga por equipo',
+      en: 'Faster, guided time tracking with clear team-workload views',
+    },
   },
   blocks: [
     {

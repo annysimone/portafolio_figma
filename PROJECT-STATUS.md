@@ -49,8 +49,11 @@ git checkout -b content/portfolio-copy-v3
 |--------|------|-------|----------|
 | **Principal** | Figma import / deploy | merge `main`, push, `vercel deploy`, `sync:vercel-urls` | Editar copy masivo sin revisar BACKLOG |
 | **Backlog / copy** | Este hilo + tasks P0–P2 | Editar `src/data/**`, `ui.ts`, `site.ts`; commit en **branch**; actualizar BACKLOG + este archivo | push `main`, deploy Vercel |
-| **Soluciones** | Agente estratégico por proyecto | Mejorar Solución/Proceso/Resultados en `project-*.ts`; branch; actualizar este archivo | Inventar métricas; cambiar layout/imágenes; deploy |
+| **Case study** | Contenido + diseño por proyecto | Refinar copy **y** modificar componentes, estilos, imágenes (agregar/quitar/ajustar elementos); commit en **branch** tras `npm run build` OK | push `main`, deploy Vercel |
+| **Soluciones** | Agente estratégico por proyecto | Mejorar Solución/Proceso/Resultados en `project-*.ts`; branch; actualizar este archivo | Inventar métricas; deploy |
 | **Tú (Anny)** | — | Aprobar merge, validar hechos, revisar localhost | — |
+
+> **Regla clave de Git:** cualquier agente de trabajo puede hacer `commit` en la **branch** activa; **solo Principal** hace `merge a main` + `push` + **deploy Vercel**. Trabajar **una branch activa a la vez** para que dos agentes no editen la misma branch en simultáneo.
 
 ---
 
@@ -142,7 +145,9 @@ Reglas: solo texto, Product Designer visible, ES+EN, no inventar métricas.
 | 2026-07-07 | Backlog/Principal | `863fecb` | Sprint 2 P1 parcial → merge main |
 | 2026-07-08 | Principal | `8dd870a` | Deploy + Vercel URL sync |
 | 2026-07-08 | Soluciones | `5c97ff9` | Refinamiento copy + KPIs P1–P4 (local, sin desplegar) |
-| 2026-07-08 | Backlog | *(branch v3)* | P1-5 About multi-cliente + P2-4 meta.description SEO. Build OK. Listo para commit en `content/portfolio-copy-v3` |
+| 2026-07-08 | Backlog | `d0ea617` | P1-5 About multi-cliente + P2-4 meta SEO (commit junto con ajustes visuales de Case study) |
+| 2026-07-08 | Case study | `d0ea617` | Ajustes visuales (widthReduce, post-its) en branch v3 |
+| 2026-07-08 | Backlog | *(branch v3, sin commit)* | **P0 nuevo backlog:** N0-1 header role·scope·outcome, N0-2 CTA contacto, N0-3 botón CV (falta PDF), N0-4 OG por proyecto + Twitter. Build OK |
 | | | | *(añadir fila al cerrar cada sesión)* |
 
 ---

@@ -1,0 +1,37 @@
+---
+import type { Lang } from '../../i18n/config';
+import { getAdjacentProjects, getProjectPreview } from '../../data/site';
+import { localizedPath, pick } from '../../i18n/utils';
+import { useTranslations } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+}
+
+const { lang, slug } = Astro.props;
+const t = useTranslations(lang);
+const { prev, next } = getAdjacentProjects(slug);
+
+const prevPreview = prev ? getProjectPreview(prev) : undefined;
+const nextPreview = next ? getProjectPreview(next) : undefined;
+---
+
+<nav class="cs-project-nav" aria-label={t.caseStudy.moreProjects}>
+  {prevPreview ? (
+    <a href={localizedPath(prevPreview.href, lang)} class="cs-project-nav__link cs-project-nav__link--prev">
+      <span class="cs-project-nav__dir">← {t.caseStudy.prevProject}</span>
+      <span class="cs-project-nav__name">{pick(prevPreview.title, lang)}</span>
+    </a>
+  ) : (
+    <span></span>
+  )}
+  {nextPreview ? (
+    <a href={localizedPath(nextPreview.href, lang)} class="cs-project-nav__link cs-project-nav__link--next">
+      <span class="cs-project-nav__dir">{t.caseStudy.nextProject} →</span>
+      <span class="cs-project-nav__name">{pick(nextPreview.title, lang)}</span>
+    </a>
+  ) : (
+    <span></span>
+  )}
+</nav>

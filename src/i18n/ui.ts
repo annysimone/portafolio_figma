@@ -5,6 +5,7 @@ export const ui = {
     nav: {
       home: 'Home',
       about: 'About',
+      contact: 'Conversemos',
       themeLight: 'Modo claro',
       themeDark: 'Modo oscuro',
       langSwitch: 'Cambiar idioma',
@@ -28,6 +29,7 @@ export const ui = {
       contactTitle: 'Conversemos...',
       mail: 'mail:',
       phone: 'cel:',
+      cv: 'Descargar CV (PDF)',
       projectsTitle: 'Mis proyectos',
     },
     caseStudy: {
@@ -37,6 +39,8 @@ export const ui = {
       solutions: 'Soluciones',
       learnings: 'Aprendizajes',
       moreProjects: 'Más proyectos',
+      prevProject: 'Anterior',
+      nextProject: 'Siguiente',
     },
     footer: {
       email: 'Email',
@@ -49,6 +53,7 @@ export const ui = {
     nav: {
       home: 'Home',
       about: 'About',
+      contact: 'Let\'s talk',
       themeLight: 'Light mode',
       themeDark: 'Dark mode',
       langSwitch: 'Switch language',
@@ -72,6 +77,7 @@ export const ui = {
       contactTitle: 'Let\'s talk...',
       mail: 'mail:',
       phone: 'phone:',
+      cv: 'Download résumé (PDF)',
       projectsTitle: 'My projects',
     },
     caseStudy: {
@@ -81,6 +87,8 @@ export const ui = {
       solutions: 'Solutions',
       learnings: 'Learnings',
       moreProjects: 'More projects',
+      prevProject: 'Previous',
+      nextProject: 'Next',
     },
     footer: {
       email: 'Email',
