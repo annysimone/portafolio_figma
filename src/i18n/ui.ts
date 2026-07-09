@@ -21,10 +21,10 @@ export const ui = {
     about: {
       title: 'About — Anny Mamani',
       description:
-        'Soy diseñadora de productos digitales enfocada en plataformas de gestión interna.',
+        'Product Designer en industrias reguladas —banca, seguros y mercado de capitales—, con casos en Interbank, Pacífico Seguros y ACRES.',
       intro:
-        'Soy diseñadora de productos digitales enfocada en plataformas de gestión interna.',
-      body: 'He colaborado activamente en el proyecto ASSI, la plataforma de venta de Interbank. Este proyecto presentó desafíos significativos debido a la complejidad de sus procesos, el entendimiento de las reglas de negocio y las múltiples integraciones tecnológicas que implicaba su funcionamiento.\n\nEsta experiencia me ha permitido adquirir conocimientos sobre lógicas y sistemas internos integrados. He tenido la oportunidad de interactuar diariamente con equipos multidisciplinarios incluyendo: equipos de desarrollo, Líderes técnicos, Business Analysts, Product Owners y aprender de los Ejecutivos de ventas y Supervisores, nuestros usuarios finales.',
+        'Soy Product Designer enfocada en plataformas digitales de industrias reguladas: banca, seguros y mercado de capitales.',
+      body: 'Diseño productos para entornos regulados y de alta complejidad, donde las reglas de negocio y las integraciones tecnológicas pesan tanto como la experiencia del usuario. En Interbank (2020–2024) colaboré en el diseño de ASSI, su plataforma de venta y bandejas de gestión interna; en Pacífico Seguros (2025) trabajé en el canal digital del Seguro de Sepelio y en TOM 3.0, plataforma interna de gestión de horas y tareas; y en ACRES (2019) diseñé AppCres, una plataforma de inversiones en el mercado de capitales.\n\nMi enfoque combina el entendimiento profundo de lógicas y sistemas internos con el trabajo diario junto a equipos multidisciplinarios —desarrollo, líderes técnicos, business analysts y product owners— y el aprendizaje directo de los usuarios finales. Traduzco procesos complejos en experiencias claras, medibles y accionables.',
       contactTitle: 'Conversemos...',
       mail: 'mail:',
       phone: 'cel:',
@@ -65,10 +65,10 @@ export const ui = {
     about: {
       title: 'About — Anny Mamani',
       description:
-        'Digital product designer focused on internal management platforms.',
+        'Product Designer across regulated industries —banking, insurance, and capital markets— with case studies at Interbank, Pacífico Seguros, and ACRES.',
       intro:
-        'I am a digital product designer focused on internal management platforms.',
-      body: 'I actively collaborated on ASSI, Interbank\'s sales platform. The project involved significant challenges due to process complexity, business rule understanding, and the many technology integrations required for it to work.\n\nThis experience helped me build knowledge of integrated internal systems and logic. I worked daily with multidisciplinary teams including developers, technical leads, business analysts, product owners, and learned from sales executives and supervisors—our end users.',
+        'I\'m a Product Designer focused on digital platforms in regulated industries: banking, insurance, and capital markets.',
+      body: 'I design products for regulated, high-complexity environments, where business rules and technology integrations matter as much as the user experience. At Interbank (2020–2024) I collaborated on the design of ASSI, its sales platform and internal management queues; at Pacífico Seguros (2025) I worked on the digital channel for funeral insurance and on TOM 3.0, an internal time- and task-management platform; and at ACRES (2019) I designed AppCres, an investment platform for the capital markets.\n\nMy approach combines a deep understanding of internal systems and logic with daily collaboration alongside multidisciplinary teams —developers, technical leads, business analysts, and product owners— and direct learning from end users. I turn complex processes into clear, measurable, actionable experiences.',
       contactTitle: 'Let\'s talk...',
       mail: 'mail:',
       phone: 'phone:',

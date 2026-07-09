@@ -11,7 +11,7 @@
 |-------|--------|
 | **Rama publicada** | `main` |
 | **Commit en producción** | `8dd870a` |
-| **Local `main` (sin desplegar)** | `5c97ff9` — refinamiento copy/KPIs P1–P4 (pendiente push + deploy por Principal) |
+| **Local `main` (sin desplegar)** | `94f403a` — refinamiento copy/KPIs P1–P4 (pendiente push + deploy por Principal) |
 | **URL principal** | https://annymamaniportafolioux.vercel.app |
 | **URL secundaria** | https://portafolio-figma-nu.vercel.app |
 | **Repo** | https://github.com/annysimone/portafolio_figma.git |
@@ -100,14 +100,20 @@ Detalle completo en **`BACKLOG.md`**. Resumen:
   - P3 Sepelio — pulido copy, KPIs verificados (`242897e`)
 - [x] **P1-2** Recorte copy AppCres — cubierto dentro del refinamiento de P2.
 
+### ✅ Hecho — sesión Backlog (branch `content/portfolio-copy-v3`, sin desplegar)
+
+- [x] **P1-5** About multi-cliente en `ui.ts` (ES+EN): positioning en industrias reguladas + highlights Interbank / Pacífico / ACRES con años.
+- [x] **P2-4** `meta.description` outcome-first en los 4 `project-*.ts` (ES+EN), alineadas a SEO/preview LinkedIn.
+
 ### ⏳ Pendiente — orden recomendado
 
 | Orden | ID | Tarea | Agente | Archivos |
 |-------|-----|-------|--------|----------|
 | 1 | **Deploy** | Push + deploy de `5c97ff9` (refinamiento P1–P4) + `sync:vercel-urls` | Principal | — |
-| 2 | **P1-5** | About multi-cliente (no solo ASSI) | Backlog | `ui.ts` |
-| 3 | **P2-1…P2-4** | Metadata header, secciones unificadas, glosario, meta SEO | Backlog | types + case studies |
-| 4 | **P3** | Features producto (CV, sitemap, etc.) | Principal + backlog | — |
+| 2 | **Merge v3** | Tras OK localhost de Anny: merge `content/portfolio-copy-v3` → `main` | Principal | `ui.ts`, `project-*.ts` |
+| 3 | **P2-3** | Glosario y tono transversal (fixes de copy) | Backlog | `project-*.ts` |
+| 4 | **P2-1 / P2-2** | Metadata header (role/scope/outcome) + spine de secciones — **tocan `types.ts` + componentes**, requiere decisión | Backlog + Principal | `types.ts`, `CaseStudyHeader.astro`, `project-*.ts` |
+| 5 | **P3** | Features producto (CV, sitemap, etc.) | Principal + backlog | — |
 
 ### 🔮 Agente Soluciones (plan paralelo al backlog)
 
@@ -136,6 +142,7 @@ Reglas: solo texto, Product Designer visible, ES+EN, no inventar métricas.
 | 2026-07-07 | Backlog/Principal | `863fecb` | Sprint 2 P1 parcial → merge main |
 | 2026-07-08 | Principal | `8dd870a` | Deploy + Vercel URL sync |
 | 2026-07-08 | Soluciones | `5c97ff9` | Refinamiento copy + KPIs P1–P4 (local, sin desplegar) |
+| 2026-07-08 | Backlog | *(branch v3)* | P1-5 About multi-cliente + P2-4 meta.description SEO. Build OK. Listo para commit en `content/portfolio-copy-v3` |
 | | | | *(añadir fila al cerrar cada sesión)* |
 
 ---

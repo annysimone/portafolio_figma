@@ -10,8 +10,8 @@ export const project4CaseStudy: CaseStudy = {
       en: 'Time & task management — Anny Mamani',
     },
     description: {
-      es: 'Pacífico Seguros — TOM 3.0 Gestión de horas y tareas',
-      en: 'Pacífico Seguros — TOM 3.0 time and task management',
+      es: 'Rediseño de TOM 3.0, plataforma interna de gestión de horas y tareas de Pacífico: registro más ágil y guiado, con vistas claras de carga por equipo.',
+      en: 'Redesign of TOM 3.0, Pacífico\'s internal time- and task-management platform: faster, guided time tracking with clear team-workload views.',
     },
   },
   header: {

@@ -10,8 +10,8 @@ export const project3CaseStudy: CaseStudy = {
       en: 'Pacífico Seguros — Funeral Insurance — Anny Mamani',
     },
     description: {
-      es: 'Seguro de Sepelio — Pacífico Seguros 2025',
-      en: 'Funeral insurance — Pacífico Seguros 2025',
+      es: 'Canal digital del Seguro de Sepelio de Pacífico: e-commerce y captura de leads orientados a habilitar la conversión más allá del televentas.',
+      en: 'Digital channel for Pacífico\'s funeral insurance: e-commerce and lead capture aimed at enabling conversion beyond the telesales channel.',
     },
   },
   header: {
@@ -246,6 +246,7 @@ export const project3CaseStudy: CaseStudy = {
     {
       type: 'image',
       src: `${P}/ia-web-producto.png`,
+      widthReduce: 200,
       alt: {
         es: 'Arquitectura de información de la web de producto Seguro de Sepelio',
         en: 'Information architecture for the funeral insurance product web',
@@ -303,6 +304,7 @@ export const project3CaseStudy: CaseStudy = {
       images: [
         {
           src: `${P}/solucion-ecommerce-mobile.png`,
+          widthReduce: 160,
           alt: {
             es: 'Solución e-commerce mobile con anotaciones de UX',
             en: 'Mobile e-commerce solution with UX annotations',
@@ -360,6 +362,7 @@ export const project3CaseStudy: CaseStudy = {
       images: [
         {
           src: `${P}/solucion-web-mobile.png`,
+          widthReduce: 160,
           alt: {
             es: 'Web de producto mobile: hero, planes y cómo usar',
             en: 'Mobile product web: hero, plans, and how-to',

@@ -10,8 +10,8 @@ export const project1CaseStudy: CaseStudy = {
       en: 'ASSI. Interbank — Anny Mamani',
     },
     description: {
-      es: 'Plataforma de venta de productos financieros — Interbank 2020-2024',
-      en: 'Financial product sales platform — Interbank 2020-2024',
+      es: 'Rediseño de ASSI, la plataforma de venta de Interbank: flujos más claros y consistentes orientados a reducir el ANS y sostener el crecimiento de desembolsos.',
+      en: 'Redesign of ASSI, Interbank\'s sales platform: clearer, more consistent flows aimed at reducing handling time (ANS) and sustaining disbursement growth.',
     },
   },
   header: {
@@ -354,6 +354,7 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'image',
       src: `${P}/prestamos-personales.jpg`,
+      widthReduce: 200,
       title: {
         es: 'Préstamos Personales — problema, objetivos y solución',
         en: 'Personal loans — problem, objectives, and solution',
@@ -429,7 +430,7 @@ export const project1CaseStudy: CaseStudy = {
     {
       type: 'image',
       src: `${P}/compra-deuda-consulta.jpg`,
-      maxWidth: 1080,
+      widthReduce: 200,
       title: {
         es: 'Compra Deuda Ataque y Consulta y Seguimiento',
         en: 'Debt purchase and inquiry & tracking',

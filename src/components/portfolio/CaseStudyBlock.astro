@@ -403,7 +403,9 @@ const hmwLabels = {
                 class:list={[
                   'cs-ui-figure flex flex-col gap-2',
                   img.wide && 'cs-gallery-figure--wide',
+                  img.widthReduce && 'cs-width-reduce',
                 ]}
+                style={img.widthReduce ? `--width-reduce: ${img.widthReduce}px` : undefined}
               >
                 {img.reference && (
                   <p class="font-source-code text-xs tracking-[-0.04em] text-[var(--color-accent-pink)] m-0">
@@ -464,7 +466,9 @@ const hmwLabels = {
                     class:list={[
                       'cs-ui-figure flex flex-col gap-2',
                       img.wide && 'cs-gallery-figure--wide',
+                      img.widthReduce && 'cs-width-reduce',
                     ]}
+                    style={img.widthReduce ? `--width-reduce: ${img.widthReduce}px` : undefined}
                     data-gallery-slide={slideIndex}
                   >
                     {img.reference && (

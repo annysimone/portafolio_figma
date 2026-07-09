@@ -109,6 +109,8 @@ export type CaseStudyBlock =
         reference?: boolean;
         /** Imagen desktop: más ancho + opción de ampliar */
         wide?: boolean;
+        /** Reduce el ancho total en px (centrado), solo para esta imagen */
+        widthReduce?: number;
       }[];
     };
 

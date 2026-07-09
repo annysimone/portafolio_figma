@@ -10,8 +10,8 @@ export const project2CaseStudy: CaseStudy = {
       en: 'AppCres — Anny Mamani',
     },
     description: {
-      es: 'Plataforma de gestión de inversiones — AppCres 2019',
-      en: 'Investment management platform — AppCres 2019',
+      es: 'Diseño de AppCres: onboarding e inversión en el mercado de capitales simplificados para reducir la barrera de entrada de nuevos inversionistas.',
+      en: 'Design of AppCres: simplified onboarding and investing in the capital markets to lower the entry barrier for new investors.',
     },
   },
   header: {

@@ -278,6 +278,7 @@ body {
 
 .cs-card-grid--postits {
   padding-top: 1.5rem;
+  row-gap: 2.75rem;
 }
 
 .cs-card-grid--postits-ref {
@@ -417,7 +418,7 @@ body {
   position: absolute;
   top: -1.125rem;
   right: 0.35rem;
-  max-width: 10.5rem;
+  max-width: 15.5rem;
   padding: 0.4rem 0.55rem;
   font-size: 0.8125rem;
   line-height: 1.35;
@@ -981,6 +982,10 @@ body {
 
 .cs-gallery-stack figure {
   margin: 0;
+}
+
+.cs-gallery-stack .cs-width-reduce {
+  align-self: center;
 }
 
 .cs-gallery-figure--wide {
