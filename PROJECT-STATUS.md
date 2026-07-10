@@ -10,8 +10,7 @@
 | Campo | Valor |
 |-------|--------|
 | **Rama publicada** | `main` |
-| **Commit en producción** | `8dd870a` |
-| **Local `main` (sin desplegar)** | `94f403a` — refinamiento copy/KPIs P1–P4 (pendiente push + deploy por Principal) |
+| **Commit en producción** | `92d01f2` |
 | **URL producción** | https://portafolio-figma-nu.vercel.app |
 | **Repo** | https://github.com/annysimone/portafolio_figma.git |
 
@@ -19,10 +18,11 @@
 
 | Commit | Contenido |
 |--------|-----------|
-| `8dd870a` | Regla/script sync URLs Vercel (Principal) |
+| `92d01f2` | **Sprint 5:** slugs legibles, redirects, 404, sitemap, JSON-LD, analytics, a11y, spine + glosario |
+| `0a75978` | Eliminar alias custom; `site` → `portafolio-figma-nu.vercel.app` |
+| `8fbcd3d` | Sprint 3: nav fijo, CV ES/EN, OG, tarjetas clicables, sticky nav |
 | `863fecb` | Sprint 2 parcial (P1): copy P1, P3, P4 |
 | `03fc5ce` | Sprint 1 (P0): copy Home, P3 Challenge, Resultados P1/P3/P4, site.ts |
-| `d47a80f` | Portafolio estructurado ES/EN + assets (base Figma) |
 
 ---
 
@@ -30,14 +30,14 @@
 
 | Rama | Estado | Notas |
 |------|--------|-------|
-| `main` | ✅ Producción + último merge | Trabajar desde aquí o crear branch nueva **desde** `main` |
-| `content/portfolio-copy-v2` | ⚠️ Obsoleta | Mergeada en `main` hasta `863fecb`; **1 commit detrás** (`8dd870a`). No usar — borrar tras confirmar |
+| `main` | ✅ Producción | Trabajar desde aquí o crear branch nueva **desde** `main` |
+| `content/portfolio-copy-v4` | ✅ Mergeada | Sprint 5 — mergeada y desplegada en `92d01f2` |
 
 **Próxima branch de trabajo:**
 
 ```bash
 git checkout main && git pull origin main
-git checkout -b content/portfolio-copy-v4   # Sprint 5 (en curso, sin commit aún)
+git checkout -b content/portfolio-copy-v5   # siguiente sprint
 ```
 
 ---
@@ -46,13 +46,13 @@ git checkout -b content/portfolio-copy-v4   # Sprint 5 (en curso, sin commit aú
 
 | Agente | Chat | Puede | No puede |
 |--------|------|-------|----------|
-| **Principal** | Figma import / deploy | merge `main`, push, `vercel deploy`, `sync:vercel-urls` | Editar copy masivo sin revisar BACKLOG |
+| **Principal** | Figma import / deploy | merge `main`, push, `vercel deploy` | Editar copy masivo sin revisar BACKLOG |
 | **Backlog / copy** | Este hilo + tasks P0–P2 | Editar `src/data/**`, `ui.ts`, `site.ts`; commit en **branch**; actualizar BACKLOG + este archivo | push `main`, deploy Vercel |
-| **Case study** | Contenido + diseño por proyecto | Refinar copy **y** modificar componentes, estilos, imágenes (agregar/quitar/ajustar elementos); commit en **branch** tras `npm run build` OK | push `main`, deploy Vercel |
+| **Case study** | Contenido + diseño por proyecto | Refinar copy **y** modificar componentes, estilos, imágenes; commit en **branch** tras `npm run build` OK | push `main`, deploy Vercel |
 | **Soluciones** | Agente estratégico por proyecto | Mejorar Solución/Proceso/Resultados en `project-*.ts`; branch; actualizar este archivo | Inventar métricas; deploy |
 | **Tú (Anny)** | — | Aprobar merge, validar hechos, revisar localhost | — |
 
-> **Regla clave de Git:** cualquier agente de trabajo puede hacer `commit` en la **branch** activa; **solo Principal** hace `merge a main` + `push` + **deploy Vercel**. Trabajar **una branch activa a la vez** para que dos agentes no editen la misma branch en simultáneo.
+> **Regla clave de Git:** cualquier agente de trabajo puede hacer `commit` en la **branch** activa; **solo Principal** hace `merge a main` + `push` + **deploy Vercel**.
 
 ---
 
@@ -65,8 +65,7 @@ git checkout -b content/portfolio-copy-v4   # Sprint 5 (en curso, sin commit aú
    - Usuario revisó localhost
    - `BACKLOG.md` / este archivo actualizados
    - `git push origin main`
-   - Deploy Vercel
-   - `npm run sync:vercel-urls`
+   - `npx vercel deploy --prod --yes`
 4. **Nunca** deploy desde chats de copy/soluciones sin pasar por Principal.
 5. **Al terminar sesión:** commit descriptivo + actualizar sección "Hecho / Pendiente" abajo.
 
@@ -76,7 +75,7 @@ git checkout -b content/portfolio-copy-v4   # Sprint 5 (en curso, sin commit aú
 
 ```
 Lee PROJECT-STATUS.md y BACKLOG.md en la raíz del repo antes de actuar.
-Producción: main @ 8dd870a. Sigue el protocolo de roles y no hagas deploy salvo que seas Principal.
+Producción: main @ 92d01f2. Sigue el protocolo de roles y no hagas deploy salvo que seas Principal.
 Mi tarea de hoy: [DESCRIBE AQUÍ]
 ```
 
@@ -86,44 +85,20 @@ Mi tarea de hoy: [DESCRIBE AQUÍ]
 
 Detalle completo en **`BACKLOG.md`**. Resumen:
 
-### ✅ Hecho (ya en producción `main`)
+### ✅ Hecho (en producción `main` @ `92d01f2`)
 
-- [x] **P0** completo (Sprint 1 — `03fc5ce`)
-- [x] **P1 parcial** (Sprint 2 — `863fecb`): mejoras copy en `project-1`, `project-3`, `project-4` (Aprendizajes P3/P4, puente narrativo, etc.)
-- [x] Sync URLs Vercel (`8dd870a`)
+- [x] **Sprint 5:** slugs `/work/*`, redirects `/project_*`, `404.astro`, sitemap, JSON-LD, analytics hook, a11y
+- [x] **Spine narrativo** + glosario en case studies
+- [x] **Subfases h3** Desafío → Proceso → Solución (P1/P2)
+- [x] Sprints 1–3 (copy, nav, CV, OG, tarjetas clicables)
 
-### ✅ Hecho — sesión Soluciones/refinamiento (local `main`, sin desplegar)
+### ⏳ Pendiente (manual / siguiente sprint)
 
-- [x] **Soluciones** potenciadas en los 4 proyectos (sesiones previas).
-- [x] **Refinamiento copy + coherencia de KPIs** completo en P1, P2, P3, P4:
-  - P2 AppCres + spacing post-its (`4cc9b52`)
-  - P1 ASSI — copy y relato del ANS (`9c1a87d`)
-  - P4 TOM 3.0 — flecha KPI unificada + reorden Asignaciones (`2dd7d9a`, `5c97ff9`)
-  - P3 Sepelio — pulido copy, KPIs verificados (`242897e`)
-- [x] **P1-2** Recorte copy AppCres — cubierto dentro del refinamiento de P2.
-
-### ✅ Hecho — sesión Backlog (branch `content/portfolio-copy-v3`, sin desplegar)
-
-- [x] **P1-5** About multi-cliente en `ui.ts` (ES+EN): positioning en industrias reguladas + highlights Interbank / Pacífico / ACRES con años.
-- [x] **P2-4** `meta.description` outcome-first en los 4 `project-*.ts` (ES+EN), alineadas a SEO/preview LinkedIn.
-
-### ⏳ Pendiente — orden recomendado
-
-| Orden | ID | Tarea | Agente | Archivos |
-|-------|-----|-------|--------|----------|
-| 1 | **Deploy** | Push + deploy de `5c97ff9` (refinamiento P1–P4) + `sync:vercel-urls` | Principal | — |
-| 2 | **Merge v3** | Tras OK localhost de Anny: merge `content/portfolio-copy-v3` → `main` | Principal | `ui.ts`, `project-*.ts` |
-| 3 | **P2-3** | Glosario y tono transversal (fixes de copy) | Backlog | `project-*.ts` |
-| 4 | **P2-1 / P2-2** | Metadata header (role/scope/outcome) + spine de secciones — **tocan `types.ts` + componentes**, requiere decisión | Backlog + Principal | `types.ts`, `CaseStudyHeader.astro`, `project-*.ts` |
-| 5 | **P3** | Features producto (CV, sitemap, etc.) | Principal + backlog | — |
-
-### 🔮 Agente Soluciones (plan paralelo al backlog)
-
-Un chat, mismo prompt, **un proyecto por sesión** (no 4 agentes en paralelo):
-
-1. `project_4` → 2. `project_3` → 3. `project_1` → 4. `project_2`
-
-Reglas: solo texto, Product Designer visible, ES+EN, no inventar métricas.
+| Orden | Tarea | Responsable |
+|-------|-------|-------------|
+| 1 | Activar **Vercel Analytics** en dashboard del proyecto | Anny |
+| 2 | Hard refresh en producción (`Cmd+Shift+R`) y validar checklist post-deploy | Anny |
+| 3 | Siguiente sprint de copy/features según `BACKLOG.md` | Backlog + Principal |
 
 ---
 
@@ -131,8 +106,8 @@ Reglas: solo texto, Product Designer visible, ES+EN, no inventar métricas.
 
 - Rol visible: **Product Designer** (nunca "Senior" en UI).
 - Calidad interna: criterio de nivel senior en análisis y copy.
-- **No cambiar** layout: post-its, cards, galerías, imágenes.
-- Solo editar strings en bloques existentes.
+- **No cambiar** layout: post-its, cards, galerías, imágenes (salvo tarea explícita).
+- Solo editar strings en bloques existentes (salvo tarea explícita).
 
 ---
 
@@ -142,22 +117,13 @@ Reglas: solo texto, Product Designer visible, ES+EN, no inventar métricas.
 |-------|--------|--------|-------|
 | 2026-07-06 | Backlog | `03fc5ce` | Sprint 1 P0 en branch |
 | 2026-07-07 | Backlog/Principal | `863fecb` | Sprint 2 P1 parcial → merge main |
-| 2026-07-08 | Principal | `8dd870a` | Deploy + Vercel URL sync |
-| 2026-07-08 | Soluciones | `5c97ff9` | Refinamiento copy + KPIs P1–P4 (local, sin desplegar) |
-| 2026-07-08 | Backlog | `d0ea617` | P1-5 About multi-cliente + P2-4 meta SEO (commit junto con ajustes visuales de Case study) |
-| 2026-07-08 | Case study | `d0ea617` | Ajustes visuales (widthReduce, post-its) en branch v3 |
-| 2026-07-08 | Backlog | *(branch v3, sin commit)* | **P0 nuevo backlog:** N0-1 header role·scope·outcome, N0-2 CTA contacto, N0-3 botón CV (falta PDF), N0-4 OG por proyecto + Twitter. Build OK |
-| | | | *(añadir fila al cerrar cada sesión)* |
+| 2026-07-09 | Principal | `92d01f2` | Sprint 5 merge + deploy: SEO, rutas, spine, glosario |
 
 ---
 
 ## Qué decirle al Principal ahora
 
 ```
-Deploy ya hecho en 8dd870a. Antes del próximo deploy:
-1. Pull main
-2. Revisar PROJECT-STATUS.md pendientes (P1-2, P1-5)
-3. Trabajo nuevo en branch content/portfolio-copy-v3
-4. Merge solo cuando Anny apruebe localhost
-5. Tras deploy: npm run sync:vercel-urls
+Sprint 5 desplegado en 92d01f2. Próximo trabajo en nueva branch desde main.
+Anny: activar Analytics en Vercel dashboard si aún no está habilitado.
 ```
