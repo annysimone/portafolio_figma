@@ -120,12 +120,13 @@ Detalle completo en **`BACKLOG.md`**. Resumen:
 | 2026-07-09 | Principal | `92d01f2` | Sprint 5 merge + deploy: SEO, rutas, spine, glosario |
 | 2026-07-10 | Backlog | `a9ede58` | OG N0-4b + contacto directo (mailto, WhatsApp, LinkedIn) |
 | 2026-07-10 | Principal | `a9ede58` | Push + deploy producción |
+| 2026-07-10 | Principal | *(pendiente)* | Fix GitHub: eliminar workflow `github-pages` (Pages no habilitado); CI build-only |
 
 ---
 
 ## Qué decirle al Principal ahora
 
 ```
-OG + contacto desplegados en a9ede58. Listo para compartir.
-Anny: LinkedIn Post Inspector + hard refresh si la preview OG no actualiza.
+Producción solo en Vercel (portafolio-figma-nu.vercel.app).
+GitHub Actions: CI build-only; sin deploy a github-pages.
 ```
