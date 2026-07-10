@@ -10,7 +10,9 @@
 | Campo | Valor |
 |-------|--------|
 | **Rama publicada** | `main` |
-| **Commit en producción** | `a9ede58` |
+| **Commit en producción** | `08401ec` |
+| **Deploy Vercel** | `dpl_6C6RnADTG34t5ZDcWXMLMjDsDzFJ` — Ready |
+| **GitHub Actions** | CI build-only — ✅ success |
 | **URL producción** | https://portafolio-figma-nu.vercel.app |
 | **Repo** | https://github.com/annysimone/portafolio_figma.git |
 
@@ -18,6 +20,8 @@
 
 | Commit | Contenido |
 |--------|-----------|
+| `08401ec` | Documentar fix GitHub CI en PROJECT-STATUS |
+| `86503c4` | Fix GitHub Actions: CI build-only (sin github-pages) |
 | `a9ede58` | **OG N0-4b + contacto:** `og-image.png` 1200×630, meta OG width/height/alt, mailto bilingüe, WhatsApp About, LinkedIn About |
 | `fc82783` | Actualizar PROJECT-STATUS tras Sprint 5 |
 | `92d01f2` | **Sprint 5:** slugs legibles, redirects, 404, sitemap, JSON-LD, analytics, a11y, spine + glosario |
@@ -74,7 +78,7 @@ git checkout -b content/portfolio-copy-v6   # siguiente sprint
 
 ```
 Lee PROJECT-STATUS.md y BACKLOG.md en la raíz del repo antes de actuar.
-Producción: main @ a9ede58. Sigue el protocolo de roles y no hagas deploy salvo que seas Principal.
+Producción: main @ 08401ec — Vercel Ready. GitHub CI verde. Deploy solo Vercel.
 Mi tarea de hoy: [DESCRIBE AQUÍ]
 ```
 
@@ -84,8 +88,9 @@ Mi tarea de hoy: [DESCRIBE AQUÍ]
 
 Detalle completo en **`BACKLOG.md`**. Resumen:
 
-### ✅ Hecho (en producción `main` @ `a9ede58`)
+### ✅ Hecho (en producción `main` @ `08401ec`)
 
+- [x] **GitHub CI** build-only (sin deploy a Pages inexistente)
 - [x] **OG dedicada 1200×630** (`public/og-image.png`) + meta `og:image:width/height/alt`
 - [x] **Contacto directo:** mailto bilingüe (nav Conversemos, footer, About), WhatsApp en About, LinkedIn en About
 - [x] **Sprint 5:** slugs `/work/*`, redirects, 404, sitemap, JSON-LD, analytics hook, a11y, spine + glosario
@@ -120,12 +125,13 @@ Detalle completo en **`BACKLOG.md`**. Resumen:
 | 2026-07-09 | Principal | `92d01f2` | Sprint 5 merge + deploy: SEO, rutas, spine, glosario |
 | 2026-07-10 | Backlog | `a9ede58` | OG N0-4b + contacto directo (mailto, WhatsApp, LinkedIn) |
 | 2026-07-10 | Principal | `86503c4` | Fix GitHub Actions: CI build-only (sin github-pages) |
+| 2026-07-10 | Principal | `08401ec` | Verificación Vercel: producción Ready, rutas OK |
 
 ---
 
 ## Qué decirle al Principal ahora
 
 ```
-Producción solo en Vercel (portafolio-figma-nu.vercel.app).
-GitHub Actions: CI build-only @ 86503c4 — verde.
+Portafolio listo en https://portafolio-figma-nu.vercel.app (@ 08401ec).
+GitHub CI verde. Vercel Production Ready. Sin correcciones pendientes.
 ```
