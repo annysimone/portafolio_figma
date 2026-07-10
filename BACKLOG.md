@@ -86,10 +86,14 @@ Ordenado por impacto. Cada ítem = 1 sesión / PR pequeño. DoD = "definición d
 - **Archivos:** `AboutPage.astro`, `site.ts` (`cvHref`), `public/cv/`
 - **DoD:** Botón descarga el PDF correcto por idioma, sin 404.
 
-#### N0-4 · OG images  ✅ hecho *(opcional: OG dedicada)*
-- **Archivos:** `Portfolio.astro`, `CaseStudyPage.astro`
-- **Opcional futuro:** diseñar una OG con foto + nombre + rol (mejor preview que el screenshot del proyecto).
+#### N0-4 · OG images  ✅ hecho
+- **Archivos:** `Portfolio.astro`, `CaseStudyPage.astro`, `public/og-image.png`, `site.ts` (`portfolioOgImage`)
 - **DoD:** Cada URL muestra preview correcta al compartir en LinkedIn/WhatsApp.
+
+#### N0-4b · OG dedicada del portafolio  ✅ hecho
+- **Asset:** `public/og-image.png` (1200×630) — foto, nombre, rol, acentos de marca (#ab0782, #0034ad).
+- **Alcance:** Home y About (default en `Portfolio.astro`); case studies siguen con preview del proyecto.
+- **DoD:** Al compartir la URL principal se ve la tarjeta de marca, no el screenshot de Figma (400×220).
 
 ### 🟧 P1 — Credibilidad y consistencia
 

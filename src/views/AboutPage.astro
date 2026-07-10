@@ -4,6 +4,8 @@ import Portfolio from '../layouts/Portfolio.astro';
 import ProjectPreviewCard from '../components/portfolio/ProjectPreviewCard.astro';
 import { aboutFeaturedProjects, contact, cvHref } from '../data/site';
 import { useTranslations } from '../i18n/ui';
+import WhatsAppIcon from '../components/ui/WhatsAppIcon.astro';
+import { mailtoHref, whatsappHref } from '../utils/contact';
 
 interface Props {
   lang: Lang;
@@ -34,11 +36,28 @@ const paragraphs = t.about.body.split('\n\n');
       <address class="flex flex-1 flex-col min-w-[280px] not-italic">
         <div class="border-t border-[var(--color-border)] flex font-source-code gap-[19px] py-[30px] text-base tracking-[-0.72px] w-full">
           <span>{t.about.mail}</span>
-          <a href={`mailto:${contact.email}`} class="underline">{contact.email}</a>
+          <a href={mailtoHref(lang)} class="underline">{contact.email}</a>
         </div>
         <div class="border-t border-[var(--color-border)] flex font-source-code gap-[19px] py-[30px] text-base tracking-[-0.72px] w-full">
           <span>{t.about.phone}</span>
-          <a href={contact.phoneHref}>{contact.phone}</a>
+          <span class="flex flex-wrap gap-x-[19px] gap-y-1 items-center">
+            <a href={contact.phoneHref} class="underline">{contact.phone}</a>
+            <a
+              href={whatsappHref(lang)}
+              class="cs-whatsapp-link"
+              aria-label={t.about.phoneWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon />
+            </a>
+          </span>
+        </div>
+        <div class="border-t border-[var(--color-border)] flex font-source-code gap-[19px] py-[30px] text-base tracking-[-0.72px] w-full">
+          <span>{t.about.linkedin}</span>
+          <a href={contact.linkedin} class="underline" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/amamanigue
+          </a>
         </div>
         <div class="border-t border-[var(--color-border)] flex flex-wrap gap-3 py-[30px] w-full">
           <a href={cvHref.es} class="cs-cv-button" download>

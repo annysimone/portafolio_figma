@@ -3,7 +3,7 @@ import type { Lang } from '../i18n/config';
 import type { CaseStudy } from '../data/types';
 import Portfolio from '../layouts/Portfolio.astro';
 import CaseStudyView from '../components/portfolio/CaseStudyView.astro';
-import { getProjectShareImage } from '../data/site';
+import { getProjectShareImage, portfolioOgImage } from '../data/site';
 import { pick } from '../i18n/utils';
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { lang, study } = Astro.props;
-const ogImage = getProjectShareImage(study.slug) ?? study.gallery?.[0] ?? '/og-image.png';
+const ogImage = getProjectShareImage(study.slug) ?? study.gallery?.[0] ?? portfolioOgImage;
 ---
 
 <Portfolio

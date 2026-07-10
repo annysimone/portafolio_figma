@@ -9,9 +9,13 @@ export const contact = {
   email: 'annysimone@gmail.com',
   phone: '+51 949 295 796',
   phoneHref: 'tel:+51949295796',
+  whatsappHref: 'https://wa.me/51949295796',
   behance: 'https://www.behance.net/AnnyMamani',
   linkedin: 'https://www.linkedin.com/in/amamanigue/',
 };
+
+/** Preview al compartir Home / About (1200×630). */
+export const portfolioOgImage = '/og-image.png';
 
 /** CV descargable por idioma. Colocar los PDF en public/cv/. */
 export const cvHref: Record<'es' | 'en', string> = {

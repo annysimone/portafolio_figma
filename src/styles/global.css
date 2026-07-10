@@ -179,6 +179,25 @@ button:focus-visible,
   color: var(--color-accent-blue);
 }
 
+.cs-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-accent-violet);
+  text-decoration: none;
+  line-height: 0;
+  transition: color 0.15s ease;
+}
+
+.cs-whatsapp-link:hover,
+.cs-whatsapp-link:focus-visible {
+  color: var(--color-accent-pink);
+}
+
+.cs-whatsapp-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 /* Interactive project cards — linked title + image (home, about, more projects) */
 .cs-link-title:hover,
 .cs-link-title:focus-visible {
