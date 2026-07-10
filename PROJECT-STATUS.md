@@ -119,8 +119,7 @@ Detalle completo en **`BACKLOG.md`**. Resumen:
 | 2026-07-07 | Backlog/Principal | `863fecb` | Sprint 2 P1 parcial → merge main |
 | 2026-07-09 | Principal | `92d01f2` | Sprint 5 merge + deploy: SEO, rutas, spine, glosario |
 | 2026-07-10 | Backlog | `a9ede58` | OG N0-4b + contacto directo (mailto, WhatsApp, LinkedIn) |
-| 2026-07-10 | Principal | `a9ede58` | Push + deploy producción |
-| 2026-07-10 | Principal | *(pendiente)* | Fix GitHub: eliminar workflow `github-pages` (Pages no habilitado); CI build-only |
+| 2026-07-10 | Principal | `86503c4` | Fix GitHub Actions: CI build-only (sin github-pages) |
 
 ---
 
@@ -128,5 +127,5 @@ Detalle completo en **`BACKLOG.md`**. Resumen:
 
 ```
 Producción solo en Vercel (portafolio-figma-nu.vercel.app).
-GitHub Actions: CI build-only; sin deploy a github-pages.
+GitHub Actions: CI build-only @ 86503c4 — verde.
 ```
