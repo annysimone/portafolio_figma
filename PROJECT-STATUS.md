@@ -10,7 +10,7 @@
 | Campo | Valor |
 |-------|--------|
 | **Rama publicada** | `main` |
-| **Commit en producción** | `92d01f2` |
+| **Commit en producción** | `a9ede58` |
 | **URL producción** | https://portafolio-figma-nu.vercel.app |
 | **Repo** | https://github.com/annysimone/portafolio_figma.git |
 
@@ -18,11 +18,11 @@
 
 | Commit | Contenido |
 |--------|-----------|
+| `a9ede58` | **OG N0-4b + contacto:** `og-image.png` 1200×630, meta OG width/height/alt, mailto bilingüe, WhatsApp About, LinkedIn About |
+| `fc82783` | Actualizar PROJECT-STATUS tras Sprint 5 |
 | `92d01f2` | **Sprint 5:** slugs legibles, redirects, 404, sitemap, JSON-LD, analytics, a11y, spine + glosario |
-| `0a75978` | Eliminar alias custom; `site` → `portafolio-figma-nu.vercel.app` |
+| `0a75978` | Eliminar alias custom; `site` → `portafolio-figma-nu.vercel.app |
 | `8fbcd3d` | Sprint 3: nav fijo, CV ES/EN, OG, tarjetas clicables, sticky nav |
-| `863fecb` | Sprint 2 parcial (P1): copy P1, P3, P4 |
-| `03fc5ce` | Sprint 1 (P0): copy Home, P3 Challenge, Resultados P1/P3/P4, site.ts |
 
 ---
 
@@ -31,13 +31,12 @@
 | Rama | Estado | Notas |
 |------|--------|-------|
 | `main` | ✅ Producción | Trabajar desde aquí o crear branch nueva **desde** `main` |
-| `content/portfolio-copy-v4` | ✅ Mergeada | Sprint 5 — mergeada y desplegada en `92d01f2` |
 
 **Próxima branch de trabajo:**
 
 ```bash
 git checkout main && git pull origin main
-git checkout -b content/portfolio-copy-v5   # siguiente sprint
+git checkout -b content/portfolio-copy-v6   # siguiente sprint
 ```
 
 ---
@@ -75,7 +74,7 @@ git checkout -b content/portfolio-copy-v5   # siguiente sprint
 
 ```
 Lee PROJECT-STATUS.md y BACKLOG.md en la raíz del repo antes de actuar.
-Producción: main @ 92d01f2. Sigue el protocolo de roles y no hagas deploy salvo que seas Principal.
+Producción: main @ a9ede58. Sigue el protocolo de roles y no hagas deploy salvo que seas Principal.
 Mi tarea de hoy: [DESCRIBE AQUÍ]
 ```
 
@@ -85,20 +84,21 @@ Mi tarea de hoy: [DESCRIBE AQUÍ]
 
 Detalle completo en **`BACKLOG.md`**. Resumen:
 
-### ✅ Hecho (en producción `main` @ `92d01f2`)
+### ✅ Hecho (en producción `main` @ `a9ede58`)
 
-- [x] **Sprint 5:** slugs `/work/*`, redirects `/project_*`, `404.astro`, sitemap, JSON-LD, analytics hook, a11y
-- [x] **Spine narrativo** + glosario en case studies
-- [x] **Subfases h3** Desafío → Proceso → Solución (P1/P2)
-- [x] Sprints 1–3 (copy, nav, CV, OG, tarjetas clicables)
+- [x] **OG dedicada 1200×630** (`public/og-image.png`) + meta `og:image:width/height/alt`
+- [x] **Contacto directo:** mailto bilingüe (nav Conversemos, footer, About), WhatsApp en About, LinkedIn en About
+- [x] **Sprint 5:** slugs `/work/*`, redirects, 404, sitemap, JSON-LD, analytics hook, a11y, spine + glosario
+- [x] Sprints 1–3 (copy, nav, CV, tarjetas clicables)
 
 ### ⏳ Pendiente (manual / siguiente sprint)
 
 | Orden | Tarea | Responsable |
 |-------|-------|-------------|
 | 1 | Activar **Vercel Analytics** en dashboard del proyecto | Anny |
-| 2 | Hard refresh en producción (`Cmd+Shift+R`) y validar checklist post-deploy | Anny |
-| 3 | Siguiente sprint de copy/features según `BACKLOG.md` | Backlog + Principal |
+| 2 | **LinkedIn Post Inspector** si cachea OG vieja | Anny |
+| 3 | Hard refresh (`Cmd+Shift+R`) y validar checklist post-deploy | Anny |
+| 4 | Siguiente sprint según `BACKLOG.md` | Backlog + Principal |
 
 ---
 
@@ -118,12 +118,14 @@ Detalle completo en **`BACKLOG.md`**. Resumen:
 | 2026-07-06 | Backlog | `03fc5ce` | Sprint 1 P0 en branch |
 | 2026-07-07 | Backlog/Principal | `863fecb` | Sprint 2 P1 parcial → merge main |
 | 2026-07-09 | Principal | `92d01f2` | Sprint 5 merge + deploy: SEO, rutas, spine, glosario |
+| 2026-07-10 | Backlog | `a9ede58` | OG N0-4b + contacto directo (mailto, WhatsApp, LinkedIn) |
+| 2026-07-10 | Principal | `a9ede58` | Push + deploy producción |
 
 ---
 
 ## Qué decirle al Principal ahora
 
 ```
-Sprint 5 desplegado en 92d01f2. Próximo trabajo en nueva branch desde main.
-Anny: activar Analytics en Vercel dashboard si aún no está habilitado.
+OG + contacto desplegados en a9ede58. Listo para compartir.
+Anny: LinkedIn Post Inspector + hard refresh si la preview OG no actualiza.
 ```
